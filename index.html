@@ -260,6 +260,25 @@
           </ul>
         </div>
       </div>
+
+      <!-- Mermaid Visual Execution Gantt Chart -->
+      <div class="mermaid-container" style="margin-top:28px; background:#F8FAFC; padding:24px; border-radius:12px; border:1px solid #E2E8F0;">
+        <h4 style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; color:#475569; margin-bottom:16px;">DIAGRAMA VISUAL MERMAID: LÍNEA DE TIEMPO DE ACCIÓN (30-60-90 DÍAS)</h4>
+        <pre class="mermaid">
+gantt
+    title Plan de Ejecución Comercial Intelligential
+    dateFormat  YYYY-MM-DD
+    section Mes 1 (Días 1-30)
+    Lanzamiento Playbook Descongelamiento    :active, m1_1, 2026-08-01, 15d
+    Auditoría DNS & Entregabilidad          :m1_2, 2026-08-05, 10d
+    Formalización Co-Sell con Aliados        :m1_3, 2026-08-10, 20d
+    section Mes 2 (Días 31-60)
+    Convenio ASOFOM / AMSOFAC                :m2_1, 2026-09-01, 15d
+    Garantía SLA Go-Live 30 Días             :m2_2, 2026-09-10, 20d
+    section Mes 3 (Días 61-90)
+    Escalamiento Outbound SOFOMes            :m3_1, 2026-10-01, 30d
+        </pre>
+      </div>
     </section>
   </main>
 
@@ -270,8 +289,13 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      if (window.mermaid) {
+        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+      }
+
       const rentaInput = document.getElementById('rentaInput');
       const rentaDisplay = document.getElementById('rentaDisplay');
       
