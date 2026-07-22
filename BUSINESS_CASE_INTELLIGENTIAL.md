@@ -113,6 +113,9 @@ En el día a día operativo, Intelligential sustituye el caos de plataformas des
 | Categoría de Expansión | NUEVO Partner Objetivo | Propuesta de Valor Inédita para SOFOMes | Modelo de Monetización Intelligential |
 | :--- | :--- | :--- | :--- |
 | **Gremios e Instituciones** | **ASOFOM & AMSOFAC** | Convenio institucional como Core homologado con descuento preferencial en Setup Fee para sus 200+ agremiados. | Canal masivo de adquisición (CAC = $0) |
+| **Pagos en Efectivo** | **Paynau / Paycash** | Recepción de pagos y cuotas en efectivo (OXXO, 7-Eleven) para SOFOMes con clientes no bancarizados. | Comisión por transacción |
+| **WhatsApp KYC & Auth** | **Truora** *(Contacto directo)* | Validaciones biométricas y onboarding 100% automatizado por WhatsApp en 3 minutos. | Fee por consulta + Onboarding rápido |
+| **Firma Digital LatAm** | **Auco (Colombia)** | Firma electrónica y certificación legal de pagarés y contratos en Latinoamérica. | RevShare por documento |
 | **Emisión de Tarjetas** | **Pomelo / Credix** | Permite a las SOFOMes emitir sus propias tarjetas de crédito/débito (Mastercard/Visa) conectadas al Core. | Suscripción SaaS + Kickback por tarjeta |
 | **Open Banking / Score** | **Belvo / Fintoc** | Extracción automatizada de transacciones bancarias en tiempo real sin requerir PDFs de estados de cuenta. | 20% RevShare por llamada API + Markup |
 | **Cobranza Inteligente** | **Toku** | Orquestación automatizada de recobro con reintentos inteligentes por WhatsApp y débito directo a tarjeta. | Comisión por éxito de recuperación |
