@@ -74,14 +74,17 @@ Diseñado para la captación rápida de SOFOMes que buscan operar de inmediato:
 * Core financiero + PLD/FT + Solicitud Digital + KYC nativos.
 * Sin desarrollos. Sin terceros. Precio transparente. Escalabilidad garantizada sin cambiar de plataforma al crecer la cartera.
 
-### 🤝 Mapa de Partners Estratégicos Objetivo (Roadmap de Alianzas Q3-Q4)
-| Categoría de Alianza | Partner Objetivo | Sinergia Comercial / Co-Selling | Estado |
+### 🤝 Mapa de NUEVAS Incorporaciones de Partners Estratégicos (Roadmap Q3-Q4)
+*(Nuevas alianzas inéditas para expandir el valor comercial del Core)*
+
+| Categoría de Expansión | NUEVO Partner Objetivo | Propuesta de Valor Inédita para SOFOMes | Impacto Comercial |
 | :--- | :--- | :--- | :--- |
-| **Gremios Nacionales** | ASOFOM & AMSOFAC | Acceso prioritario a más de 200 SOFOMes y Arrendadoras en México. | En Prospección (Mes 1) |
-| **Firma Electrónica NOM-151** | Mifiel / Weetrust | Contratos y pagarés digitales con valor probatorio legal. | Pre-Integrado |
-| **Scoring & Datos Fiscales** | Syntage / Moffin / Nufi | Automatización de extracción de constancias SAT y CIEC en segundos. | Objetivo Q3 |
-| **Biometría & KYC Avanzado** | Incode / Truora / Veriff | Verificación facial y biométrica INE en tiempo real anti-fraude. | Objetivo Q4 |
-| **Open Banking & Riel SPEI** | STP / Monato / Belvo | Asignación de CLABE interbancaria dedicada por crédito para auto-conciliación. | Pre-Integrado |
+| **Gremios e Instituciones** | **ASOFOM & AMSOFAC** | Convenio institucional como Core homologado con descuento preferencial en Setup Fee para sus 200+ agremiados. | Canal masivo de distribución |
+| **Emisión de Tarjetas** | **Pomelo / Credix** | Permite a las SOFOMes emitir sus propias tarjetas de crédito/débito (Mastercard/Visa) conectadas al Core. | Nuevo vertical de ingresos SaaS |
+| **Open Banking / Score** | **Belvo / Fintoc** | Extracción automatizada de transacciones bancarias en tiempo real sin requerir PDFs de estados de cuenta. | Underwriting en 60 segundos |
+| **Cobranza Inteligente** | **Toku** | Orquestación automatizada de recobro con reintentos inteligentes por WhatsApp y débito directo a tarjeta. | +25% de recuperación de cartera |
+| **IA Credit Engine** | **Provenir / Scienaptic** | Motor de decisión crediticia con Inteligencia Artificial para originación automatizada en tiempo real. | Oferta para SOFOMes Enterprise |
+| **Cross-Border & Remesas** | **Bitso / Felix Pago** | Recepción de remesas desde EE. UU. como garantía o abono a capital para SOFOMes fronterizas. | Nicho de altísima demanda |
 
 ---
 
