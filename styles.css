@@ -68,6 +68,102 @@ body {
   gap: 12px;
 }
 
+/* 3-Presentation Format Nav Tabs */
+.presentation-switcher-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-subtle);
+  padding: 4px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.switcher-nav-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-weight: 700;
+  padding: 0 6px;
+}
+
+.nav-tab {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+
+.nav-tab:hover {
+  background: #ffffff;
+  color: var(--accent-blue);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-tab.active {
+  background: #ffffff;
+  color: var(--accent-blue);
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+/* Hero Switcher Box */
+.hero-switcher-box {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-top: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.box-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.box-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-tab {
+  text-decoration: none;
+  font-family: var(--font-main);
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--bg-subtle);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  transition: all 0.15s ease;
+}
+
+.btn-tab:hover {
+  background: var(--accent-blue-light);
+  color: var(--accent-blue);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.btn-tab.active {
+  background: var(--accent-blue);
+  color: #ffffff;
+  border-color: var(--accent-blue);
+}
+
 .logo-text {
   font-size: 1.2rem;
   font-weight: 800;
