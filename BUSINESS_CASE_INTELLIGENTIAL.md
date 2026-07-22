@@ -163,6 +163,14 @@ Para tratos atorados que aún tienen contrato vigente con competidores como Dyna
   2. Adquisición de dominio satélite disponible: **`getintelligential.com`** o **`intelligential.co`** (~$9.77 USD/año en Cloudflare Registrar) para calentar correos outbound (*Email Warmup*) sin arriesgar el dominio raíz.
   3. Verificación de reputación de IP y limpieza de frases disparadoras de filtros SPAM en plantillas.
 
+### 7. Compliance Regulatorio (PLD/CNBV) como Palanca Comercial de Cierre
+* **Posicionamiento RevOps:** El cumplimiento normativo no es burocracia; es el **freno número 1 de los Consejos de Administración de las SOFOMes** para autorizar compras de software. Intelligential convierte el PLD en una palanca de cierre inmediato.
+
+#### 🎙️ Script de Ventas (Pitch de Cierre por Compliance):
+> **Pregunta Gancho:** *"Director, cuando su equipo aprueba un crédito hoy... ¿cuántos softwares distintos abren para validar que el cliente no esté en la Lista 69-B del SAT o en OFAC, y cuánto gastan en licencias de PLD por fuera?"*
+> 
+> **El Pitch:** *"Con Intelligential no pegas un software de PLD encima como parche. **El cumplimiento CNBV nació adentro del Core**. En milisegundos, el sistema valida listas negras, biometría e INE sin intervención manual, ahorrándoles $120,000 MXN al año y dándole a su Consejo la paz mental de un registro 100% blindado."*
+
 ---
 
 ## 5. 🗓️ Plan de Acción 30 - 60 - 90 Días
