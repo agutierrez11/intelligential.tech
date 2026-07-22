@@ -107,10 +107,10 @@ En el día a día operativo, Intelligential sustituye el caos de plataformas des
 
 ---
 
-### 🤝 Mapa de NUEVAS Incorporaciones Inéditas (Partners que AÚN NO tienen)
-*(Exclusivamente nuevas alianzas estratégicas para expandir la monetización)*
+### 🗺️ Roadmap Estratégico de Futuras Integraciones (Expansión Fases 2 y 3 - Q3/Q4)
+*(Alianzas planificadas en la hoja de ruta para integrar progresivamente en los siguientes trimestres)*
 
-| Categoría de Expansión | NUEVO Partner Objetivo | Propuesta de Valor Inédita para SOFOMes | Modelo de Monetización Intelligential |
+| Categoría de Expansión | Partner en Roadmap | Propuesta de Valor en Hoja de Ruta | Modelo de Monetización Intelligential |
 | :--- | :--- | :--- | :--- |
 | **Gremios e Instituciones** | **ASOFOM & AMSOFAC** | Convenio institucional como Core homologado con descuento preferencial en Setup Fee para sus 200+ agremiados. | Canal masivo de adquisición (CAC = $0) |
 | **Pagos en Efectivo** | **Paynau / Paycash** | Recepción de pagos y cuotas en efectivo (OXXO, 7-Eleven) para SOFOMes con clientes no bancarizados. | Comisión por transacción |
