@@ -119,6 +119,12 @@ En el día a día operativo, Intelligential sustituye el caos de plataformas des
 | **IA Credit Engine** | **Provenir / Scienaptic** | Motor de decisión crediticia con Inteligencia Artificial para originación automatizada en tiempo real. | Oferta para SOFOMes Enterprise |
 | **Cross-Border & Remesas** | **Bitso / Felix Pago** | Recepción de remesas desde EE. UU. como garantía o abono a capital para SOFOMes fronterizas. | Nicho de altísima demanda |
 
+#### 💡 Rationale de Partnerships: ¿Por qué Belvo, Pomelo o Toku se alían con Intelligential?
+1. **Canal de Adquisición con CAC = $0 (El Core como "Sistema Operativo"):** Nadie puede operar una SOFOM únicamente usando la API de Belvo o Pomelo. La SOFOM requiere obligatoriamente el Core Bancario. Cada nueva SOFOM que firma con Intelligential se convierte en cliente de Belvo/Pomelo sin que ellos gasten $1 en marketing.
+2. **Eliminación de la Fricción de Venta (Time-to-Value):** Cuando Belvo le vende a una SOFOM, la SOFOM suele rechazar porque su Core legacy cobra $30,000 USD de integración custom. Con Intelligential pre-conectado, Belvo cierra su venta en 24 horas.
+3. **Co-Selling y Referencias Bidireccionales:** Belvo y Pomelo reciben prospectos que buscan Core Bancario. Nos refieren a esas SOFOMes como su socio de Core preferente a cambio de incentivos y consumo de API.
+4. **Defensibilidad contra Competidores:** Evita que competidores directos de Open Banking (Fintoc, Prometeo, Plaid) capturen la red de SOFOMes de Intelligential.
+
 ---
 
 ## 4. 🚀 5 Iniciativas Estratégicas del Director Comercial
