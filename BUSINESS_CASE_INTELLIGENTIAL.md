@@ -167,22 +167,9 @@ Para tratos atorados que aún tienen contrato vigente con competidores como Dyna
 
 ## 5. 🗓️ Plan de Acción 30 - 60 - 90 Días
 
-```mermaid
-gantt
-    title Plan de Ejecución Comercial Intelligential
-    dateFormat  YYYY-MM-DD
-    section Mes 1 (Días 1-30)
-    Lanzamiento Playbook Descongelamiento    :active, m1_1, 2026-09-01, 15d
-    Formalización Co-Sell con Aliados        :m1_2, 2026-09-10, 20d
-    Cierre de primeros 5 tratos reactivados  :m1_3, 2026-09-20, 10d
-    section Mes 2 (Días 31-60)
-    Campaña Masiva ASOFOM / AMSOFAC          :m2_1, 2026-10-01, 20d
-    Garantía Go-Live 30 Días en marcha       :m2_2, 2026-10-15, 15d
-    Acumular +10 Nuevos Clientes            :m2_3, 2026-10-20, 10d
-    section Mes 3 (Días 61-90)
-    Escalamiento Outbound Quirúrgico         :m3_1, 2026-11-01, 20d
-    Alcanzar Meta de +20 Clientes y +$200k MRR:m3_2, 2026-11-15, 15d
-```
+* **Días 1 - 30 (Mes 1):** Auditoría DNS (SPF/DKIM/DMARC), activación de dominios satélite y lanzamiento del Playbook de Descongelamiento de Pipeline con la oferta *"Migración Sin Doble Costo"*.
+* **Días 31 - 60 (Mes 2):** Formalización de acuerdos estratégicos con gremios (ASOFOM/AMSOFAC) y despliegue de la *"Garantía SLA Go-Live en 30 Días"*.
+* **Días 61 - 90 (Mes 3):** Escalamiento Outbound sobre el universo cualificado de SOFOMes en México para alcanzar la meta de +$200k MXN MRR y +20 clientes.
 
 ---
 
