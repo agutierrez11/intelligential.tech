@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intelligential — Executive Business Case & RevOps Command Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Executive Top Bar -->
+  <header class="exec-header">
+    <div class="container exec-header-flex">
+      <div class="exec-brand">
+        <span class="logo-text">INTELLIGENTIAL</span>
+        <span class="confidential-badge">CONFIDENCIAL — CASO DE NEGOCIO Y REVOPS</span>
+      </div>
+      <div class="meeting-tag">
+        <span>SESIÓN DE CONSEJO Y REVISIÓN: <strong>27 DE JULIO (EN 6 DÍAS)</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Executive Control Panel Container -->
+  <main class="container main-dashboard">
+    <!-- Hero / Title Header -->
+    <div class="dashboard-header">
+      <div class="badge-row">
+        <span class="tag-cyan">ESTRATEGIA COMERCIAL Q3-Q4</span>
+        <span class="tag-purple">PREPARADO PARA: LUIS FERNANDO (CEO & FOUNDER)</span>
+        <span class="tag-green">LÍDER DE PROYECTO: ANTONIO GUTIÉRREZ</span>
+      </div>
+      <h1 class="dash-title">Plan de Aceleración de Revenue & Modelado de Negocio</h1>
+      <p class="dash-subtitle">
+        Diagnóstico operativo, resolución de la fuga silenciosa de leads a SPAM, teardown financiero TCO vs. DynamiCore y plan de ejecución para alcanzar <strong>+$200,000 MXN en MRR</strong> y <strong>+20 clientes nuevos</strong>.
+      </p>
+    </div>
+
+    <!-- Executive KPI Summary Grid -->
+    <div class="kpi-grid">
+      <div class="kpi-card highlight-cyan">
+        <span class="kpi-label">META ADICIONAL MRR (Q3-Q4)</span>
+        <span class="kpi-value">+$200,000 MXN</span>
+        <span class="kpi-sub">Target en renta mensual recurrente</span>
+      </div>
+      <div class="kpi-card highlight-green">
+        <span class="kpi-label">AHORRO EN TCO VS DYNAMICORE</span>
+        <span class="kpi-value">> 42%</span>
+        <span class="kpi-sub">+$520,000 MXN ahorro neto / año 1</span>
+      </div>
+      <div class="kpi-card highlight-yellow">
+        <span class="kpi-label">REGLA DE SETUP / IMPLEMENTACIÓN</span>
+        <span class="kpi-value">2x Renta</span>
+        <span class="kpi-sub">Fee de activación dinámico por proyecto</span>
+      </div>
+      <div class="kpi-card highlight-red">
+        <span class="kpi-label">DIAGNOSTICO DE FUGA A SPAM</span>
+        <span class="kpi-value">🔻 73%</span>
+        <span class="kpi-sub">Pérdida de aperturas por falta de SPF/DKIM</span>
+      </div>
+    </div>
+
+    <!-- Section 1: Diagnostico de Entregabilidad & Fuga de Ingresos -->
+    <section class="dash-section">
+      <div class="section-title-row">
+        <h2>1. 🎯 Diagnóstico RevOps: Corrección de la Fuga Silenciosa a SPAM</h2>
+        <span class="section-badge badge-red">PROBLEMA CRÍTICO DETECTADO</span>
+      </div>
+      <p class="section-intro">
+        Las invitaciones a Google Meet y correos del fundador caen en SPAM por falta de autenticación DNS. Arreglar esto multiplica por 5x las demos del equipo sin gasto adicional.
+      </p>
+
+      <div class="impact-table-wrapper">
+        <table class="impact-table">
+          <thead>
+            <tr>
+              <th>Métrica de Conversión</th>
+              <th>Con Autenticación DNS (SPF/DKIM/DMARC)</th>
+              <th>Situación Actual (Correos en SPAM)</th>
+              <th>Impacto Financiero Directo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Tasa de Apertura (Open Rate)</strong></td>
+              <td><span class="val-green">45%</span> (Bandeja Entrada)</td>
+              <td><span class="val-red">12%</span> (Carpeta Spam)</td>
+              <td><strong class="val-red">73% menos lecturas efectivas</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Tasa de Respuesta (Reply Rate)</strong></td>
+              <td><span class="val-green">8.0%</span></td>
+              <td><span class="val-red">1.5%</span></td>
+              <td><strong class="val-red">80% menos prospectos en conversación</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Demos Agendadas por cada 100 correos</strong></td>
+              <td><span class="val-green">4 a 5 Reuniones</span></td>
+              <td><span class="val-red">0 a 1 Reunión</span></td>
+              <td><strong class="val-yellow">Se requiere 5x más esfuerzo comercial</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="action-box">
+        <h4>🛠️ Solución Inmediata de Entregabilidad (Playbook DNS en 15 min):</h4>
+        <ul>
+          <li><strong>Configuración DNS:</strong> Activar registros <code>SPF</code>, <code>DKIM</code> y <code>DMARC</code> en el dominio <code>intelligential.tech</code>.</li>
+          <li><strong>Dominios Satélite Outbound:</strong> Comprar <code>getintelligential.com</code> (~$9.77 USD/año en Cloudflare Registrar) para prospección en frío blindando el dominio principal.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 2: Simulador Financiero TCO & Unit Economics -->
+    <section class="dash-section">
+      <div class="section-title-row">
+        <h2>2. 💰 Teardown Financiero: Intelligential vs. DynamiCore</h2>
+        <span class="section-badge badge-green">VENTA POR VALOR TCO</span>
+      </div>
+      <p class="section-intro">
+        Los competidores ofrecen rentas base engañosas pero cobran por separado PLD, conectores y desarrollos. El Plan Smarty empaqueta todo reduciendo el TCO en un 42%.
+      </p>
+
+      <div class="tco-dashboard">
+        <div class="slider-control">
+          <label>Ajustar Renta Mensual del Proyecto (MRR): <span id="rentaDisplay">$50,000</span> MXN/mes</label>
+          <input type="range" id="rentaInput" min="25000" max="100000" step="5000" value="50000">
+        </div>
+
+        <div class="tco-comparison-grid">
+          <div class="tco-col intelligential-box">
+            <div class="col-header">INTELLIGENTIAL (PLAN SMARTY)</div>
+            <div class="col-price" id="tcoIntelligentialVal">$700,000 MXN</div>
+            <div class="col-price-sub">Total Cost of Ownership (Año 1)</div>
+            <ul class="col-breakdown">
+              <li><span>Setup Fee (2x Renta):</span> <strong id="setupIntVal">$100,000 MXN</strong></li>
+              <li><span>Renta Anual (12 meses):</span> <strong id="rentaIntVal">$600,000 MXN</strong></li>
+              <li><span>Módulo PLD/FT:</span> <strong class="text-green">$0 (Incluido nativo)</strong></li>
+              <li><span>Conectores SAT, INE, Mifiel, STP:</span> <strong class="text-green">$0 (Pre-integrados)</strong></li>
+            </ul>
+          </div>
+
+          <div class="tco-col dynamicore-box">
+            <div class="col-header">DYNAMICORE + TERCEROS SEPARADOS</div>
+            <div class="col-price text-red" id="tcoDynamicoreVal">$1,270,000 MXN</div>
+            <div class="col-price-sub">Total Cost of Ownership (Año 1)</div>
+            <ul class="col-breakdown">
+              <li><span>Setup & Horas Dev Custom:</span> <strong id="setupDynVal">$350,000 MXN</strong></li>
+              <li><span>Renta Anual Core:</span> <strong id="rentaDynVal">$720,000 MXN</strong></li>
+              <li><span>Módulo PLD/FT Externo:</span> <strong class="text-red">$120,000 MXN extra</strong></li>
+              <li><span>Conectores API & Desactivación:</span> <strong class="text-red">$80,000 MXN extra</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="savings-banner">
+          <span class="savings-title">AHORRO NETO COMPROBADO EN AÑO 1 PARA LA SOFOM:</span>
+          <span class="savings-val" id="savingsVal">$570,000 MXN</span>
+          <span class="savings-pct" id="savingsPct">(44.8% de Ahorro Real)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: 4 Pilares & Ecosistema de Aliados -->
+    <section class="dash-section">
+      <div class="section-title-row">
+        <h2>3. 🏛️ Infraestructura Smart Native® & Ecosistema de Aliados</h2>
+        <span class="section-badge badge-cyan">DIFERENCIACIÓN TECNOLÓGICA</span>
+      </div>
+
+      <div class="pillars-container">
+        <div class="p-card">
+          <div class="p-tag">PILAR 01</div>
+          <h3>Core Financiero</h3>
+          <p>Productos, administración de cartera, cobranza y reportes de originación nativos.</p>
+        </div>
+        <div class="p-card">
+          <div class="p-tag">PILAR 02</div>
+          <h3>Solicitud Digital</h3>
+          <p>Originación y flujos de aprobación configurables 100% sin papel.</p>
+        </div>
+        <div class="p-card">
+          <div class="p-tag">PILAR 03</div>
+          <h3>Onboarding & KYC</h3>
+          <p>Alta digital y validación de identidad INE, SAT y fuentes de datos integradas.</p>
+        </div>
+        <div class="p-card">
+          <div class="p-tag">PILAR 04</div>
+          <h3>Cumplimiento PLD/FT</h3>
+          <p>Regulación CNBV embebida en el core desde el día 1, sin parches externos.</p>
+        </div>
+      </div>
+
+      <div class="allies-wrapper">
+        <h4>Ecosistema de Integraciones Pre-Conectadas:</h4>
+        <div class="allies-pills">
+          <span class="pill">Firma: Mifiel / Weetrust</span>
+          <span class="pill">Buró: Círculo de Crédito / Buró</span>
+          <span class="pill">KYC: Nubarium</span>
+          <span class="pill">SPEI: STP / Monato</span>
+          <span class="pill">Data: Syntage / Nufi / Moffin</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Plan de Accion 30-60-90 Días -->
+    <section class="dash-section">
+      <div class="section-title-row">
+        <h2>4. 🚀 Plan de Acción 30 - 60 - 90 Días & Modelo de Ejecución</h2>
+        <span class="section-badge badge-purple">HOJA DE RUTA COMERCIAL</span>
+      </div>
+
+      <div class="roadmap-grid">
+        <div class="road-card">
+          <div class="road-month">DÍAS 1 - 30 (AGOSTO)</div>
+          <h3>Mes 1: Descongelamiento & DNS</h3>
+          <ul>
+            <li>Autenticación DNS (SPF/DKIM/DMARC) y dominios satélite.</li>
+            <li>Lanzamiento del Playbook de Descongelamiento con la oferta <em>"Migración Sin Doble Costo"</em>.</li>
+            <li>Formalización de acuerdos Co-Selling con aliados (Mifiel/STP).</li>
+          </ul>
+        </div>
+        <div class="road-card">
+          <div class="road-month">DÍAS 31 - 60 (SEPTIEMBRE)</div>
+          <h3>Mes 2: Gremios & Garantía 30 Días</h3>
+          <ul>
+            <li>Convenio preferencial con ASOFOM y AMSOFAC.</li>
+            <li>Despliegue de la <em>Garantía SLA Go-Live en 30 Días</em> por contrato.</li>
+            <li>Meta acumulada: +10 nuevos clientes activos.</li>
+          </ul>
+        </div>
+        <div class="road-card">
+          <div class="road-month">DÍAS 61 - 90 (OCTUBRE-NOVIEMBRE)</div>
+          <h3>Mes 3: Escalamiento Outbound</h3>
+          <ul>
+            <li>Prospección quirúrgica sobre el universo de SOFOMes calificado en México.</li>
+            <li>Cumplimiento de la meta: +20 Clientes nuevos y +$200k MXN MRR.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Executive Footer -->
+  <footer class="exec-footer">
+    <div class="container">
+      <p>💼 <strong>INTELLIGENTIAL EXECUTIVE BUSINESS CASE</strong> | Preparado para la sesión estratégica del 27 de Julio con Luis Fernando.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const rentaInput = document.getElementById('rentaInput');
+      const rentaDisplay = document.getElementById('rentaDisplay');
+      
+      const setupIntVal = document.getElementById('setupIntVal');
+      const rentaIntVal = document.getElementById('rentaIntVal');
+      const tcoIntelligentialVal = document.getElementById('tcoIntelligentialVal');
+      
+      const setupDynVal = document.getElementById('setupDynVal');
+      const rentaDynVal = document.getElementById('rentaDynVal');
+      const tcoDynamicoreVal = document.getElementById('tcoDynamicoreVal');
+      
+      const savingsVal = document.getElementById('savingsVal');
+      const savingsPct = document.getElementById('savingsPct');
+
+      function format(val) {
+        return '$' + val.toLocaleString('es-MX') + ' MXN';
+      }
+
+      function calc() {
+        const renta = parseInt(rentaInput.value, 10);
+        rentaDisplay.textContent = '$' + renta.toLocaleString('es-MX');
+
+        const setupInt = renta * 2;
+        const rentaAnualInt = renta * 12;
+        const totalInt = setupInt + rentaAnualInt;
+
+        const setupDyn = 350000;
+        const rentaAnualDyn = Math.round(renta * 1.2) * 12;
+        const extrasDyn = 200000;
+        const totalDyn = setupDyn + rentaAnualDyn + extrasDyn;
+
+        const ahorro = totalDyn - totalInt;
+        const pct = ((ahorro / totalDyn) * 100).toFixed(1);
+
+        setupIntVal.textContent = format(setupInt);
+        rentaIntVal.textContent = format(rentaAnualInt);
+        tcoIntelligentialVal.textContent = format(totalInt);
+
+        setupDynVal.textContent = format(setupDyn);
+        rentaDynVal.textContent = format(rentaAnualDyn);
+        tcoDynamicoreVal.textContent = format(totalDyn);
+
+        savingsVal.textContent = format(ahorro);
+        savingsPct.textContent = `(${pct}% de Ahorro Real)`;
+      }
+
+      if (rentaInput) {
+        rentaInput.addEventListener('input', calc);
+        calc();
+      }
+    });
+  </script>
+</body>
+</html>
