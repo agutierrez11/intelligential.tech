@@ -53,26 +53,59 @@ El portafolio actual de Intelligential está compuesto por SOFOMes ENR de carter
 
 ---
 
-## 3. 💡 Propuesta de Valor Comercial y Pilares del Producto
+## 3. 💡 Impacto de Negocio en la Originación y Matching por Industria
+
+### ⚙️ El Flujo Real de Originación: ¿Qué hace Intelligential en la práctica?
+En el día a día operativo, Intelligential sustituye el caos de plataformas desconectadas ejecutando un **flujo de originación punta a punta en una sola pantalla**:
 
 ```
-+-----------------------------------------------------------------------------------+
-|                        INTELLIGENTIAL: SMART NATIVE® CORE                         |
-+-----------------------------------------------------------------------------------+
-|  PILAR 01: CORE FINANCIERO    | Productos, administración de cartera y cobranza   |
-|  PILAR 02: SOLICITUD DIGITAL  | Originación y expedientes 100% digitales          |
-|  PILAR 03: ONBOARDING & KYC   | Validación INE, SAT y fuentes de datos nativas    |
-|  PILAR 04: CUMPLIMIENTO PLD   | Auditoría y regulación CNBV/PLD embebida          |
-+-----------------------------------------------------------------------------------+
-|                ECOSISTEMA PRE-INTEGRADO (API-FIRST PARTNERS)                      |
-| (Mifiel | Weetrust | STP | Círculo de Crédito | Nubarium | Nufi | Moffin | Syntage) |
-+-----------------------------------------------------------------------------------+
+[1. SOLICITUD DIGITAL] ➔ [2. VALIDACIÓN KYC/SAT] ➔ [3. CUMPLIMIENTO PLD] ➔ [4. FIRMA ELECTRÓNICA] ➔ [5. CARTERA DE COBRANZA]
+  (Onboarding Web)         (INE / Buró / CIEC)       (69-B / OFAC / PEPs)       (NOM-151 Mifiel)         (Riel SPEI / STP)
 ```
 
-### El Plan Smarty: La Entrada al Ecosistema Digital
-Diseñado para la captación rápida de SOFOMes que buscan operar de inmediato:
-* Core financiero + PLD/FT + Solicitud Digital + KYC nativos.
-* Sin desarrollos. Sin terceros. Precio transparente. Escalabilidad garantizada sin cambiar de plataforma al crecer la cartera.
+**Impacto Financiero en la Originación:**
+* **Tiempo de Respuesta:** Reduce el ciclo de aprobación de **14 días laborables a 24 horas**.
+* **Costo por Expediente:** Disminuye el costo de originación por crédito en un **65%** al eliminar la captura manual de mesa de control.
+* **Tasa de Abandono del Cliente:** Cae del **35% al 4%** al evitar solicitudes en papel.
+
+---
+
+### 🧩 Matching Operativo: Los 4 Pilares del Crédito vs. Dolores del Proceso
+
+| Pilar del Producto | ¿Qué Ejecuta en la Originación? | ¿Por qué hace MATCH y resuelve el problema? |
+| :--- | :--- | :--- |
+| **Pilar 01: Core Financiero** | Administra productos, tablas de amortización, devengamiento de intereses y cobranza. | **Elimina la cartera descuadrada en Excel** y la doble digitación manual. Conecta la originación directa al saldo deudor. |
+| **Pilar 02: Solicitud Digital** | Captura datos de prospectos, expedientes y flujos de aprobación sin papel. | **Acelera la velocidad de venta**. La mesa de control aprueba en 1 clic sin traspasar papeles físicamente. |
+| **Pilar 03: Onboarding & KYC** | Valida INE en tiempo real, consulta Buró/Círculo y extrae constancias del SAT. | **Elimina el fraude por suplantación de identidad** y automatiza el scoring crediticio sin cambiar de ventana. |
+| **Pilar 04: Cumplimiento PLD/FT** | Contrasta al acreditado contra listas negras (OFAC, 69-B SAT, PEPs) de forma nativa. | **Evita multas de la CNBV** y ahorra $120,000 MXN/año al no requerir un software de PLD externo. |
+
+---
+
+### 🎯 Match Perfecto con las 3 Principales Industrias Target (ICP)
+
+```
++---------------------------------------------------------------------------------------------------+
+|                           MATCH CON LAS 3 INDUSTRIAS CORE DE INTELLIGENTIAL                       |
++-----------------------------------+-----------------------------------+---------------------------+
+| 🏢 1. SOFOMes (40% del Target)    | 🚜 2. ARRENDADORAS (30% Target)   | ⚡ 3. LENDERS DIGITALES   |
+| "Tengo 4 contratos y sistemas     | "Seguimos conciliando en Excel.   | "Nuestro core in-house no |
+|  que no se hablan entre sí."      |  El onboarding es en papel."      |  escala y da deuda técnica|
++-----------------------------------+-----------------------------------+---------------------------+
+```
+
+#### 🏢 1. SOFOMes (40% de la Meta)
+* **Dolor de la Industria:** Suelen operar con un sistema para originación, un software externo para PLD, Excel para cobranza y otro proveedor para firma electrónica. La cartera vive descuadrada y cada auditoría de la CNBV es una pesadilla de 3 semanas.
+* **Match con Intelligential:** **Unificación Total.** Intelligential empaqueta los 4 pilares en un solo contrato y una sola base de datos. La originación pasa automáticamente a cobranza sin riesgo de descalce.
+
+#### 🚜 2. Arrendadoras Financieras / Pura (30% de la Meta)
+* **Dolor de la Industria:** Tienen flujos complejos de activos (vehículos, maquinaria, equipo médico), tablas de depreciación, rentas vencidas y contratos extensos que hoy firman físicamente en papel.
+* **Match con Intelligential:** **Automatización de Leasing & Pagarés NOM-151.** Permite estructurar contratos de arrendamiento puro y financiero con tablas de rentas automatizadas, vinculadas a la firma electrónica de Mifiel/Weetrust con validez legal ejecutiva.
+
+#### ⚡ 3. Lenders Digitales / Fintechs (30% de la Meta)
+* **Dolor de la Industria:** Empezaron construyendo un core "hecho en casa" (*in-house*), pero al crecer la cartera el sistema improvisado no soporta nuevos productos financieros y requiere ingenieros de software muy caros para mantenimiento.
+* **Match con Intelligential:** **API-First & Escalabilidad Smart Native®.** Permite conectar sus interfaces mediante API REST sin reconstruir el backend, eliminando la deuda técnica y garantizando escalabilidad a más de 100,000 créditos sin contratar programadores extra.
+
+---
 
 ### 🤝 Mapa de NUEVAS Incorporaciones de Partners Estratégicos (Roadmap Q3-Q4)
 *(Nuevas alianzas inéditas para expandir el valor comercial del Core)*
