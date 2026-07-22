@@ -74,6 +74,15 @@ Diseñado para la captación rápida de SOFOMes que buscan operar de inmediato:
 * Core financiero + PLD/FT + Solicitud Digital + KYC nativos.
 * Sin desarrollos. Sin terceros. Precio transparente. Escalabilidad garantizada sin cambiar de plataforma al crecer la cartera.
 
+### 🤝 Mapa de Partners Estratégicos Objetivo (Roadmap de Alianzas Q3-Q4)
+| Categoría de Alianza | Partner Objetivo | Sinergia Comercial / Co-Selling | Estado |
+| :--- | :--- | :--- | :--- |
+| **Gremios Nacionales** | ASOFOM & AMSOFAC | Acceso prioritario a más de 200 SOFOMes y Arrendadoras en México. | En Prospección (Mes 1) |
+| **Firma Electrónica NOM-151** | Mifiel / Weetrust | Contratos y pagarés digitales con valor probatorio legal. | Pre-Integrado |
+| **Scoring & Datos Fiscales** | Syntage / Moffin / Nufi | Automatización de extracción de constancias SAT y CIEC en segundos. | Objetivo Q3 |
+| **Biometría & KYC Avanzado** | Incode / Truora / Veriff | Verificación facial y biométrica INE en tiempo real anti-fraude. | Objetivo Q4 |
+| **Open Banking & Riel SPEI** | STP / Monato / Belvo | Asignación de CLABE interbancaria dedicada por crédito para auto-conciliación. | Pre-Integrado |
+
 ---
 
 ## 4. 🚀 5 Iniciativas Estratégicas del Director Comercial
