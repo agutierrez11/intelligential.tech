@@ -107,23 +107,23 @@ En el día a día operativo, Intelligential sustituye el caos de plataformas des
 
 ---
 
-### 🤝 Mapa de NUEVAS Incorporaciones de Partners Estratégicos (Roadmap Q3-Q4)
-*(Nuevas alianzas inéditas para expandir el valor comercial del Core)*
+### 🤝 Mapa de NUEVAS Incorporaciones Inéditas (Partners que AÚN NO tienen)
+*(Exclusivamente nuevas alianzas estratégicas para expandir la monetización)*
 
-| Categoría de Expansión | NUEVO Partner Objetivo | Propuesta de Valor Inédita para SOFOMes | Impacto Comercial |
+| Categoría de Expansión | NUEVO Partner Objetivo | Propuesta de Valor Inédita para SOFOMes | Modelo de Monetización Intelligential |
 | :--- | :--- | :--- | :--- |
-| **Gremios e Instituciones** | **ASOFOM & AMSOFAC** | Convenio institucional como Core homologado con descuento preferencial en Setup Fee para sus 200+ agremiados. | Canal masivo de distribución |
-| **Emisión de Tarjetas** | **Pomelo / Credix** | Permite a las SOFOMes emitir sus propias tarjetas de crédito/débito (Mastercard/Visa) conectadas al Core. | Nuevo vertical de ingresos SaaS |
-| **Open Banking / Score** | **Belvo / Fintoc** | Extracción automatizada de transacciones bancarias en tiempo real sin requerir PDFs de estados de cuenta. | Underwriting en 60 segundos |
-| **Cobranza Inteligente** | **Toku** | Orquestación automatizada de recobro con reintentos inteligentes por WhatsApp y débito directo a tarjeta. | +25% de recuperación de cartera |
-| **IA Credit Engine** | **Provenir / Scienaptic** | Motor de decisión crediticia con Inteligencia Artificial para originación automatizada en tiempo real. | Oferta para SOFOMes Enterprise |
-| **Cross-Border & Remesas** | **Bitso / Felix Pago** | Recepción de remesas desde EE. UU. como garantía o abono a capital para SOFOMes fronterizas. | Nicho de altísima demanda |
+| **Gremios e Instituciones** | **ASOFOM & AMSOFAC** | Convenio institucional como Core homologado con descuento preferencial en Setup Fee para sus 200+ agremiados. | Canal masivo de adquisición (CAC = $0) |
+| **Emisión de Tarjetas** | **Pomelo / Credix** | Permite a las SOFOMes emitir sus propias tarjetas de crédito/débito (Mastercard/Visa) conectadas al Core. | Suscripción SaaS + Kickback por tarjeta |
+| **Open Banking / Score** | **Belvo / Fintoc** | Extracción automatizada de transacciones bancarias en tiempo real sin requerir PDFs de estados de cuenta. | 20% RevShare por llamada API + Markup |
+| **Cobranza Inteligente** | **Toku** | Orquestación automatizada de recobro con reintentos inteligentes por WhatsApp y débito directo a tarjeta. | Comisión por éxito de recuperación |
+| **IA Credit Engine** | **Provenir / Scienaptic AI** | Motor de decisión crediticia con Inteligencia Artificial para originación automatizada en tiempo real. | Fee por scoring + Licencia Enterprise |
+| **Cross-Border & Remesas** | **Bitso / Felix Pago** | Recepción de remesas desde EE. UU. como garantía o abono a capital para SOFOMes fronterizas. | Spread transaccional por conversión FX |
 
-#### 💡 Rationale de Partnerships: ¿Por qué Belvo, Pomelo o Toku se alían con Intelligential?
-1. **Canal de Adquisición con CAC = $0 (El Core como "Sistema Operativo"):** Nadie puede operar una SOFOM únicamente usando la API de Belvo o Pomelo. La SOFOM requiere obligatoriamente el Core Bancario. Cada nueva SOFOM que firma con Intelligential se convierte en cliente de Belvo/Pomelo sin que ellos gasten $1 en marketing.
-2. **Eliminación de la Fricción de Venta (Time-to-Value):** Cuando Belvo le vende a una SOFOM, la SOFOM suele rechazar porque su Core legacy cobra $30,000 USD de integración custom. Con Intelligential pre-conectado, Belvo cierra su venta en 24 horas.
-3. **Co-Selling y Referencias Bidireccionales:** Belvo y Pomelo reciben prospectos que buscan Core Bancario. Nos refieren a esas SOFOMes como su socio de Core preferente a cambio de incentivos y consumo de API.
-4. **Defensibilidad contra Competidores:** Evita que competidores directos de Open Banking (Fintoc, Prometeo, Plaid) capturen la red de SOFOMes de Intelligential.
+#### 💰 Modelo de Monetización & Rationale de Partnerships (¿Cómo Ganamos Dinero?):
+1. **Comisiones Recurrentes (RevShare del 10% al 20%):** Por contrato de partner, Belvo, Pomelo y Toku nos pagan entre un 10% y un 20% de Kickback mensual recurrente sobre todo el consumo de APIs de nuestras SOFOMes.
+2. **Margin Markup (Revendedor Mayorista):** Intelligential compra el volumen de APIs a tarifa mayorista y se lo factura a la SOFOM con un margen del 25% empaquetado en la renta del Core.
+3. **Reducción de CAC (Intercambio Inbound de Leads):** Belvo y Pomelo nos envían a sus prospectos que buscan un Core Bancario, entregándonos leads calificados con Costo de Adquisición (CAC) de $0.
+4. **Retención de Clientes (Churn < 1%):** Al tener Core + Tarjetas + Open Banking integrados, el cliente nunca migra a la competencia, elevando el LTV a más de $3.5 MDP por cliente.
 
 ---
 
