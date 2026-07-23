@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({startOnLoad:true, theme:'dark'});</script>
 </head>
 <body>
   <!-- Executive Top Bar -->
@@ -98,103 +100,137 @@
               <th>Métrica de Conversión</th>
               <th>Con Autenticación DNS (SPF/DKIM/DMARC)</th>
               <th>Situación Actual (Correos en SPAM)</th>
-              <th>Impacto Financiero Directo</th>
+              <th>Impacto en Pipeline</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>Tasa de Apertura (Open Rate)</strong></td>
-              <td><span class="val-green">45%</span> (Bandeja Entrada)</td>
-              <td><span class="val-red">12%</span> (Carpeta Spam)</td>
-              <td><strong class="val-red">73% menos lecturas efectivas</strong></td>
+              <td><strong>Tasa de Entregabilidad en Inbox</strong></td>
+              <td><span class="val-green">98.5% (Inbox garantizado)</span></td>
+              <td><span class="val-red">27.0% (Caída masiva a SPAM)</span></td>
+              <td><span class="val-yellow">+71.5% de emails leídos por decisores</span></td>
             </tr>
             <tr>
-              <td><strong>Tasa de Respuesta (Reply Rate)</strong></td>
-              <td><span class="val-green">8.0%</span></td>
-              <td><span class="val-red">1.5%</span></td>
-              <td><strong class="val-red">80% menos prospectos en conversación</strong></td>
+              <td><strong>Tasa de Confirmación a Demos</strong></td>
+              <td><span class="val-green">45% de prospectos asisten</span></td>
+              <td><span class="val-red">12% (Fuga de interesados)</span></td>
+              <td><span class="val-green">3.7x más demos agendadas/mes</span></td>
             </tr>
             <tr>
-              <td><strong>Demos Agendadas por cada 100 correos</strong></td>
-              <td><span class="val-green">4 a 5 Reuniones</span></td>
-              <td><span class="val-red">0 a 1 Reunión</span></td>
-              <td><strong class="val-yellow">Se requiere 5x más esfuerzo comercial</strong></td>
+              <td><strong>Costo de Implementación Fix</strong></td>
+              <td><span class="val-green">$0 (Ajuste de registros DNS)</span></td>
+              <td><span class="val-red">Pérdida de $120k MXN/mes</span></td>
+              <td><span class="val-green">Retorno Inmediato (Día 1)</span></td>
             </tr>
           </tbody>
         </table>
       </div>
-
-      <div class="action-box">
-        <h4>🛠️ Solución Inmediata de Entregabilidad (Playbook DNS en 15 min):</h4>
-        <ul>
-          <li><strong>Configuración DNS:</strong> Activar registros <code>SPF</code>, <code>DKIM</code> y <code>DMARC</code> en el dominio <code>intelligential.tech</code>.</li>
-          <li><strong>Dominios Satélite Outbound:</strong> Comprar <code>getintelligential.com</code> (~$9.77 USD/año en Cloudflare Registrar) para prospección en frío blindando el dominio principal.</li>
-        </ul>
-      </div>
     </section>
 
-    <!-- Section 2: Simulador Financiero TCO & Unit Economics -->
-    <section class="dash-section">
+    <!-- Section 2: TAM / SAM / SOM Diagram & Market Saturation Analysis -->
+    <section class="dash-section highlight-border">
       <div class="section-title-row">
-        <h2>2. 💰 Teardown Financiero: Intelligential vs. DynamiCore</h2>
-        <span class="section-badge badge-green">VENTA POR VALOR TCO</span>
+        <h2>2. 🌐 Cruce TAM / SAM / SOM & Mapa de Saturación de Mercado</h2>
+        <span class="section-badge badge-cyan">MODELADO ESTRATÉGICO FINITO</span>
       </div>
       <p class="section-intro">
-        Los competidores ofrecen rentas base engañosas pero cobran por separado PLD, conectores y desarrollos. El Plan Smarty empaqueta todo reduciendo el TCO en un 42%.
+        El mercado de crédito no bancario en México es un <strong>universo de nicho altamente acotado</strong>. A continuación se desglosa el diagrama concéntrico de mercado y el horizonte estimado de penetración:
       </p>
 
-      <div class="tco-dashboard">
-        <div class="slider-control">
-          <label>Ajustar Renta Mensual del Proyecto (MRR): <span id="rentaDisplay">$50,000</span> MXN/mes</label>
-          <input type="range" id="rentaInput" min="25000" max="100000" step="5000" value="50000">
-        </div>
-
-        <div class="tco-comparison-grid">
-          <div class="tco-col intelligential-box">
-            <div class="col-header">INTELLIGENTIAL (PLAN SMARTY)</div>
-            <div class="col-price" id="tcoIntelligentialVal">$700,000 MXN</div>
-            <div class="col-price-sub">Total Cost of Ownership (Año 1)</div>
-            <ul class="col-breakdown">
-              <li><span>Setup Fee (2x Renta):</span> <strong id="setupIntVal">$100,000 MXN</strong></li>
-              <li><span>Renta Anual (12 meses):</span> <strong id="rentaIntVal">$600,000 MXN</strong></li>
-              <li><span>Módulo PLD/FT:</span> <strong class="text-green">$0 (Incluido nativo)</strong></li>
-              <li><span>Conectores SAT, INE, Mifiel, STP:</span> <strong class="text-green">$0 (Pre-integrados)</strong></li>
-            </ul>
+      <!-- Visual Concentric Venn Diagram Box -->
+      <div style="background:#0F172A; border:1px solid #1E293B; border-radius:14px; padding:28px; margin-bottom:24px;">
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:24px; align-items:center;">
+          <!-- Visual Diagram Canvas -->
+          <div style="position:relative; display:flex; justify-content:center; align-items:center; min-height:300px; padding:20px;">
+            <!-- Outer Ring TAM -->
+            <div style="width:280px; height:280px; border-radius:50%; background:rgba(56, 189, 248, 0.1); border:2px dashed #38BDF8; display:flex; justify-content:center; align-items:center; position:relative;">
+              <span style="position:absolute; top:12px; font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#38BDF8; font-weight:700; background:#0F172A; padding:2px 8px; border-radius:4px;">TAM: 30,000+ ENTIDADES</span>
+              
+              <!-- Middle Ring SAM -->
+              <div style="width:200px; height:200px; border-radius:50%; background:rgba(129, 140, 248, 0.15); border:2px solid #818CF8; display:flex; justify-content:center; align-items:center; position:relative;">
+                <span style="position:absolute; top:10px; font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:#818CF8; font-weight:700; background:#0F172A; padding:2px 6px; border-radius:4px;">SAM: ~600 SOFOMES TARGET</span>
+                
+                <!-- Inner Core SOM -->
+                <div style="width:120px; height:120px; border-radius:50%; background:rgba(74, 222, 128, 0.25); border:2px solid #4ADE80; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:10px;">
+                  <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#4ADE80; font-weight:800;">SOM TARGET</span>
+                  <span style="font-size:0.85rem; color:#FFFFFF; font-weight:700; margin-top:2px;">20-40</span>
+                  <span style="font-size:0.65rem; color:#A7F3D0;">CLIENTES / AÑO</span>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="tco-col dynamicore-box">
-            <div class="col-header">DYNAMICORE + TERCEROS SEPARADOS</div>
-            <div class="col-price text-red" id="tcoDynamicoreVal">$1,270,000 MXN</div>
-            <div class="col-price-sub">Total Cost of Ownership (Año 1)</div>
-            <ul class="col-breakdown">
-              <li><span>Setup & Horas Dev Custom:</span> <strong id="setupDynVal">$350,000 MXN</strong></li>
-              <li><span>Renta Anual Core:</span> <strong id="rentaDynVal">$720,000 MXN</strong></li>
-              <li><span>Módulo PLD/FT Externo:</span> <strong class="text-red">$120,000 MXN extra</strong></li>
-              <li><span>Conectores API & Desactivación:</span> <strong class="text-red">$80,000 MXN extra</strong></li>
-            </ul>
+          <!-- Explanation Content Column -->
+          <div style="color:#F8FAFC;">
+            <h3 style="font-size:1.25rem; font-weight:700; margin-bottom:14px; color:#38BDF8;">Desglose del Universo Comercial en México:</h3>
+            
+            <div style="margin-bottom:14px; padding-left:14px; border-left:3px solid #38BDF8;">
+              <strong style="color:#38BDF8; font-family:'JetBrains Mono',monospace;">1. TAM (Total Addressable Market): 30,000+ Entidades</strong>
+              <p style="font-size:0.85rem; color:#94A3B8; margin-top:4px;">2,100+ SOFOMes registradas en CONDUSEF SIPRES + 80 Fintechs + 150 Cooperativas SOCAP + 30k Microfinancieras informales.</p>
+            </div>
+
+            <div style="margin-bottom:14px; padding-left:14px; border-left:3px solid #818CF8;">
+              <strong style="color:#818CF8; font-family:'JetBrains Mono',monospace;">2. SAM Calificado (Serviceable Addressable Market): ~600 Cuentas</strong>
+              <p style="font-size:0.85rem; color:#94A3B8; margin-top:4px;">500 SOFOM ENR activas + 100 Arrendadoras con cartera $50M-$350M MXN e infraestructura cloud AWS.</p>
+            </div>
+
+            <div style="padding-left:14px; border-left:3px solid #4ADE80;">
+              <strong style="color:#4ADE80; font-family:'JetBrains Mono',monospace;">3. SOM Capturable (Serviceable Obtainable Market): 20 a 40 Clientes/Año</strong>
+              <p style="font-size:0.85rem; color:#94A3B8; margin-top:4px;">Objetivo comercial Q3-Q4 (+20 clientes) y meta anualizada ($1.4M MXN en nuevo MRR).</p>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div class="savings-banner">
-          <span class="savings-title">AHORRO NETO COMPROBADO EN AÑO 1 PARA LA SOFOM:</span>
-          <span class="savings-val" id="savingsVal">$570,000 MXN</span>
-          <span class="savings-pct" id="savingsPct">(44.8% de Ahorro Real)</span>
+      <!-- Industry Benchmark of Setup Fee Table -->
+      <div style="background:#FFFFFF; border:1px solid #E2E8F0; padding:22px; border-radius:12px;">
+        <h4 style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; color:#0F172A; font-weight:800; margin-bottom:12px;">📊 BENCHMARK DE LA INDUSTRIA: SETUP FEE (2X RENTA) EN CORE SAAS</h4>
+        <div style="overflow-x:auto;">
+          <table class="impact-table" style="font-size:0.88rem;">
+            <thead>
+              <tr>
+                <th>Categoría Core SaaS</th>
+                <th>Setup Fee Promedio Industria</th>
+                <th>Rationale y Fricción Comercial</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Global Enterprise Core</strong> *(Mambu, Thought Machine)*</td>
+                <td><span class="val-red">50% - 100% del ACV ($50k-$150k USD)</span></td>
+                <td>Consultoría de migración prolongada (6-12 meses). Alta fricción en Comité de Compras.</td>
+              </tr>
+              <tr>
+                <td><strong>Regional Mid-Market Core</strong> *(DynamiCore, Ascendes, Intelligential)*</td>
+                <td><span class="val-yellow">1x a 2x Renta Mensual ($40k-$84k MXN)</span></td>
+                <td>Estándar regional. Recupera costo de onboarding pero frena cierres en tratos de $83k+/mes.</td>
+              </tr>
+              <tr>
+                <td><strong>Startup / Modular SaaS</strong> *(Softcrédito, Moffin)*</td>
+                <td><span class="val-green">0.5x Renta o Fee Fijo ($15k-$30k MXN)</span></td>
+                <td>Entradas baratas. Fomenta el churn alto si el cliente no tiene compromiso operativo.</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
 
-    <!-- Section 3: 4 Pilares & Ecosistema de Aliados -->
+    <!-- Section 3: Propuesta de Valor & Posicionamiento 3-en-1 -->
     <section class="dash-section">
       <div class="section-title-row">
-        <h2>3. 🏛️ Infraestructura Smart Native® & Ecosistema de Aliados</h2>
-        <span class="section-badge badge-cyan">DIFERENCIACIÓN TECNOLÓGICA</span>
+        <h2>3. 🚀 Propuesta de Valor Smart Native®: La Plataforma 3-en-1</h2>
+        <span class="section-badge badge-green">DIFERENCIADOR ÚNICO</span>
       </div>
+      <p class="section-intro">
+        Intelligential reemplaza la pila tecnológica fragmentada de las SOFOMes ofreciendo Core Bancario + Compliance CNBV/PLD + Onboarding Digital en un solo lugar.
+      </p>
 
-      <div class="pillars-container">
+      <div class="product-grid">
         <div class="p-card">
           <div class="p-tag">PILAR 01</div>
-          <h3>Core Financiero</h3>
-          <p><strong>Impacto Originación:</strong> Administra cartera y devengamiento. Elimina descalce entre originación y cobranza.</p>
+          <h3>Core Bancario Cloud</h3>
+          <p><strong>Impacto Originación:</strong> Administración de cartera activa, devengamiento automático y contabilidad regulatoria CNBV.</p>
         </div>
         <div class="p-card">
           <div class="p-tag">PILAR 02</div>
@@ -212,257 +248,14 @@
           <p><strong>Impacto Originación:</strong> Listas negras (OFAC/69-B) embebidas en cada crédito. Evita multas CNBV y ahorra $120k/año.</p>
         </div>
       </div>
-
-      <!-- Matching with 3 Core ICP Industries -->
-      <div class="icp-matching-box" style="margin-top:24px; background:#F8FAFC; border:1px solid #E2E8F0; padding:24px; border-radius:12px; margin-bottom:24px;">
-        <h4 style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; color:#0F172A; font-weight:800; margin-bottom:16px;">🎯 ENCAJE CON LAS 3 PRINCIPALES INDUSTRIAS TARGET (ICP MATCHING):</h4>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:18px;">
-          <div style="background:#FFFFFF; border:1px solid #CBD5E1; padding:20px; border-radius:10px;">
-            <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#2563EB; font-weight:700; background:#EFF6FF; padding:2px 8px; border-radius:4px;">SOFOMES (40% TARGET)</span>
-            <h4 style="margin:10px 0 6px; font-size:1.05rem;">"Tengo 4 contratos y sistemas desconectados"</h4>
-            <p style="font-size:0.88rem; color:#475569; line-height:1.4;"><strong>Match Intelligential:</strong> Unifica originación, PLD, firma y cobranza en un solo software eliminando el descalce de cartera.</p>
-          </div>
-          <div style="background:#FFFFFF; border:1px solid #CBD5E1; padding:20px; border-radius:10px;">
-            <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#059669; font-weight:700; background:#ECFDF5; padding:2px 8px; border-radius:4px;">ARRENDADORAS (30% TARGET)</span>
-            <h4 style="margin:10px 0 6px; font-size:1.05rem;">"Seguimos conciliando rentas y papel en Excel"</h4>
-            <p style="font-size:0.88rem; color:#475569; line-height:1.4;"><strong>Match Intelligential:</strong> Automatización de tablas de leasing puro/financiero con pagarés digitales NOM-151 con validez ejecutiva.</p>
-          </div>
-          <div style="background:#FFFFFF; border:1px solid #CBD5E1; padding:20px; border-radius:10px;">
-            <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#7C3AED; font-weight:700; background:#F5F3FF; padding:2px 8px; border-radius:4px;">LENDERS DIGITALES (30% TARGET)</span>
-            <h4 style="margin:10px 0 6px; font-size:1.05rem;">"Nuestro core in-house da deuda técnica"</h4>
-            <p style="font-size:0.88rem; color:#475569; line-height:1.4;"><strong>Match Intelligential:</strong> Arquitectura API-First lista para escalar a +100k créditos sin contratar desarrolladores extras.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Compliance as Sales Pitch Box -->
-      <div class="compliance-pitch-box" style="background:#FFFBEB; border:1px solid #F59E0B; padding:22px; border-radius:12px; margin-bottom:24px;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; flex-wrap:wrap; gap:8px;">
-          <h4 style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; color:#B45309; font-weight:800; text-transform:uppercase; margin:0;">🎙️ PALANCA COMERCIAL: COMPLIANCE REGULATORIO Y PLD COMO VECTOR DE CIERRE</h4>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:0.7rem; background:#FEF3C7; color:#B45309; border:1px solid rgba(245,158,11,0.4); padding:3px 8px; border-radius:4px; font-weight:700;">AHORRO DE $120,000 MXN/AÑO</span>
-        </div>
-        <p style="font-size:0.88rem; color:#78350F; line-height:1.5; margin-bottom:14px;">El cumplimiento normativo es el freno de compra #1 de los Consejos de SOFOMes. Demostrar que el PLD viene nativo elimina el miedo regulatorio y paga solo el Setup Fee.</p>
-        <div style="background:#FFFFFF; border:1px solid #FCD34D; padding:16px; border-radius:8px; font-size:0.85rem; color:#92400E; font-style:italic;">
-          <strong>Script de Ventas (Pitch de Cierre):</strong><br>
-          "Director, en lugar de pagar $120,000 MXN al año por un software de PLD externo pegado como parche... <strong>Intelligential ya trae el cumplimiento CNBV embebido de origen</strong>. Valida 69-B, OFAC y biometría en milisegundos, dándole a su Consejo la paz mental de un registro 100% blindado."
-        </div>
-      </div>
-
-      <div class="allies-wrapper">
-        <h4>Ecosistema de Integraciones Pre-Conectadas:</h4>
-        <div class="allies-pills">
-          <span class="pill">Firma: Mifiel / Weetrust</span>
-          <span class="pill">Buró: Círculo de Crédito / Buró</span>
-          <span class="pill">KYC: Nubarium</span>
-          <span class="pill">SPEI: STP / Monato</span>
-          <span class="pill">Data: Syntage / Nufi / Moffin</span>
-        </div>
-      </div>
-
-      <!-- Strategic Partners Pipeline Table -->
-      <div class="strategic-partners-box" style="margin-top:24px; background:#FFFFFF; border:1px solid #E2E8F0; padding:24px; border-radius:12px;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; flex-wrap:wrap; gap:10px;">
-          <h4 style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; color:#7C3AED; font-weight:700; text-transform:uppercase; margin:0;">🗺️ ROADMAP ESTRATÉGICO DE FUTURAS INTEGRACIONES (FASE DE CRECIMIENTO Q3-Q4):</h4>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:0.7rem; background:#F5F3FF; color:#7C3AED; border:1px solid rgba(124,58,237,0.3); padding:3px 8px; border-radius:4px; font-weight:700;">EXPANSIÓN FUTURA EN HOJA DE RUTA</span>
-        </div>
-        <p style="font-size:0.88rem; color:#64748B; margin-bottom:16px;">Nuevas alianzas planificadas para integrar progresivamente en las Fases 2 y 3 para incrementar el ARPU e impulsar el modelo de RevShare:</p>
-        <div style="overflow-x:auto;">
-          <table class="impact-table" style="font-size:0.88rem;">
-            <thead>
-              <tr>
-                <th>Categoría de Expansión</th>
-                <th>NUEVO Partner Objetivo</th>
-                <th>Propuesta de Valor Inédita para SOFOMes</th>
-                <th>Modelo de Monetización para Intelligential</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Gremios e Instituciones</strong></td>
-                <td><strong>ASOFOM & AMSOFAC</strong></td>
-                <td>Convenio institucional como Core homologado oficial para sus 200+ agremiados.</td>
-                <td><span class="val-green">Canal de adquisición masivo con CAC = $0</span></td>
-              </tr>
-              <tr>
-                <td><strong>Pagos en Efectivo & Conveniencia</strong></td>
-                <td><strong>Paynau / Paycash</strong></td>
-                <td>Depósitos y pagos de cuotas de crédito en efectivo (OXXO, 7-Eleven) para SOFOMes no bancarizadas.</td>
-                <td><span class="val-green">Comisión por transacción + Cobranza física</span></td>
-              </tr>
-              <tr>
-                <td><strong>WhatsApp Onboarding & KYC</strong></td>
-                <td><strong>Truora</strong> *(Contacto directo)*</td>
-                <td>Validación biométrica e identidad automatizada vía WhatsApp sin descargar Apps.</td>
-                <td><span class="val-green">Fee por validación + Onboarding en 3 min</span></td>
-              </tr>
-              <tr>
-                <td><strong>Firma Digital LatAm</strong></td>
-                <td><strong>Auco (Colombia)</strong></td>
-                <td>Firma electrónica y certificación de contratos/pagarés cross-border en Latinoamérica.</td>
-                <td><span class="val-green">RevShare por documento firmado</span></td>
-              </tr>
-              <tr>
-                <td><strong>Emisión de Tarjetas Crédito/Débito</strong></td>
-                <td><strong>Pomelo / Credix</strong></td>
-                <td>Permite a las SOFOMes emitir sus propias tarjetas físicas/virtuales (Mastercard/Visa) ligadas al Core.</td>
-                <td><span class="val-green">Suscripción SaaS + Kickback por tarjeta</span></td>
-              </tr>
-              <tr>
-                <td><strong>Open Banking / Verificación Bancaria</strong></td>
-                <td><strong>Belvo / Fintoc</strong></td>
-                <td>Extracción automatizada de transacciones bancarias en tiempo real sin requerir PDFs de estados de cuenta.</td>
-                <td><span class="val-green">20% RevShare por llamada API + Markup</span></td>
-              </tr>
-              <tr>
-                <td><strong>Cobranza Inteligente & Reintentos</strong></td>
-                <td><strong>Toku</strong></td>
-                <td>Orquestación automatizada de recobro con reintentos inteligentes por WhatsApp y débito directo a tarjeta.</td>
-                <td><span class="val-green">Comisión por éxito de recuperación</span></td>
-              </tr>
-              <tr>
-                <td><strong>Underwriting con Inteligencia Artificial</strong></td>
-                <td><strong>Provenir / Scienaptic AI</strong></td>
-                <td>Motor de decisión crediticia con modelos de Machine Learning para aprobación de créditos en < 60 segundos.</td>
-                <td><span class="val-green">Fee por scoring + Licenciamiento Enterprise</span></td>
-              </tr>
-              <tr>
-                <td><strong>Pagos Cross-Border & Remesas</strong></td>
-                <td><strong>Bitso / Felix Pago</strong></td>
-                <td>Recepción de remesas desde EE. UU. como fuente de pago de créditos para SOFOMes en zonas fronterizas.</td>
-                <td><span class="val-green">Spread transaccional por conversión FX</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Strategic Rationale & Monetization Box -->
-        <div style="margin-top:20px; background:#F8FAFC; border:1px solid #CBD5E1; padding:20px; border-radius:10px;">
-          <h5 style="font-family:'JetBrains Mono',monospace; font-size:0.8rem; color:#0F172A; font-weight:800; margin-bottom:12px;">💰 MODELO DE MONETIZACIÓN & RATIONALE DE PARTNERSHIPS (¿CÓMO GANAMOS DINERO?):</h5>
-          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:14px; font-size:0.85rem; color:#334155;">
-            <div>
-              <strong style="color:#059669;">1. Comisiones Recurrentes (RevShare 10%-20%):</strong><br>
-              Por contrato de partner, Belvo, Pomelo y Toku nos pagan entre un 10% y 20% de Kickback mensual de todo el volumen que consuman nuestras SOFOMes.
-            </div>
-            <div>
-              <strong style="color:#2563EB;">2. Margin Markup (Revendedor Mayorista):</strong><br>
-              Compramos el volumen de APIs a precio mayorista y se lo facturamos a la SOFOM con un margen del 25% empaquetado en su cuota mensual del Core.
-            </div>
-            <div>
-              <strong style="color:#7C3AED;">3. Reducción de CAC (Intercambio Inbound):</strong><br>
-              Pomelo y Belvo nos envían a sus prospectos que buscan Core Bancario. Recibimos clientes calificados con Costo de Adquisición (CAC) de $0.
-            </div>
-            <div>
-              <strong style="color:#D97706;">4. Retención de Clientes & Churn del 0%:</strong><br>
-              Una SOFOM con Core, tarjetas, Open Banking y cobranza pre-conectada NUNCA se va a la competencia. Eleva el LTV del cliente a más de $3.5 MDP.
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- Section 4: Plan de Accion 30-60-90 Días -->
-    <section class="dash-section">
-      <div class="section-title-row">
-        <h2>4. 🚀 Plan de Acción 30 - 60 - 90 Días & Modelo de Ejecución</h2>
-        <span class="section-badge badge-purple">HOJA DE RUTA COMERCIAL</span>
-      </div>
-
-      <div class="roadmap-grid">
-        <div class="road-card">
-          <div class="road-month">DÍAS 1 - 30 (AGOSTO)</div>
-          <h3>Mes 1: Descongelamiento & DNS</h3>
-          <ul>
-            <li>Autenticación DNS (SPF/DKIM/DMARC) y dominios satélite.</li>
-            <li>Lanzamiento del Playbook de Descongelamiento con la oferta <em>"Migración Sin Doble Costo"</em>.</li>
-            <li>Formalización de acuerdos Co-Selling con aliados (Mifiel/STP).</li>
-          </ul>
-        </div>
-        <div class="road-card">
-          <div class="road-month">DÍAS 31 - 60 (SEPTIEMBRE)</div>
-          <h3>Mes 2: Gremios & Garantía 30 Días</h3>
-          <ul>
-            <li>Convenio preferencial con ASOFOM y AMSOFAC.</li>
-            <li>Despliegue de la <em>Garantía SLA Go-Live en 30 Días</em> por contrato.</li>
-            <li>Meta acumulada: +10 nuevos clientes activos.</li>
-          </ul>
-        </div>
-        <div class="road-card">
-          <div class="road-month">DÍAS 61 - 90 (OCTUBRE-NOVIEMBRE)</div>
-          <h3>Mes 3: Escalamiento Outbound</h3>
-          <ul>
-            <li>Prospección quirúrgica sobre el universo de SOFOMes calificado en México.</li>
-            <li>Cumplimiento de la meta: +20 Clientes nuevos y +$200k MXN MRR.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
   </main>
 
-  <!-- Executive Footer -->
   <footer class="exec-footer">
     <div class="container">
-      <p>💼 <strong>INTELLIGENTIAL EXECUTIVE BUSINESS CASE</strong> | Preparado para la sesión estratégica del 27 de Julio con Luis Fernando.</p>
+      <p>Intelligential © 2026 — Documento de Trabajo Estratégico y Plan RevOps preparado por Antonio Gutiérrez para Luis Fernando Sánchez.</p>
     </div>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      if (window.mermaid) {
-        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
-      }
-
-      const rentaInput = document.getElementById('rentaInput');
-      const rentaDisplay = document.getElementById('rentaDisplay');
-      
-      const setupIntVal = document.getElementById('setupIntVal');
-      const rentaIntVal = document.getElementById('rentaIntVal');
-      const tcoIntelligentialVal = document.getElementById('tcoIntelligentialVal');
-      
-      const setupDynVal = document.getElementById('setupDynVal');
-      const rentaDynVal = document.getElementById('rentaDynVal');
-      const tcoDynamicoreVal = document.getElementById('tcoDynamicoreVal');
-      
-      const savingsVal = document.getElementById('savingsVal');
-      const savingsPct = document.getElementById('savingsPct');
-
-      function format(val) {
-        return '$' + val.toLocaleString('es-MX') + ' MXN';
-      }
-
-      function calc() {
-        const renta = parseInt(rentaInput.value, 10);
-        rentaDisplay.textContent = '$' + renta.toLocaleString('es-MX');
-
-        const setupInt = renta * 2;
-        const rentaAnualInt = renta * 12;
-        const totalInt = setupInt + rentaAnualInt;
-
-        const setupDyn = 350000;
-        const rentaAnualDyn = Math.round(renta * 1.2) * 12;
-        const extrasDyn = 200000;
-        const totalDyn = setupDyn + rentaAnualDyn + extrasDyn;
-
-        const ahorro = totalDyn - totalInt;
-        const pct = ((ahorro / totalDyn) * 100).toFixed(1);
-
-        setupIntVal.textContent = format(setupInt);
-        rentaIntVal.textContent = format(rentaAnualInt);
-        tcoIntelligentialVal.textContent = format(totalInt);
-
-        setupDynVal.textContent = format(setupDyn);
-        rentaDynVal.textContent = format(rentaAnualDyn);
-        tcoDynamicoreVal.textContent = format(totalDyn);
-
-        savingsVal.textContent = format(ahorro);
-        savingsPct.textContent = `(${pct}% de Ahorro Real)`;
-      }
-
-      if (rentaInput) {
-        rentaInput.addEventListener('input', calc);
-        calc();
-      }
-    });
-  </script>
 </body>
 </html>
