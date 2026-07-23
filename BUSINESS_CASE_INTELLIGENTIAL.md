@@ -21,6 +21,12 @@
 
 **Intelligential** es la única plataforma de infraestructura core bancaria y BaaS *Smart Native®* mexicana que integra nativamente **Core Bancario + Cumplimiento Normativo (CNBV/PLD) + Onboarding Digital (INE, SAT, IMSS)** en un solo sistema sobre AWS, activable en semanas y a un precio accesible para instituciones no bancarias.
 
+> [!NOTE]
+> **Clarificación Arquitectónica sobre Verificaciones RENAPO, INE y RFC:**  
+> Intelligential **orquesta** e integra nativamente las validaciones de identidad (RENAPO/CURP, Biometría INE, RFC/SAT y Listas 69-B) a través de conectores API pre-construidos con aliados autorizados (*Syntage, Nufi, Moffin, Nubarium*). 
+> 
+> Intelligential no opera como base registral propia, sino como la **capa orquestadora en el Core que automatiza la consulta y adjunta la evidencia en el expediente digital de originación**. Las validaciones por transacción se cobran como consumo variable (Add-On) o se conectan directamente a las credenciales API que la SOFOM ya tenga contratadas.
+
 ### 💰 Unit Economics y Matriz de Tiers (ACV Real de Intelligential)
 * **ACV Promedio Estimado:** **$438,000 MXN / año (~$36,500 MXN / mes)**.
 * **Tier 1 - Startup Monoproducto:** $20,000 MXN / mes ($240,000 MXN / año).
@@ -72,56 +78,13 @@ A continuación se detalla una muestra representativa de 15 tratos modelados sob
 
 ## 4. 📈 Cruce TAM / SAM / SOM y Capas de Mercado
 
-```mermaid
-graph TD
-    subgraph TAM ["TAM: Total Addressable Market (~30,000+ Entidades)"]
-        style TAM fill:#0F172A,stroke:#38BDF8,stroke-width:2px,color:#F8FAFC
-        TAM_DESC["2,100+ SOFOMes registradas en CONDUSEF SIPRES + 80 Fintechs + 150 Cooperativas + 30k Microfinancieras"]
-        
-        subgraph SAM ["SAM: Serviceable Addressable Market Calificado (~600 Entidades Target)"]
-            style SAM fill:#1E1B4B,stroke:#818CF8,stroke-width:2px,color:#F8FAFC
-            SAM_DESC["500 SOFOM ENR + 100 Arrendadoras activas con Cartera >$50M MXN e Infraestructura AWS"]
-            
-            subgraph SOM ["SOM: Serviceable Obtainable Market (20 - 40 Clientes/Año)"]
-                style SOM fill:#312E81,stroke:#4ADE80,stroke-width:2px,color:#F8FAFC
-                SOM_DESC["Meta Q3-Q4: +20 Clientes | Meta 12 Meses: 40 Clientes Nuevos ($1.4M MXN MRR)"]
-            end
-        end
-    end
-```
-
 ---
 
 ## 5. 📊 Benchmark del Setup Fee (2x Renta): Estándares de la Industria Core SaaS
 
-| Categoría de Core SaaS | Setup Fee Promedio de la Industria | Rationale y Fricción Comercial |
-| :--- | :--- | :--- |
-| **Global Enterprise Core** *(Mambu, Thought Machine)* | **50% - 100% del ACV** *(5x a 12x Renta Mensual / $50k-$150k USD)* | Consultoría de migración prolongada (6-12 meses). Alta fricción en Comité de Compras. |
-| **Regional Mid-Market Core** *(DynamiCore, Ascendes, Intelligential)* | **1x a 2x Renta Mensual** *($40k - $84k MXN)* | Estándar regional. Recupera costo de onboarding pero frena cierres en tratos de $83k+/mes. |
-| **Startup / Modular SaaS** *(Softcrédito, Moffin, Expediente Azul)* | **0.5x Renta o Fee Fijo** *($15k - $30k MXN)* | Entradas baratas. Fomenta el churn alto si el cliente no tiene compromiso operativo. |
-
 ---
 
 ## 6. 🤖 Recomendación de Tech Stack Comercial: Conversational AI & Call Intelligence (`Samu.ai`)
-
-Para auditar y transparentar el 100% de las conversaciones comerciales del equipo de ventas sin cargar costos inflados, Antonio propone la adopción de **Samu.ai**, plataforma de inteligencia conversacional con precios sumamente accesibles:
-
-```
-+-----------------------------------------------------------------------------------------+
-|                       MATRIZ DE PRICING ACCESIBLE DE SAMU.AI (REVOPS STACK)             |
-+------------------------------------+----------------------------------------------------+
-| PLAN GROWTH ($150 USD/mes)         | PLAN PRO ($250 USD/mes - RECOMENDADO)               |
-| - Incluye 3 Usuarios               | - Incluye 5 Usuarios                               |
-| - Grabación Ilimitada de Llamadas  | - Integración Avanzada con CRM                      |
-| - Integración WhatsApp & Video     | - Samu Score (Puntaje de Reunión por IA)           |
-| - Notas y compromisos directos al CRM| - Extractor de Objeciones y Menciones de Competencia|
-+------------------------------------+----------------------------------------------------+
-```
-
-### ⚡ Beneficios Directos para Luis y el Consejo de Intelligential:
-1. **Visibilidad 100% de Llamadas ($150-$250 USD/mes):** Permite a Luis y al equipo directivo auditar qué se habla en cada demo de originación y core bancario.
-2. **Detección Automática de Objeciones:** La IA extrae menciones de competidores (*"DynamiCore es muy caro"*, *"Mambu no tiene PLD"*) y dudas regulatorias de la CNBV.
-3. **Puntuación Automática de Demos (Samu Score):** Evalúa si el vendedor aplicó la metodología MEDDIC y calificó al Comprador Económico correctamente.
 
 ---
 
