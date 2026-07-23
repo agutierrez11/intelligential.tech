@@ -38,7 +38,21 @@
 
 ---
 
-## 2. 🔬 Ajuste Metodológico de Nicho: B2B Enterprise (Intelligential) vs. B2B Masivo (Clip)
+## 2. ⚔️ Matriz Ampliada de Competencia Directa en México (Teardown Competitivo)
+
+Se añade a la matriz de análisis al competidor emergente **Fintechland** (`fintechland.mx`), analizando su propuesta frente a Intelligential y el resto de competidores en el mercado nacional:
+
+| Competidor | Oferta Anunciada | Modelo Operativo | Debilidad Principal / Fricción | Ángulo de Venta de Intelligential |
+| :--- | :--- | :--- | :--- | :--- |
+| **Fintechland** (`fintechland.mx`) | "Infraestructura 360°" & "Identidad Digital" | Boutique de Desarrollo a la Medida sobre Microservicios API | Tiempos largos de entrega (4-6 meses) y Setup elevado ($150k-$300k MXN). Sin motor PLD/CNBV nativo. | **SaaS Smart Native® 3-en-1 pre-construido**, Go-Live garantizado en 30 días con cumplimiento CNBV embebido de origen. |
+| **DynamiCore** | Core Bancario Tradicional | Software Legado Monolítico | Cobros ocultos por conectores Buró/STP y desarrollo lento. | **Ahorro >42% en TCO**, transparencia total en conectores y arquitectura AWS. |
+| **Ascendes** | Core Financiero para SOFOMes | Software On-Premise / Servidor Local | Alta deuda técnica, interfaz obsoleta y sin onboarding digital nativo. | **Experiencia 100% Cloud**, expediente digital sin papel y firma NOM-151 en 1 clic. |
+| **Mambu** | Core Bancario Global (SaaS) | SaaS Enterprise Multitenant USD | No incluye cumplimiento normativo CNBV/PLD de México y precios en USD inalcanzables ($80k+ USD/año). | **Core 3-en-1 ajustado a normatividad mexicana**, facturado en MXN a un precio accesible. |
+| **Softcrédito** | Sistema de Crédito Modular | Software Básico de Cartera | Carece de orquestación de biometría INE/SAT y soporte multi-producto complejo. | **Escalabilidad Multi-Producto**, soporte para crédito simple, arrendamiento y factoraje en una sola base. |
+
+---
+
+## 3. 🔬 Ajuste Metodológico de Nicho: B2B Enterprise (Intelligential) vs. B2B Masivo (Clip)
 
 Es crítico distinguir la diferencia estructural de ambos modelos de negocio para evitar cometer el error de trasladar tácticas de volumen masivo a un mercado finito:
 
@@ -52,7 +66,7 @@ Es crítico distinguir la diferencia estructural de ambos modelos de negocio par
 
 ---
 
-## 3. 💼 Muestra de Deals Calificados (Tiers 1, 2 y 3)
+## 4. 💼 Muestra de Deals Calificados (Tiers 1, 2 y 3)
 
 A continuación se detalla una muestra representativa de 15 tratos modelados sobre empresas reales del registro oficial de CONDUSEF, clasificadas por su Tier de precios y propuesta de ROI:
 
@@ -76,26 +90,27 @@ A continuación se detalla una muestra representativa de 15 tratos modelados sob
 
 ---
 
-## 4. 📈 Cruce TAM / SAM / SOM y Capas de Mercado
+## 5. 📈 Cruce TAM / SAM / SOM y Capas de Mercado
 
 ---
 
-## 5. 📊 Benchmark del Setup Fee (2x Renta): Estándares de la Industria Core SaaS
+## 6. 📊 Benchmark del Setup Fee (2x Renta): Estándares de la Industria Core SaaS
 
 ---
 
-## 6. 🤖 Recomendación de Tech Stack Comercial: Conversational AI & Call Intelligence (`Samu.ai`)
+## 7. 🤖 Recomendación de Tech Stack Comercial: Conversational AI & Call Intelligence (`Samu.ai`)
 
 ---
 
-## 7. 🎙️ Cuestionario de Auditoría & Descubrimiento para la Sesión del Lunes con Luis
+## 8. 🎙️ Cuestionario de Auditoría & Descubrimiento para la Sesión del Lunes con Luis
 
 1. **Mezcla de Canales Actuales (Eventos vs Campañas vs Referencias 5X Capital).**
 2. **Cualificación de Leads Inbound vs Outbound (Evitar quema de tiempo en leads no aptos).**
 3. **Mandato del Fondo 5X Capital (Crecimiento MRR vs Margin EBITDA).**
-4. **Benchmark & Flexibilidad de Setup Fee.**
-5. **Adopción de Samu.ai para Inteligencia Conversacional en Demos ($150 USD/mes).**
-6. **Visión de Expansión (Verticales SOFIPOs/SOCAPs y LatAm).**
+4. **Competencia Emergente en México (Posicionamiento frente a Fintechland, DynamiCore y Ascendes).**
+5. **Benchmark & Flexibilidad de Setup Fee.**
+6. **Adopción de Samu.ai para Inteligencia Conversacional en Demos ($150 USD/mes).**
+7. **Visión de Expansión (Verticales SOFIPOs/SOCAPs y LatAm).**
 
 ---
 *Documento estratégico preparado para la alineación comercial con Luis Fernando Sánchez.*
