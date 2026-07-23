@@ -36,45 +36,13 @@ Así como en la industria de pagos las empresas migraron de contratar pasarelas 
 +------------------------------------+--------------------------------------------------------------+
 ```
 
-* **El Elevator Pitch Comercial:**  
-  *"Intelligential no vende una API registral suelta. **Somos el Orquestador de Core Bancario y Cumplimiento Embebido sobre AWS**: conectamos la biometría, el SAT, el Buró y los rieles de pago directamente a la administración de tu cartera en 1 sola plataforma."*
-
 ---
 
 ## 2. ⚔️ Matriz Ampliada de Competencia & Conclusión Única (Teardown Competitivo)
 
 ### 🎯 La Conclusión Clave: DynamiCore es el ÚNICO Rival Directo en el SAM
 
-Tras auditar a todos los actores locales e internacionales, **DynamiCore es la ÚNICA competencia real directa en el mercado objetivo de 600 SOFOMes calificadas de México**. Los demás actores no compiten directamente en el mismo segmento:
-
-* **Mambu:** Inalcanzable en precio ($80k+ USD/año) y sin PLD/CNBV nativo de México. *(Fuera de segmento)*.
-* **Ascendes:** Software on-premise/legado obsoleto en servidores locales a punto de churnear. *(Target de migración)*.
-* **Softcrédito / Moffin / Expediente Azul:** Herramientas modulares básicas sin Core bancario completo ni motor regulatorio CNBV. *(Módulos parciales)*.
-* **Fintechland:** Boutique de desarrollo a la medida por proyecto (4-6 meses) a $300k+ setup. *(No es SaaS empaquetado)*.
-* **Adamo / Truora:** RegTechs extranjeras de identidad sin contabilidad ni compliance SOFOM para México. *(Proveedores de data)*.
-
----
-
-### ⚠️ Teardown Técnico: Validadores de PDF Superficiales vs. Orquestación Directa a Fuentes Oficiales
-
-Existe una vulnerabilidad crítica en herramientas que ofrecen "validación de documentos con IA mediante carga de PDF":
-
-```
-+---------------------------------------------------------------------------------------------------+
-|               DIFERENCIA ENTRE FAKE VALIDATION (OCR PDF) VS. ORQUESTACIÓN REAL FUENTES OFICIALES  |
-+------------------------------------+--------------------------------------------------------------+
-| ❌ FAKE VALIDATION (OCR SUBIR PDF)  | 🟢 ORQUESTACIÓN INTELLIGENTIAL (FUENTES OFICIALES EN TIEMPO REAL)|
-| - El usuario sube un PDF a una web | - Consulta directa al SAT vía CIEC / Syntage (Padrón 69-B)    |
-| - La IA lee el texto del PDF (OCR) | - Verificación biométrica facial INE vs Lista Nominal CNBV   |
-| - Vulnerable a PDFs alterados en IA| - Consulta instantánea a Buró de Crédito en tiempo real       |
-| - RECHAZADO EN AUDITORÍA CNBV/PLD  | - Expediente electrónico con sello de tiempo NOM-151 (Mifiel) |
-+------------------------------------+--------------------------------------------------------------+
-```
-
-#### 🔑 Por Qué el Lector de PDF Falla en una SOFOM Regulada:
-1. **Riesgo Masivo de Fraude por Alteración:** Cualquier solicitante puede alterar un estado de cuenta o comprobante fiscal con Photoshop/Canva/IA. Un validador de PDF superficial solo lee la estructura visual, no la autenticidad en el padrón gubernamental.
-2. **Cero Valor en Auditorías CNBV:** En una auditoría de Prevención de Lavado de Dinero (PLD), la CNBV **no acepta un texto extraído de un PDF**; exige la constancia electrónica oficial emitida directamente por el SAT y el INE.
-3. **El Enfoque de Intelligential:** Intelligential no confía en PDFs subidos por usuarios. **Orquesta la llamada API directa a la fuente primaria oficial**, garantizando 100% de certeza legal y cero fraudes por suplantación.
+Tras auditar a todos los actores locales e internacionales, **DynamiCore es la ÚNICA competencia real directa en el mercado objetivo de 600 SOFOMes calificadas de México**. Los demás actores no compiten directamente en el mismo segmento.
 
 ---
 
@@ -86,7 +54,32 @@ Existe una vulnerabilidad crítica en herramientas que ofrecen "validación de d
 
 ---
 
-## 5. 📈 Cruce TAM / SAM / SOM y Capas de Mercado
+## 5. 📈 Cruce TAM / SAM / SOM y Calibración Quirúrgica del Mercado
+
+Tras la alineación directa con el CEO Luis F. Sánchez (descartando sectores de alta transaccionalidad masiva como cobros por WhatsApp o wallets B2C), el modelado de mercado se **calibra y refina quirúrgicamente**:
+
+```mermaid
+graph TD
+    subgraph TAM ["TAM: Total Addressable Market (~30,000+ Entidades)"]
+        style TAM fill:#0F172A,stroke:#38BDF8,stroke-width:2px,color:#F8FAFC
+        TAM_DESC["2,100+ SOFOMes registradas en CONDUSEF SIPRES + 80 Fintechs + 150 Cooperativas + 30k Microfinancieras"]
+        
+        subgraph SAM ["SAM Calificado Refinado (~600 Entidades Objetivo Reales)"]
+            style SAM fill:#1E1B4B,stroke:#818CF8,stroke-width:2px,color:#F8FAFC
+            SAM_DESC["500 SOFOM ENR activas + 100 Arrendadoras de Crédito, Arrendamiento y Factoraje (Cartera >$50M MXN)"]
+            
+            subgraph SOM ["SOM: Serviceable Obtainable Market (20 - 40 Clientes/Año)"]
+                style SOM fill:#312E81,stroke:#4ADE80,stroke-width:2px,color:#F8FAFC
+                SOM_DESC["Meta Q3-Q4: +20 Clientes | Meta 12 Meses: 40 Clientes Nuevos ($1.4M MXN MRR de Alto Margen)"]
+            end
+        end
+    end
+```
+
+### 📊 Desglose de la Calibración de Mercado:
+1. **TAM (Total Addressable Market): PERMANECE IGUAL (~30,000+ Entidades).** Sigue siendo el universo macro crediticio e informal de México.
+2. **SAM (Serviceable Addressable Market Calificado): SE REFIMA A ~600 CUENTAS TARGET.** Se eliminan pasarelas de pago masivas y cobros por WhatsApp (como Soy Aida) para concentrar el 100% de la prospección en **Crédito Simple, Arrendamiento y Factoraje**.
+3. **SOM (Serviceable Obtainable Market): SE MANTIENE EN 20-40 CLIENTES/AÑO.** Con la ventaja de capturar tratos de **alto ACV ($36.5k - $42k/mes)** con menor consumo de recursos AWS y mayor LTV por cliente.
 
 ---
 
@@ -103,7 +96,7 @@ Existe una vulnerabilidad crítica en herramientas que ofrecen "validación de d
 1. **Mezcla de Canales Actuales (Eventos vs Campañas vs Referencias 5X Capital).**
 2. **Posicionamiento de Orquestación de Core & Compliance Embebido frente a APIs sueltas.**
 3. **Validación Directa a Fuentes Oficiales (SAT/INE) vs. Herramientas de OCR de PDF superficiales.**
-4. **Cualificación de Leads Inbound vs Outbound (Foco exclusivo en Crédito, Arrendamiento y Factoraje).**
+4. **Calibración Quirúrgica del SAM (Foco exclusivo en Crédito, Arrendamiento y Factoraje).**
 5. **Mandato del Fondo 5X Capital (Crecimiento MRR vs Margin EBITDA).**
 6. **Manejo de Coopetencia & Alianza con Nubarium (Orquestación 3-en-1 vs API suelta).**
 7. **Desplazamiento Directo de DynamiCore (La única competencia real en el SAM).**
