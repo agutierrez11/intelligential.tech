@@ -35,14 +35,27 @@ Tras auditar a todos los actores locales e internacionales, **DynamiCore es la �
 * **Fintechland:** Boutique de desarrollo a la medida por proyecto (4-6 meses) a $300k+ setup. *(No es SaaS empaquetado)*.
 * **Adamo / Truora:** RegTechs extranjeras de identidad sin contabilidad ni compliance SOFOM para México. *(Proveedores de data)*.
 
+---
+
+### 🔓 Teardown de Capas No Reguladas: Riesgo Competitivo y Defensibilidad del Core 3-en-1
+
+Es un análisis brillante cuestionar qué ocurre en las capas operativas que **NO requieren regulación explícita de la CNBV**. A continuación se evalúa el nivel de riesgo y defensibilidad en cada capa:
+
+| Capa Tecnológica | Función Operativa (No Regulada) | Nivel de Riesgo Frente a RegTechs / Competencia | Defensibilidad & Estrategia de Intelligential |
+| :--- | :--- | :--- | :--- |
+| **Capa 1: Lending Engine (Motor de Cartera)** | Amortizaciones, cálculo de TIIE, devengamiento, pagos, mora, quitas y estados de cuenta. | **Riesgo BAJO.** Construir un motor de cartera sobre AWS toma 12-18 meses de desarrollo complejo. | Una RegTech (Adamo/Truora) NO lo tiene. Sin motor de cartera no pueden administrar el crédito. |
+| **Capa 2: Portal de Solicitud Digital (UX/UI)** | Formulario web/móvil donde la persona física o moral llena datos y sube documentos. | <span class="val-red">**Riesgo ALTO / Vulnerable.**</span> Cualquier boutique de software (Expediente Azul, Moffin, Adamo) puede hacer un formulario bonito por $5k-$15k/mes. | **Estrategia Anti-Unbundling:** NUNCA vender el portal como un módulo aislado barato, sino como la entrada nativa del Core. |
+| **Capa 3: Integración de Pagos & Firma (SPEI / NOM-151)** | Dispersión automática por SPEI (STP) y firmado de pagarés digitales con Mifiel/Weetrust. | **Riesgo MEDIO.** RegTechs extranjeras dispersan en sus países, pero en México requieren conectores locales Banxico/STP. | Intelligential ofrece conectores STP/Mifiel pre-construidos sin costo de integración por proyecto. |
+
 ```
 +---------------------------------------------------------------------------------------------------+
-|                        INTELLIGENTIAL VS. DYNAMICORE (EL ÚNICO DUELO REAL)                         |
+|                     POR QUÉ EL CORE 3-EN-1 EVITA EL RIESGO DE LAS CAPAS NO REGULADAS             |
 +------------------------------------+--------------------------------------------------------------+
-| DYNAMICORE (EL LEGADO CARO)        | INTELLIGENTIAL (SMART NATIVE®)                               |
-| - Cobros ocultos por conectores    | - Transparencia total (Conectores nativos incluidos)          |
-| - TCO Anual: $1,240,000 MXN        | - TCO Anual: $720,000 MXN (AHORRO NETO >42% / +$520k MXN)    |
-| - Implementación: 3 a 6 Meses      | - Go-Live Garantizado: 30 Días sobre AWS                      |
+| SI LA SOFOM COMPRA MÓDULOS SUELTOS | SI LA SOFOM UTILIZA INTELLIGENTIAL 3-EN-1                     |
+| - Paga $15k a Expediente Azul (UX) | - Integra Portal UX + Motor de Cartera + PLD CNBV en 1 solo  |
+| - Paga $12k a un software PLD      | - 1 sola factura mensual ($36.5k a $42k MXN)                 |
+| - Paga $25k a un Core de cartera   | - Cero descalce contable o desincronización de API keys      |
+| Total: $52k/mes + 3 contratos      | Total: Ahorro de 30% + SLA garantizado en 30 días            |
 +------------------------------------+--------------------------------------------------------------+
 ```
 
@@ -83,10 +96,11 @@ Es crítico distinguir la diferencia estructural de ambos modelos de negocio par
 1. **Mezcla de Canales Actuales (Eventos vs Campañas vs Referencias 5X Capital).**
 2. **Cualificación de Leads Inbound vs Outbound (Evitar quema de tiempo en leads no aptos).**
 3. **Mandato del Fondo 5X Capital (Crecimiento MRR vs Margin EBITDA).**
-4. **Desplazamiento Directo de DynamiCore (La única competencia real en el SAM).**
-5. **Benchmark & Flexibilidad of Setup Fee.**
-6. **Adopción de Samu.ai para Inteligencia Conversacional en Demos ($150 USD/mes).**
-7. **Visión de Expansión (Verticales SOFIPOs/SOCAPs y LatAm).**
+4. **Defensa de Capas No Reguladas (Evitar el Unbundling frente a Expediente Azul / Moffin).**
+5. **Desplazamiento Directo de DynamiCore (La única competencia real en el SAM).**
+6. **Benchmark & Flexibilidad de Setup Fee.**
+7. **Adopción de Samu.ai para Inteligencia Conversacional en Demos ($150 USD/mes).**
+8. **Visión de Expansión (Verticales SOFIPOs/SOCAPs y LatAm).**
 
 ---
 *Documento estratégico preparado para la alineación comercial con Luis Fernando Sánchez.*
