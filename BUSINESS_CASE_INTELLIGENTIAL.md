@@ -18,7 +18,7 @@
 * **Tier 2 - Mid-Market:** $42,000 MXN / mes ($504,000 MXN / año).
 * **Tier 3 - Multi-Producto:** $83,000 MXN / mes ($998,000 MXN / año).
 * **Tier 4 - Enterprise:** $200,000 MXN / mes ($2,400,000 MXN / año).
-* **Fee de Activación & Setup:** **2x la Renta Mensual del proyecto** *(Ejemplo: $84,000 MXN Setup Fee para Tier Mid-Market de $42,000 MXN/mes)*.
+* **Fee de Activación & Setup Vigente:** 2x la Renta Mensual *(Propuesta de optimización dinámica por Antonio abajo)*.
 * **LTV Promedio (36 meses):** $1,400,000 - $3,000,000 MXN por cliente.
 
 ---
@@ -47,7 +47,33 @@ A continuación se detalla una muestra representativa de 15 tratos modelados sob
 
 ---
 
-## 3. 📈 Cruce TAM / SAM / SOM y Análisis de Saturación de Mercado
+## 3. 💳 Optimización de la Estrategia de Pricing (Propuesta de Antonio)
+
+### 💡 Diagnóstico del Modelo Actual (Setup Fee = 2x Renta):
+* **Fricción de Entrada en Cuentas Grandes:** Para un trato Tier 3 ($83k/mes) o Enterprise ($200k/mes), cobrar un Setup Fee del 2x exige un desembolso inicial de **$166,000 a $400,000 MXN de golpe**. Esto se convierte en la **freno #1 en el Comité de Compras** y alarga el ciclo de venta.
+* **El Riesgo del "Cheap Entry" en Startups:** Si vendemos muy barato o regalamos el setup a clientes pequeños ($15k-$20k/mes), el cliente no tiene "skin in the game" (compromiso operativo) y la probabilidad de **churn a los 6 meses es muy alta**.
+
+### 🛠️ Las 3 Opciones Dinámicas para Elevar Rentabilidad y Acelerar el Cierre:
+
+#### 🟢 Opción A: Setup Fee Decompresivo (Acelera Cierre sin Barreras)
+Mantenemos la Renta MRR alta y reducimos la tasa de Setup Fee a mayor volumen para eliminar el freno de entrada:
+* **Tier 1 (Startup $20k/m):** Setup Fee de **$40,000 MXN (2x Renta)** -> *Filtro anti-churn obligatorio. Garantiza compromiso.*
+* **Tier 2 (Mid-Market $42k/m):** Setup Fee Fijo de **$50,000 MXN (~1.2x Renta)** -> *Elimina la resistencia del Comité de Compras.*
+* **Tier 3 (Multi-Prod $83k/m):** Setup Fee Fijo de **$65,000 MXN (~0.8x Renta)** -> *Cierre inmediato de cuentas grandes sin trámites largos.*
+* **Tier 4 (Enterprise $200k/m):** Setup Fee Fijo de **$100,000 MXN (~0.5x Renta)** -> *Entrada limpia a cambio de contrato obligatorio a 24 meses.*
+
+#### 🟢 Opción B: Amortización de Setup Fee en Renta (MRR Recurrente Mayor + Zero Upfront)
+Para empresas que no tienen presupuesto de Capex inicial pero cuentan con flujo operativo:
+* Eliminamos el Setup Fee ($0 de enganche) a cambio de **incrementar la Renta Mensual en un 20% a 25%** bajo un **Contrato Anual Forzoso**.
+* *Ejemplo Tier Mid-Market:* Renta de **$52,000 MXN/mes sin Setup Fee** (vs $42k/mes + $84k setup). El cliente aprueba la compra de inmediato y nosotros garantizamos $624,000 MXN de ingresos anuales recurrentes.
+
+#### 🟢 Opción C: Descuento del 100% en Setup por Pago Anual Anticipado
+* Si el cliente paga por adelantado el contrato anual completo (12 meses de MRR de contado), se le **bonifica el 100% del Setup Fee**.
+* *Impacto en Intelligential:* Inyección inmediata de liquidez de contado a la caja de la empresa (**$504,000 MXN cash in-hand en el Día 1**).
+
+---
+
+## 4. 📈 Cruce TAM / SAM / SOM y Análisis de Saturación de Mercado
 
 ### 📊 Las Cifras del Mercado en México:
 * **TAM (Total Addressable Market):** 2,100+ SOFOMes registradas (CONDUSEF SIPRES) + 80 Fintechs + 150 Cooperativas + 30k Microfinancieras.
@@ -73,26 +99,29 @@ A continuación se detalla una muestra representativa de 15 tratos modelados sob
 
 2. **Horizonte de Saturación (Techo del Mercado Local):**
    * **En Escenario Conservador (20 cierres/año):** Alcanzamos la penetración máxima en **24 a 30 meses** (~50 a 60 clientes activos, representando el 10% del mercado calificado).
-   * **En Escenario Optimista (40-50 cierres/año):** En **18 a 24 meses** se alcanza el techo de penetración local (~100 a 120 clientes activos), donde el costo de adquirir el siguiente cliente en México aumenta por resistencia al cambio o contratos amarrados a largo plazo.
+   * **En Escenario Optimista (40-50 cierres/año):** En **18 a 24 meses** se alcanza el techo de penetración local (~100 a 120 clientes activos), donde adquirir el siguiente cliente en México se vuelve costoso por contratos vigentes a largo plazo de la competencia.
 
 ---
 
-## 4. 🎙️ Preguntas Estratégicas para la Sesión del Lunes con Luis
+## 5. 🎙️ Preguntas Estratégicas para la Sesión del Lunes con Luis
 
-Estas 3 preguntas demuestran un dominio total de la visión de negocio a largo plazo (RevOps & Product Strategy):
+Estas 4 preguntas demuestran un dominio total de la visión de negocio a largo plazo (RevOps, Pricing & Product Strategy):
 
-### ❓ Pregunta 1: Expansión Geográfica (Nuevos Países)
-> *"Luis, en 12 a 18 meses habremos barrido las 600 SOFOMes calificadas de México con nuestras cadencias outbound. **¿Cuál es el roadmap para adaptar el Core y Compliance a mercados como Colombia, Perú o Chile** (donde los cores locales también son obsoletos y pagan en USD)?"*
+### ❓ Pregunta 1: Flexibilización del Setup Fee (Speed to Sell vs. Risk)
+> *"Luis, hoy cobramos 2x la Renta de Setup. En proyectos de $83k o $200k/mes, pedir $166k a $400k de enganche frena la firma en el Comité de Compras. **¿Qué opinas de fijar el Setup Fee en una suma fija de $50k-$65k en Tiers altos o amortizarlo en la renta a cambio de un contrato anual forzoso**, para eliminar la barrera de entrada y acelerar los cierres del Mes 1?"*
 
-### ❓ Pregunta 2: Expansión de Verticales (Nuevos Sectores en México)
-> *"Para no depender únicamente del nicho SOFOM/Arrendadora en México, **¿cuándo está planificado habilitar la contabilidad regulada para SOFIPOs (Sector 27) y SOCAPs / Cooperativas (Sector 29)**, lo que duplicaría nuestro SAM en +300 instituciones adicionales?"*
+### ❓ Pregunta 2: Expansión Geográfica (Nuevos Países en LatAm)
+> *"Luis, con nuestra capacidad outbound, en 12 a 18 meses habremos barrido el 100% de las 600 SOFOMes calificadas en México. **¿Cuál es el roadmap para adaptar el Core y Compliance a mercados como Colombia, Perú o Chile** (donde los cores locales también son legados obsoletos y facturan en USD)?"*
 
-### ❓ Pregunta 3: Expansión de ARPU / NRR mediante Nuevos Features (Monopolio del Ecosistema)
-> *"En un mercado finito, el crecimiento de MRR depende de vender más valor a la base instalada (Expansion Revenue / NRR > 120%). **¿Qué nuevos features están planeados en la hoja de ruta** (ej. Emisión de Tarjetas BaaS con Pomelo, Motor de Scoring Crediticio con IA, u Orquestación de Cobranza automatizada) para duplicar la renta mensual promedio de $36.5k a $80k MXN por cliente?"*
+### ❓ Pregunta 3: Expansión de Verticales (Nuevos Sectores en México)
+> *"Para no agotar el nicho en México, **¿cuándo está planeado habilitar el módulo contable regulado para SOFIPOs (Sector 27) y SOCAPs / Cooperativas (Sector 29)**, lo que duplicaría de inmediato nuestro SAM en +350 instituciones adicionales?"*
+
+### ❓ Pregunta 4: Expansión de ARPU / NRR (Monopolio de Ecosistema)
+> *"En un mercado finito, la clave del valor de la empresa está en elevar el Net Retention Rate (NRR > 120%). **¿Qué nuevos features están planeados en la hoja de ruta** (ej. Emisión de Tarjetas BaaS con Pomelo, Scoring Crediticio con IA, u Orquestación de Cobranza automatizada) para duplicar el ticket promedio de $36.5k a $80k MXN por cliente?"*
 
 ---
 
-## 5. ⚡ Respuesta al Dilema Estratégico de Luis (Slide 13)
+## 6. ⚡ Respuesta al Dilema Estratégico de Luis (Slide 13)
 
 > **Pregunta de Luis:** *“¿Si nuestra propuesta de valor se basa en integrar nativamente core, cumplimiento y onboarding, deberíamos dejar de ofrecerlo por partes o empaquetarlo todo?”*
 
@@ -108,7 +137,7 @@ Estas 3 preguntas demuestran un dominio total de la visión de negocio a largo p
 
 ---
 
-## 6. 🗓️ Rutina Diaria y Ejecución Punta a Punta de Antonio (Full-Cycle AE)
+## 7. 🗓️ Rutina Diaria y Ejecución Punta a Punta de Antonio (Full-Cycle AE)
 
 ### 📅 Rutina Semanal Operativa:
 * **Lunes (Planeación & Outbound Enriquecido):** 
