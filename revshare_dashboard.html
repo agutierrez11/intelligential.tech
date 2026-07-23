@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RevShare & Waterfall Simulator — Deal Broxel x Software POS</title>
+    <title>Business Case & Simulator — Alianza FinTech Adquirente x Software POS</title>
     <!-- Google Fonts: Outfit & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +35,7 @@
             --box-shadow-hover: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
         }
 
-        /* Modo Oscuro (Opcional por Toggle) */
+        /* Modo Oscuro (Toggle) */
         [data-theme="dark"] {
             --bg-primary: #0a0d14;
             --bg-card: rgba(18, 24, 38, 0.9);
@@ -216,6 +216,7 @@
             padding: 1.5rem;
             box-shadow: var(--box-shadow);
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 1.5rem;
         }
 
         .glass-card:hover {
@@ -351,7 +352,7 @@
             position: relative;
         }
 
-        .segment-broxel { background-color: var(--accent-purple); }
+        .segment-acquirer { background-color: var(--accent-purple); }
         .segment-software { background-color: var(--accent-cyan); }
         .segment-partners { background-color: var(--accent-green); }
 
@@ -373,6 +374,79 @@
             width: 10px;
             height: 10px;
             border-radius: 3px;
+        }
+
+        /* API Architecture Flow Component */
+        .api-flow-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+            position: relative;
+        }
+
+        @media (max-width: 900px) {
+            .api-flow-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .flow-step {
+            background: rgba(79, 70, 229, 0.03);
+            border: 1px dashed var(--border-highlight);
+            border-radius: 14px;
+            padding: 1.2rem;
+            position: relative;
+            transition: transform 0.2s ease;
+        }
+
+        .flow-step:hover {
+            transform: translateY(-2px);
+            border-style: solid;
+            background: rgba(79, 70, 229, 0.06);
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--accent-purple);
+            color: #ffffff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            font-family: var(--font-mono);
+        }
+
+        .step-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 0.4rem;
+        }
+
+        .step-desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .code-snippet {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            background: rgba(0, 0, 0, 0.05);
+            padding: 0.4rem 0.6rem;
+            border-radius: 6px;
+            margin-top: 0.6rem;
+            color: var(--accent-cyan);
+            word-break: break-all;
+        }
+
+        [data-theme="dark"] .code-snippet {
+            background: rgba(0, 0, 0, 0.3);
         }
 
         /* Charts section */
@@ -398,7 +472,7 @@
         /* Table */
         .table-container {
             overflow-x: auto;
-            margin-top: 1.5rem;
+            margin-top: 1rem;
         }
 
         table {
@@ -479,10 +553,10 @@
     <header>
         <div class="header-title">
             <div class="badge-tag">
-                <span class="badge-dot"></span> Fintech RevShare Simulator v2.1
+                <span class="badge-dot"></span> Generic FinTech Partnership Framework v3.0
             </div>
-            <h1 style="margin-top: 0.5rem;">Simulador Financiero: Deal Broxel x Software POS</h1>
-            <p>Arquitectura de Margen Neto, Waterfall de Canal e Ingresos Recurrentes para Originadores (3 Socios)</p>
+            <h1 style="margin-top: 0.5rem;">Business Case: Adquirente FinTech x Software POS</h1>
+            <p>Simulador Financiero, Arquitectura de Integración API & Modelo de Revenue Sharing Portátil</p>
         </div>
         <div class="header-actions">
             <button class="theme-toggle-btn" onclick="toggleTheme()">
@@ -546,7 +620,7 @@
             <!-- Control 4: Net Margin bps -->
             <div class="control-group">
                 <div class="control-label">
-                    <span>Net Margin Broxel (bps)</span>
+                    <span>Net Margin Adquirente (bps)</span>
                     <span class="control-val" id="lbl-netbps">110 bps (1.10%)</span>
                 </div>
                 <input type="range" id="input-netbps" min="50" max="200" value="110" step="5" oninput="calculate()">
@@ -556,9 +630,9 @@
             <div class="control-group">
                 <div class="control-label">
                     <span>Nuestra Tajada (3 Socios)</span>
-                    <span class="control-val" id="lbl-partnershare">10% del Net</span>
+                    <span class="control-val" id="lbl-partnershare">7.5% del Net</span>
                 </div>
-                <input type="range" id="input-partnershare" min="5" max="25" value="10" step="1" oninput="calculate()">
+                <input type="range" id="input-partnershare" min="5" max="25" value="7.5" step="0.5" oninput="calculate()">
             </div>
 
             <!-- Control 6: Software Share % -->
@@ -591,15 +665,15 @@
                 </div>
 
                 <div class="kpi-card">
-                    <div class="kpi-label">Net Margin Broxel Total</div>
-                    <div class="kpi-value" id="kpi-broxelnet">$330,000</div>
+                    <div class="kpi-label">Net Margin Adquirente</div>
+                    <div class="kpi-value" id="kpi-acquirernet">$330,000</div>
                     <div class="kpi-subtext">Libre de costo de red (~110 bps)</div>
                 </div>
 
                 <div class="kpi-card highlight">
-                    <div class="kpi-label">REVENUE 3 SOCIOS (10%)</div>
-                    <div class="kpi-value" id="kpi-partnerrev">$33,000</div>
-                    <div class="kpi-subtext" id="kpi-annually">$396,000 MXN / año recurrente</div>
+                    <div class="kpi-label">REVENUE 3 SOCIOS (7.5%)</div>
+                    <div class="kpi-value" id="kpi-partnerrev">$24,750</div>
+                    <div class="kpi-subtext" id="kpi-annually">$297,000 MXN / año recurrente</div>
                 </div>
 
                 <div class="kpi-card">
@@ -613,19 +687,19 @@
             <div class="glass-card">
                 <div class="card-title">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                    Waterfall de Reparto del Margen Neto Broxel
+                    Waterfall de Reparto del Margen Neto Adquirente
                 </div>
                 
                 <div class="waterfall-container">
                     <div class="bar-stack">
-                        <div class="bar-segment segment-broxel" id="bar-broxel" style="width: 65%;"></div>
+                        <div class="bar-segment segment-acquirer" id="bar-acquirer" style="width: 67.5%;"></div>
                         <div class="bar-segment segment-software" id="bar-software" style="width: 25%;"></div>
-                        <div class="bar-segment segment-partners" id="bar-partners" style="width: 10%;"></div>
+                        <div class="bar-segment segment-partners" id="bar-partners" style="width: 7.5%;"></div>
                     </div>
                     <div class="waterfall-legend">
                         <div class="legend-item">
                             <div class="legend-dot" style="background-color: var(--accent-purple);"></div>
-                            <span>Broxel Retención (65%): <strong id="lbl-broxel-pct">$214,500/mes</strong></span>
+                            <span>Adquirente Retención (67.5%): <strong id="lbl-acquirer-pct">$222,750/mes</strong></span>
                         </div>
                         <div class="legend-item">
                             <div class="legend-dot" style="background-color: var(--accent-cyan);"></div>
@@ -633,13 +707,59 @@
                         </div>
                         <div class="legend-item">
                             <div class="legend-dot" style="background-color: var(--accent-green);"></div>
-                            <span>Nuestros 3 Socios (10%): <strong id="lbl-partners-pct">$33,000/mes</strong></span>
+                            <span>Nuestros 3 Socios (7.5%): <strong id="lbl-partners-pct">$24,750/mes</strong></span>
                         </div>
                     </div>
                 </div>
 
                 <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; background: rgba(79, 70, 229, 0.04); padding: 0.8rem 1rem; border-radius: 10px; border-left: 3px solid var(--accent-cyan);">
-                    <strong>Mecánica del Deal:</strong> Por cada $100 pesos cobrados en el restaurante a una tasa ponderada de <span id="lbl-weightedrate">2.85%</span>, Broxel retiene <span id="lbl-netrate">1.10%</span> de Margen Neto tras pagar intercambio. De esos 110 bps, <strong>nuestra tajada (10%) equivale a 11 bps del TPV total procesado.</strong>
+                    <strong>Mecánica del Deal:</strong> Por cada $100 pesos cobrados en el restaurante a una tasa ponderada de <span id="lbl-weightedrate">2.85%</span>, el Adquirente retiene <span id="lbl-netrate">1.10%</span> de Margen Neto tras pagar intercambio. De esos 110 bps, <strong>nuestra tajada (7.5%) equivale a 8.25 bps del TPV total procesado.</strong>
+                </div>
+            </div>
+
+            <!-- API Integration Architecture Section -->
+            <div class="glass-card">
+                <div class="card-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    Arquitectura Técnica de Integración API (Smartnet x Smart POS Device)
+                </div>
+                
+                <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.4rem;">
+                    El Adquirente proporciona el <strong>Device Físico (Smart POS)</strong> para la mesa y una <strong>API REST / Webhooks</strong> para conectar el Software de Comandas.
+                </p>
+
+                <div class="api-flow-grid">
+                    <div class="flow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-title">Orden en Software POS</div>
+                        <div class="step-desc">El mesero liquida la comanda de la mesa en el Software. Se envía la orden a la API.</div>
+                        <div class="code-snippet">POST /v1/charge<br>amount: $1,500.00</div>
+                    </div>
+
+                    <div class="flow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-title">Push al Smart POS Device</div>
+                        <div class="step-desc">La API del Adquirente despierta la terminal física asignada a la mesa con el monto exacto.</div>
+                        <div class="code-snippet">device_id: POS-8842<br>prompt: Tip & Pay</div>
+                    </div>
+
+                    <div class="flow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-title">Procesamiento de Tarjeta</div>
+                        <div class="step-desc">El cliente inserta/desliza tarjeta (Nacional o Internacional). Se autoriza con el Switch.</div>
+                        <div class="code-snippet">Auth: 948201<br>Card: Visa Intl</div>
+                    </div>
+
+                    <div class="flow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-title">Callback & Cierre Auto</div>
+                        <div class="step-desc">La terminal aprueba y la API notifica vía Webhook. La comanda se marca pagada en el POS.</div>
+                        <div class="code-snippet">Webhook: 200 OK<br>status: PAID</div>
+                    </div>
+                </div>
+
+                <div style="font-size: 0.82rem; color: var(--text-dim); background: rgba(0,0,0,0.03); padding: 0.75rem 1rem; border-radius: 8px;">
+                    ⚡ <strong>Ventaja Operativa:</strong> Eliminación 100% de la digitación manual de montos por el mesero, prevención de fraudes internos por comandas borradas y conciliación automática de caja al cierre de turno.
                 </div>
             </div>
 
@@ -661,7 +781,7 @@
             </div>
 
             <!-- Summary Table -->
-            <div class="glass-card" style="margin-top: 1.5rem;">
+            <div class="glass-card">
                 <div class="card-title">Proyección por Escenario de Escala (Cálculos Conservadores)</div>
                 <div class="table-container">
                     <table>
@@ -669,9 +789,9 @@
                             <tr>
                                 <th>Restaurantes</th>
                                 <th>TPV Cartera / Mes</th>
-                                <th>Net Margin Broxel</th>
+                                <th>Net Margin Adquirente</th>
                                 <th>Software (25%)</th>
-                                <th style="color: var(--accent-green);">3 SOCIOS (10% NET)</th>
+                                <th style="color: var(--accent-green);">3 SOCIOS (7.5% NET)</th>
                                 <th>Success Fee Único</th>
                             </tr>
                         </thead>
@@ -769,24 +889,24 @@
 
         const partnerRev = totalNetMargin * (partnerShare / 100);
         const softRev = totalNetMargin * (softShare / 100);
-        const broxelRetainedShare = 100 - partnerShare - softShare;
-        const broxelRev = totalNetMargin * (broxelRetainedShare / 100);
+        const acquirerRetainedShare = 100 - partnerShare - softShare;
+        const acquirerRev = totalNetMargin * (acquirerRetainedShare / 100);
 
         const successFeeTotal = nodes * successFee;
 
         // KPI UI Updates
         document.getElementById('kpi-tpvtotal').innerText = formatCompact(totalTPV);
-        document.getElementById('kpi-broxelnet').innerText = formatMXN(totalNetMargin);
+        document.getElementById('kpi-acquirernet').innerText = formatMXN(totalNetMargin);
         document.getElementById('kpi-partnerrev').innerText = formatMXN(partnerRev);
         document.getElementById('kpi-annually').innerText = formatMXN(partnerRev * 12) + ' / año + ' + formatMXN(successFeeTotal) + ' fee único';
         document.getElementById('kpi-softrev').innerText = formatMXN(softRev);
 
         // Waterfall Visual Updates
-        document.getElementById('bar-broxel').style.width = broxelRetainedShare + '%';
+        document.getElementById('bar-acquirer').style.width = acquirerRetainedShare + '%';
         document.getElementById('bar-software').style.width = softShare + '%';
         document.getElementById('bar-partners').style.width = partnerShare + '%';
 
-        document.getElementById('lbl-broxel-pct').innerText = formatMXN(broxelRev) + '/mes';
+        document.getElementById('lbl-acquirer-pct').innerText = formatMXN(acquirerRev) + '/mes';
         document.getElementById('lbl-software-pct').innerText = formatMXN(softRev) + '/mes';
         document.getElementById('lbl-partners-pct').innerText = formatMXN(partnerRev) + '/mes';
 
@@ -794,7 +914,7 @@
         updateTable(tpvPerNode, netMarginPct, partnerShare, softShare, successFee);
 
         // Update Charts
-        updateCharts(tpvPerNode, netMarginPct, partnerShare, softShare, broxelRetainedShare);
+        updateCharts(tpvPerNode, netMarginPct, partnerShare, softShare, acquirerRetainedShare);
     }
 
     function updateTable(tpvPerNode, netMarginPct, partnerShare, softShare, successFee) {
@@ -834,9 +954,9 @@
             data: {
                 labels: ['10 Nodos', '25 Nodos', '50 Nodos', '100 Nodos'],
                 datasets: [
-                    { label: 'Socios (10%)', data: [0,0,0,0], backgroundColor: '#059669' },
+                    { label: 'Socios (7.5%)', data: [0,0,0,0], backgroundColor: '#059669' },
                     { label: 'Software (25%)', data: [0,0,0,0], backgroundColor: '#0284c7' },
-                    { label: 'Broxel Net (65%)', data: [0,0,0,0], backgroundColor: '#4f46e5' }
+                    { label: 'Adquirente Net (67.5%)', data: [0,0,0,0], backgroundColor: '#4f46e5' }
                 ]
             },
             options: {
@@ -855,9 +975,9 @@
         pieChart = new Chart(ctx2, {
             type: 'doughnut',
             data: {
-                labels: ['Broxel Retenido (65%)', 'Software POS (25%)', 'Nuestros 3 Socios (10%)'],
+                labels: ['Adquirente Retenido (67.5%)', 'Software POS (25%)', 'Nuestros 3 Socios (7.5%)'],
                 datasets: [{
-                    data: [65, 25, 10],
+                    data: [67.5, 25, 7.5],
                     backgroundColor: ['#4f46e5', '#0284c7', '#059669'],
                     borderWidth: 0
                 }]
@@ -870,27 +990,27 @@
         });
     }
 
-    function updateCharts(tpvPerNode, netMarginPct, partnerShare, softShare, broxelRetainedShare) {
+    function updateCharts(tpvPerNode, netMarginPct, partnerShare, softShare, acquirerRetainedShare) {
         if (!scalingChart || !pieChart) return;
 
         const tiers = [10, 25, 50, 100];
         const partnerData = [];
         const softData = [];
-        const broxelData = [];
+        const acquirerData = [];
 
         tiers.forEach(n => {
             const netMargin = (n * tpvPerNode) * netMarginPct;
             partnerData.push(netMargin * (partnerShare / 100));
             softData.push(netMargin * (softShare / 100));
-            broxelData.push(netMargin * (broxelRetainedShare / 100));
+            acquirerData.push(netMargin * (acquirerRetainedShare / 100));
         });
 
         scalingChart.data.datasets[0].data = partnerData;
         scalingChart.data.datasets[1].data = softData;
-        scalingChart.data.datasets[2].data = broxelData;
+        scalingChart.data.datasets[2].data = acquirerData;
         scalingChart.update();
 
-        pieChart.data.datasets[0].data = [broxelRetainedShare, softShare, partnerShare];
+        pieChart.data.datasets[0].data = [acquirerRetainedShare, softShare, partnerShare];
         pieChart.update();
     }
 
@@ -918,17 +1038,17 @@
         const tpvNode = formatMXN(document.getElementById('input-tpv').value);
         const partnerRev = document.getElementById('kpi-partnerrev').innerText;
         const softRev = document.getElementById('kpi-softrev').innerText;
-        const netMargin = document.getElementById('kpi-broxelnet').innerText;
+        const netMargin = document.getElementById('kpi-acquirernet').innerText;
         const tpvTotal = document.getElementById('kpi-tpvtotal').innerText;
 
-        const text = `📊 *REVSUMMARY - SIMULADOR BROXEL x POS*
+        const text = `📊 *BUSINESS CASE - ADQUIRENTE x POS ALIANZA*
 • Cartera: ${nodes} Nodos (${tpvNode} TPV/nodo)
 • TPV Total Cartera: ${tpvTotal}/mes
-• Net Margin Broxel (~110 bps): ${netMargin}/mes
+• Net Margin Adquirente (~110 bps): ${netMargin}/mes
 
 💰 *REPARTICIÓN NET MARGIN:*
 • Software POS (25%): ${softRev}/mes
-• *NUESTROS 3 SOCIOS (10%): ${partnerRev}/mes* (+$${formatMXN(parseInt(document.getElementById('input-successfee').value) * nodes)} fee único)
+• *NUESTROS 3 SOCIOS (7.5%): ${partnerRev}/mes* (+$${formatMXN(parseInt(document.getElementById('input-successfee').value) * nodes)} fee único)
 
 📌 *Cálculo basado en tasas adquirentes reales de mercado (2.85% ponderado intl).*`;
 
