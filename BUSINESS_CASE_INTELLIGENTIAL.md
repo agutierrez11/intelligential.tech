@@ -37,27 +37,32 @@ Tras auditar a todos los actores locales e internacionales, **DynamiCore es la �
 
 ---
 
-### 🔓 Teardown de Capas No Reguladas: Riesgo Competitivo y Defensibilidad del Core 3-en-1
+### 🤝 Matriz Estratégica de Coopetencia: Colaboración vs. Choque Frontal & Prevención de Fuga de Leads
 
-Es un análisis brillante cuestionar qué ocurre en las capas operativas que **NO requieren regulación explícita de la CNBV**. A continuación se evalúa el nivel de riesgo y defensibilidad en cada capa:
+Para evitar la fuga de prospectos al responder preguntas en el mercado (*"Le mandamos la información de Intelligential y responde que está evaluando a Nubarium"*), a continuación se mapea el ecosistema de **Coopetencia** (dónde colaboramos como partners vs. dónde chocamos frontalmente y cómo defender la venta):
 
-| Capa Tecnológica | Función Operativa (No Regulada) | Nivel de Riesgo Frente a RegTechs / Competencia | Defensibilidad & Estrategia de Intelligential |
+| Aliado / Partner | Dónde Colaboramos (Integración Nativa) | Dónde Chocamos Frontalmente | Por Qué NO Le Resuelven a la SOFOM (El Argumento de Cierre) |
 | :--- | :--- | :--- | :--- |
-| **Capa 1: Lending Engine (Motor de Cartera)** | Amortizaciones, cálculo de TIIE, devengamiento, pagos, mora, quitas y estados de cuenta. | **Riesgo BAJO.** Construir un motor de cartera sobre AWS toma 12-18 meses de desarrollo complejo. | Una RegTech (Adamo/Truora) NO lo tiene. Sin motor de cartera no pueden administrar el crédito. |
-| **Capa 2: Portal de Solicitud Digital (UX/UI)** | Formulario web/móvil donde la persona física o moral llena datos y sube documentos. | <span class="val-red">**Riesgo ALTO / Vulnerable.**</span> Cualquier boutique de software (Expediente Azul, Moffin, Adamo) puede hacer un formulario bonito por $5k-$15k/mes. | **Estrategia Anti-Unbundling:** NUNCA vender el portal como un módulo aislado barato, sino como la entrada nativa del Core. |
-| **Capa 3: Integración de Pagos & Firma (SPEI / NOM-151)** | Dispersión automática por SPEI (STP) y firmado de pagarés digitales con Mifiel/Weetrust. | **Riesgo MEDIO.** RegTechs extranjeras dispersan en sus países, pero en México requieren conectores locales Banxico/STP. | Intelligential ofrece conectores STP/Mifiel pre-construidos sin costo de integración por proyecto. |
+| **Nubarium** (`nubarium.com`) | Biometría facial (1-1, 1-N), OCR de INE/pasaportes y consulta RENAPO. | Venden la API suelta e intentan abarcar OCR + NOM-151 + PEPs. | **NO ES UN CORE BANCARIO.** Nubarium no administra la cartera de crédito, no calcula TIIE, no hace devengamiento contable ni lleva la contabilidad CNBV. Si compran solo Nubarium, la SOFOM tiene que contratar programadores por 6 meses para armar su software. **Intelligential ya trae a Nubarium pre-conectado por dentro.** |
+| **Moffin / Nufi** | Conexión API a Buró / Círculo de Crédito y scoring crediticio. | Intentan vender formularios de KYC y listas negras por su cuenta. | **NO TIENEN MOTOR DE CARTERA.** Son herramientas de consulta aisladas; no generan tablas de amortización ni gestionan la cobranza. |
+| **Syntage** | Infraestructura fiscal SAT, CIEC y facturación electrónica. | Ninguno *(Partner Puro de Data Fiscal)*. | **Punto de Alianza Directa.** Intelligential conecta Syntage para automatizar el expediente fiscal en 1 clic. |
+| **Mifiel / Weetrust** | Firma electrónica NOM-151 y pagarés digitales ejecutivos. | Ninguno *(Partner Puro de Firma)*. | **Punto de Alianza Directa.** Intelligential orquesta la firma de Mifiel de origen en el flujo de solicitud digital. |
+| **STP (Banxico)** | Riel bancario SPEI y asignación de CLABEs personalizadas. | Ninguno *(Partner Puro de Pagos)*. | **Punto de Alianza Directa.** Dispersión y cobranza automática integrada nativamente al Core. |
 
-```
-+---------------------------------------------------------------------------------------------------+
-|                     POR QUÉ EL CORE 3-EN-1 EVITA EL RIESGO DE LAS CAPAS NO REGULADAS             |
-+------------------------------------+--------------------------------------------------------------+
-| SI LA SOFOM COMPRA MÓDULOS SUELTOS | SI LA SOFOM UTILIZA INTELLIGENTIAL 3-EN-1                     |
-| - Paga $15k a Expediente Azul (UX) | - Integra Portal UX + Motor de Cartera + PLD CNBV en 1 solo  |
-| - Paga $12k a un software PLD      | - 1 sola factura mensual ($36.5k a $42k MXN)                 |
-| - Paga $25k a un Core de cartera   | - Cero descalce contable o desincronización de API keys      |
-| Total: $52k/mes + 3 contratos      | Total: Ahorro de 30% + SLA garantizado en 30 días            |
-+------------------------------------+--------------------------------------------------------------+
-```
+---
+
+### 💬 Script de Cierre Anti-Fuga: ¿Qué responder cuando un cliente dice "Estoy evaluando a Nubarium"?
+
+> **Cliente:** *"Justo estoy evaluando contratar a Nubarium para mi proceso..."*
+>
+> **Respuesta de Antonio (AE):**  
+> *"¡Excelente opción, [Nombre]! **Nubarium es un gran aliado de data biométrica y en Intelligential lo tenemos integrado nativamente por dentro.** 
+>
+> Solo toma en cuenta un detalle clave de arquitectura: **Nubarium es una API de consulta de identidad, NO es un Core Bancario ni administra cartera de crédito**. 
+> 
+> Si contratas solo a Nubarium, tu equipo va a tener que contratar programadores por 6 meses para armar un software que reciba los datos, calcule las amortizaciones y lleve la contabilidad CNBV. 
+> 
+> **Con Intelligential no tienes que programar nada:** ya tienes la biometría de Nubarium pre-conectada + el expediente digital + el Core bancario de cartera en 1 sola plataforma activable en 30 días. ¿Te muestro en 10 min cómo se ve integrado en Sandbox?"*
 
 ---
 
@@ -96,7 +101,7 @@ Es crítico distinguir la diferencia estructural de ambos modelos de negocio par
 1. **Mezcla de Canales Actuales (Eventos vs Campañas vs Referencias 5X Capital).**
 2. **Cualificación de Leads Inbound vs Outbound (Evitar quema de tiempo en leads no aptos).**
 3. **Mandato del Fondo 5X Capital (Crecimiento MRR vs Margin EBITDA).**
-4. **Defensa de Capas No Reguladas (Evitar el Unbundling frente a Expediente Azul / Moffin).**
+4. **Manejo de Coopetencia & Prevención de Fuga a Partners (Nubarium / Moffin / Syntage).**
 5. **Desplazamiento Directo de DynamiCore (La única competencia real en el SAM).**
 6. **Benchmark & Flexibilidad de Setup Fee.**
 7. **Adopción de Samu.ai para Inteligencia Conversacional en Demos ($150 USD/mes).**
