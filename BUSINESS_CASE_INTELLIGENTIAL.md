@@ -35,6 +35,28 @@ Se incorporan al mapa competitivo **Fintechland** (México) y el benchmark regio
 | **Ascendes** | México | Core Financiero para SOFOMes | Software On-Premise / Servidor Local, interfaz obsoleta y sin onboarding nativo. | **Experiencia 100% Cloud**, expediente digital sin papel y firma NOM-151 en 1 clic. |
 | **Mambu** | Global | Core Bancario SaaS Enterprise | Precios inalcanzables ($80k+ USD/año) y sin compliance CNBV/PLD local. | **Core 3-en-1 en MXN**, empaquetado y adaptado 100% a la normativa mexicana. |
 
+### 🛡️ Matriz FODA Estratégica & Riesgo de Aterrizaje LatAm (Threat Mapping):
+
+```
++---------------------------------------------------------------------------------------------------+
+|                                  MATRIZ FODA DE INTELLIGENTIAL EN MÉXICO                          |
++---------------------------------------------------+-----------------------------------------------+
+| FORTALEZAS (F)                                    | OPORTUNIDADES (O)                             |
+| - Solución 3-en-1 (Core + PLD + Onboarding) sobre AWS | - Descongelamiento de 2,262 SOFOMes calificados|
+| - Go-Live garantizado en 30 días                  | - Incremento de ARPU vía Add-ons (Samu.ai)    |
+| - Moat Regulatorio CNBV / SAT 69-B NATIVO         | - Expansión Geográfica LatAm (Colombia/Perú)  |
++---------------------------------------------------+-----------------------------------------------+
+| DEBILIDADES (D)                                   | AMENAZAS LATAM (A - LANDING TO MEXICO)        |
+| - Proceso de ventas en estructuración inicial     | - Adamo (Colombia): RegTech & Dispersión      |
+| - Dependencia inicial de canales presenciales     | - Truora (Colombia): KYC / WhatsApp           |
+|                                                   | - Fintoc (Chile): Open Banking APIs           |
++---------------------------------------------------+-----------------------------------------------+
+```
+
+### 🎯 Impacto en el Diagrama Concéntrico (El Foso Regulatorio de Intelligential):
+* **Los Players LatAm atacan el TAM Masivo:** Empresas como Adamo o Truora entran a México buscando volumen (validación de identidad o KYC rápido).
+* **El SAM de Intelligential está BLINDADO:** Las 600 SOFOMes calificadas **requieren contabilidad regulada de la CNBV y prevención de lavado de dinero (PLD) obligatoria**. Ningún player sudamericano puede quitarle mercado a Intelligential en su SAM a menos que invierta años en adaptar la regulación mexicana.
+
 ---
 
 ## 3. 🔬 Ajuste Metodológico de Nicho: B2B Enterprise (Intelligential) vs. B2B Masivo (Clip)
@@ -72,7 +94,7 @@ Es crítico distinguir la diferencia estructural de ambos modelos de negocio par
 1. **Mezcla de Canales Actuales (Eventos vs Campañas vs Referencias 5X Capital).**
 2. **Cualificación de Leads Inbound vs Outbound (Evitar quema de tiempo en leads no aptos).**
 3. **Mandato del Fondo 5X Capital (Crecimiento MRR vs Margin EBITDA).**
-4. **Competencia y Defensa frente a Players RegTech / Core (Fintechland, Adamo, DynamiCore).**
+4. **Mapa de Amenazas RegTech LatAm y Foso Regulatorio en México (Adamo, Truora, Fintoc).**
 5. **Benchmark & Flexibilidad de Setup Fee.**
 6. **Adopción de Samu.ai para Inteligencia Conversacional en Demos ($150 USD/mes).**
 7. **Visión de Expansión (Verticales SOFIPOs/SOCAPs y LatAm).**
