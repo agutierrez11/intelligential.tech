@@ -553,7 +553,7 @@
     <header>
         <div class="header-title">
             <div class="badge-tag">
-                <span class="badge-dot"></span> Generic FinTech Partnership Framework v3.0
+                <span class="badge-dot"></span> Generic FinTech Partnership Framework v3.1
             </div>
             <h1 style="margin-top: 0.5rem;">Business Case: Adquirente FinTech x Software POS</h1>
             <p>Simulador Financiero, Arquitectura de Integración API & Modelo de Revenue Sharing Portátil</p>
@@ -617,10 +617,10 @@
 
             <hr style="border: none; border-top: 1px solid var(--border-color); margin: 1.25rem 0;">
 
-            <!-- Control 4: Net Margin bps -->
+            <!-- Control 4: Net Margin bps Base -->
             <div class="control-group">
                 <div class="control-label">
-                    <span>Net Margin Adquirente (bps)</span>
+                    <span>Net Margin Base Nacional (bps)</span>
                     <span class="control-val" id="lbl-netbps">110 bps (1.10%)</span>
                 </div>
                 <input type="range" id="input-netbps" min="50" max="200" value="110" step="5" oninput="calculate()">
@@ -666,19 +666,19 @@
 
                 <div class="kpi-card">
                     <div class="kpi-label">Net Margin Adquirente</div>
-                    <div class="kpi-value" id="kpi-acquirernet">$330,000</div>
-                    <div class="kpi-subtext">Libre de costo de red (~110 bps)</div>
+                    <div class="kpi-value" id="kpi-acquirernet">$382,500</div>
+                    <div class="kpi-subtext" id="kpi-netbps-effective">Libre de red (~127.5 bps)</div>
                 </div>
 
                 <div class="kpi-card highlight">
                     <div class="kpi-label">REVENUE 3 SOCIOS (7.5%)</div>
-                    <div class="kpi-value" id="kpi-partnerrev">$24,750</div>
-                    <div class="kpi-subtext" id="kpi-annually">$297,000 MXN / año recurrente</div>
+                    <div class="kpi-value" id="kpi-partnerrev">$28,688</div>
+                    <div class="kpi-subtext" id="kpi-annually">$344,250 MXN / año recurrente</div>
                 </div>
 
                 <div class="kpi-card">
                     <div class="kpi-label">Revenue Software (25%)</div>
-                    <div class="kpi-value" id="kpi-softrev">$82,500</div>
+                    <div class="kpi-value" id="kpi-softrev">$95,625</div>
                     <div class="kpi-subtext">Incentivo recurrente POS</div>
                 </div>
             </div>
@@ -699,25 +699,25 @@
                     <div class="waterfall-legend">
                         <div class="legend-item">
                             <div class="legend-dot" style="background-color: var(--accent-purple);"></div>
-                            <span>Adquirente Retención (67.5%): <strong id="lbl-acquirer-pct">$222,750/mes</strong></span>
+                            <span>Adquirente Retención (67.5%): <strong id="lbl-acquirer-pct">$258,188/mes</strong></span>
                         </div>
                         <div class="legend-item">
                             <div class="legend-dot" style="background-color: var(--accent-cyan);"></div>
-                            <span>Software POS (25%): <strong id="lbl-software-pct">$82,500/mes</strong></span>
+                            <span>Software POS (25%): <strong id="lbl-software-pct">$95,625/mes</strong></span>
                         </div>
                         <div class="legend-item">
                             <div class="legend-dot" style="background-color: var(--accent-green);"></div>
-                            <span>Nuestros 3 Socios (7.5%): <strong id="lbl-partners-pct">$24,750/mes</strong></span>
+                            <span>Nuestros 3 Socios (7.5%): <strong id="lbl-partners-pct">$28,688/mes</strong></span>
                         </div>
                     </div>
                 </div>
 
                 <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; background: rgba(79, 70, 229, 0.04); padding: 0.8rem 1rem; border-radius: 10px; border-left: 3px solid var(--accent-cyan);">
-                    <strong>Mecánica del Deal:</strong> Por cada $100 pesos cobrados en el restaurante a una tasa ponderada de <span id="lbl-weightedrate">2.85%</span>, el Adquirente retiene <span id="lbl-netrate">1.10%</span> de Margen Neto tras pagar intercambio. De esos 110 bps, <strong>nuestra tajada (7.5%) equivale a 8.25 bps del TPV total procesado.</strong>
+                    <strong>Mecánica Dinámica del Deal:</strong> Por cada $100 pesos cobrados en el restaurante a una tasa ponderada de <span id="lbl-weightedrate">2.85%</span>, el Adquirente retiene <span id="lbl-netrate">1.28%</span> de Margen Neto tras pagar intercambio (sube con más tarjeta internacional). De este Margen Neto dinámico, <strong>nuestra tajada (7.5%) equivale a <span id="lbl-effective-partner-bps">9.56 bps</span> del TPV total procesado.</strong>
                 </div>
             </div>
 
-            <!-- API Integration Architecture Section -->
+            <!-- API Architecture Flow Component -->
             <div class="glass-card">
                 <div class="card-title">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
@@ -864,7 +864,7 @@
         const nodes = parseInt(document.getElementById('input-nodes').value);
         const tpvPerNode = parseFloat(document.getElementById('input-tpv').value);
         const intlMix = parseFloat(document.getElementById('input-intl').value);
-        const netBps = parseFloat(document.getElementById('input-netbps').value);
+        const baseNetBps = parseFloat(document.getElementById('input-netbps').value);
         const partnerShare = parseFloat(document.getElementById('input-partnershare').value);
         const softShare = parseFloat(document.getElementById('input-softshare').value);
         const successFee = parseFloat(document.getElementById('input-successfee').value);
@@ -873,24 +873,37 @@
         document.getElementById('lbl-nodes').innerText = nodes;
         document.getElementById('lbl-tpv').innerText = formatMXN(tpvPerNode);
         document.getElementById('lbl-intl').innerText = intlMix + '%';
-        document.getElementById('lbl-netbps').innerText = netBps + ' bps (' + (netBps/100).toFixed(2) + '%)';
+        document.getElementById('lbl-netbps').innerText = baseNetBps + ' bps (' + (baseNetBps/100).toFixed(2) + '%)';
         document.getElementById('lbl-partnershare').innerText = partnerShare + '% del Net';
         document.getElementById('lbl-softshare').innerText = softShare + '% del Net';
         document.getElementById('lbl-successfee').innerText = formatMXN(successFee);
 
-        // Calculations
+        // Dynamic Calculations Based on International Card Mix:
+        // Nacional Rate: 2.50%, Interchange: 1.40% -> Base Net: 1.10% (110 bps)
+        // Intl Rate: 3.20%, Interchange: 1.75% -> Intl Net: 1.45% (145 bps) (+35 bps boost)
         const weightedRate = ( (100 - intlMix) * 2.50 + intlMix * 3.20 ) / 100;
+        const weightedInterchange = ( (100 - intlMix) * 1.40 + intlMix * 1.75 ) / 100;
+        
+        // Effective Net Margin Bps dynamically affected by Intl Mix
+        const intlBoostRatio = 1 + (intlMix / 100) * 0.318; // 35 bps boost over 110 bps
+        const effectiveNetBps = baseNetBps * intlBoostRatio;
+        const effectiveNetRate = effectiveNetBps / 100;
+
         document.getElementById('lbl-weightedrate').innerText = weightedRate.toFixed(2) + '%';
-        document.getElementById('lbl-netrate').innerText = (netBps/100).toFixed(2) + '%';
+        document.getElementById('lbl-netrate').innerText = effectiveNetRate.toFixed(2) + '%';
+        document.getElementById('kpi-netbps-effective').innerText = 'Libre de red (~' + effectiveNetBps.toFixed(1) + ' bps)';
 
         const totalTPV = nodes * tpvPerNode;
-        const netMarginPct = netBps / 10000; // bps to ratio
+        const netMarginPct = effectiveNetBps / 10000; // bps to ratio
         const totalNetMargin = totalTPV * netMarginPct;
 
         const partnerRev = totalNetMargin * (partnerShare / 100);
         const softRev = totalNetMargin * (softShare / 100);
         const acquirerRetainedShare = 100 - partnerShare - softShare;
         const acquirerRev = totalNetMargin * (acquirerRetainedShare / 100);
+
+        const effectivePartnerBps = (effectiveNetBps * (partnerShare / 100)).toFixed(2);
+        document.getElementById('lbl-effective-partner-bps').innerText = effectivePartnerBps + ' bps';
 
         const successFeeTotal = nodes * successFee;
 
@@ -1040,11 +1053,13 @@
         const softRev = document.getElementById('kpi-softrev').innerText;
         const netMargin = document.getElementById('kpi-acquirernet').innerText;
         const tpvTotal = document.getElementById('kpi-tpvtotal').innerText;
+        const intlMix = document.getElementById('input-intl').value;
 
         const text = `📊 *BUSINESS CASE - ADQUIRENTE x POS ALIANZA*
 • Cartera: ${nodes} Nodos (${tpvNode} TPV/nodo)
+• Mix Tarjeta Intl: ${intlMix}%
 • TPV Total Cartera: ${tpvTotal}/mes
-• Net Margin Adquirente (~110 bps): ${netMargin}/mes
+• Net Margin Adquirente: ${netMargin}/mes
 
 💰 *REPARTICIÓN NET MARGIN:*
 • Software POS (25%): ${softRev}/mes
