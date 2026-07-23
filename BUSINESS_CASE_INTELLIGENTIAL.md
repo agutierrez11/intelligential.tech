@@ -10,7 +10,7 @@
 > **Marco Metodológico de Prudencia RevOps (Hipótesis & Auditoría Inicial):**  
 > Toda propuesta de optimización de pricing, modelado de saturación de pipeline y sugerencias de expansión se presentan estrictamente como **hipótesis estratégicas y sugerencias a revisar a mediano plazo** durante la sesión de descubrimiento del Lunes.
 > 
-> Reconociendo la **adquisición de Intelligential por parte del fondo de inversión 5X Capital en Diciembre de 2024**, la ejecución táctica definitiva dependerá de auditar en vivo con Luis:
+> Reconociendo la **adquisición de Intelligential por parte del fondo de inversión 5X Capital en Diciembre de 2024**, la ejecución táctica definitiva dependerá de auditar en vivo con Luis (quien conoce la industria a fondo):
 > 1. **Salud de Caja & Mandato del Fondo:** Runway actual, metas de rentabilidad EBITDA vs. agresividad de gasto en adquisición (CAC).
 > 2. **Historial Real de Tracción (Últimos 12-18 Meses):** Ritmo histórico de cierre, tasa de churn y Net Retention Rate (NRR) real.
 > 3. **Mezcla de Canales de Adquisición:** Desglose del pipeline actual generado por eventos presenciales (ASOFOM/AMSOFAC), campañas de marketing inbound, referencias del portafolio de 5X Capital o prospección outbound en frío.
@@ -75,11 +75,53 @@ A continuación se detalla una muestra representativa de 15 tratos modelados sob
 
 ---
 
-## 4. 💳 Optimización de la Estrategia de Pricing (Sugerencias a Revisar a Mediano Plazo)
+## 4. 📈 Diagrama de Cruce TAM / SAM / SOM y Capas de Mercado
+
+```mermaid
+graph TD
+    subgraph TAM ["TAM: Total Addressable Market (~30,000+ Entidades)"]
+        style TAM fill:#0F172A,stroke:#38BDF8,stroke-width:2px,color:#F8FAFC
+        TAM_DESC["2,100+ SOFOMes registradas en CONDUSEF SIPRES + 80 Fintechs + 150 Cooperativas + 30k Microfinancieras"]
+        
+        subgraph SAM ["SAM: Serviceable Addressable Market Calificado (~600 Entidades Target)"]
+            style SAM fill:#1E1B4B,stroke:#818CF8,stroke-width:2px,color:#F8FAFC
+            SAM_DESC["500 SOFOM ENR + 100 Arrendadoras activas con Cartera >$50M MXN e Infraestructura AWS"]
+            
+            subgraph SOM ["SOM: Serviceable Obtainable Market (20 - 40 Clientes/Año)"]
+                style SOM fill:#312E81,stroke:#4ADE80,stroke-width:2px,color:#F8FAFC
+                SOM_DESC["Meta Q3-Q4: +20 Clientes | Meta 12 Meses: 40 Clientes Nuevos ($1.4M MXN MRR)"]
+            end
+        end
+    end
+```
+
+### ⏱️ Horizonte Visual de Saturación de Mercado:
+```
++---------------------------------------------------------------------------------------------------+
+|                          VELOCIDAD DE BARRIDO Y TECHO DEL MERCADO EN MÉXICO                       |
++------------------------------------+--------------------------------------------------------------+
+| ESCENARIO CONSERVADOR (20/año)     | ESCENARIO OPTIMISTA (40-50/año)                              |
+| - Outbound Barrido: 100 cuentas/mes| - Outbound Barrido: 150 cuentas/mes                          |
+| - Barrido 100% SAM: 12-18 Meses    | - Barrido 100% SAM: 8-12 Meses                               |
+| - Techo de Mercado: En 24 Meses    | - Techo de Mercado: En 18 Meses (Techo de 150-200 clientes)   |
++------------------------------------+--------------------------------------------------------------+
+```
 
 ---
 
-## 5. 📈 Cruce TAM / SAM / SOM y Análisis de Saturación de Mercado
+## 5. 📊 Benchmark del Setup Fee (2x Renta): Estándares de la Industria Core SaaS
+
+> [!NOTE]
+> *Análisis comparativo de mercado para abrir la discusión con Luis sobre la flexibilidad del Fee de Setup.*
+
+| Categoría de Core SaaS | Setup Fee Promedio de la Industria | Rationale y Fricción Comercial |
+| :--- | :--- | :--- |
+| **Global Enterprise Core** *(Mambu, Thought Machine)* | **50% - 100% del ACV** *(5x a 12x Renta Mensual / $50k-$150k USD)* | Consultoría de migración prolongada (6-12 meses). Alta fricción en Comité de Compras. |
+| **Regional Mid-Market Core** *(DynamiCore, Ascendes, Intelligential)* | **1x a 2x Renta Mensual** *($40k - $84k MXN)* | Estándar regional. Recupera costo de onboarding pero frena cierres en tratos de $83k+/mes. |
+| **Startup / Modular SaaS** *(Softcrédito, Moffin, Expediente Azul)* | **0.5x Renta o Fee Fijo** *($15k - $30k MXN)* | Entradas baratas. Fomenta el churn alto si el cliente no tiene compromiso operativo. |
+
+### 🎙️ Pregunta de Benchmark para Luis:
+> *"Luis, hoy tenemos el Setup Fee en 2x la Renta Mensual. En la industria regional de Cores (DynamiCore/Ascendes), el 1x a 2x es habitual para cubrir el onboarding. **¿En la historia de Intelligential el 2x ha sido una regla rígida o han sido flexibles según el tamaño de la cuenta para acelerar la firma**?"*
 
 ---
 
@@ -88,7 +130,7 @@ A continuación se detalla una muestra representativa de 15 tratos modelados sob
 1. **Mezcla de Canales Actuales (Eventos vs Campañas vs Referencias 5X Capital).**
 2. **Cualificación de Leads Inbound vs Outbound (Evitar quema de tiempo en leads no aptos).**
 3. **Mandato del Fondo 5X Capital (Crecimiento MRR vs Margin EBITDA).**
-4. **Flexibilización de Setup Fee a Mediano Plazo.**
+4. **Benchmark & Flexibilidad de Setup Fee.**
 5. **Visión de Expansión (Verticales SOFIPOs/SOCAPs y LatAm).**
 
 ---
