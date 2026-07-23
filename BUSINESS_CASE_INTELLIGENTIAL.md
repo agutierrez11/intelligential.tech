@@ -21,6 +21,26 @@
 
 **Intelligential** es la única plataforma de infraestructura core bancaria y BaaS *Smart Native®* mexicana que integra nativamente **Core Bancario + Cumplimiento Normativo (CNBV/PLD) + Onboarding Digital (INE, SAT, IMSS)** en un solo sistema sobre AWS, activable en semanas y a un precio accesible para instituciones no bancarias.
 
+### 🎯 Alineación Directa con el CEO (Luis F. Sánchez): Foco Estratégico de ICP a 3 Años
+
+Basado en la alineación directa con el CEO, se establece la frontera clara del mercado objetivo y la filosofía de orquestación de la empresa:
+
+```
++---------------------------------------------------------------------------------------------------+
+|                        FOCO ESTRATÉGICO DE ICP A 3 AÑOS (CONFIRMADO POR LUIS F. SÁNCHEZ)          |
++------------------------------------+--------------------------------------------------------------+
+| 🎯 SECTORES CORE DE NEGOCIO (ALTO MARGEN) | 🚫 SECTORES DESCARTADOS (EXHAUSTIVOS EN RECURSOS)        |
+| - CRÉDITO SIMPLE & REVOLVENTE      | - Pagos masivos por WhatsApp (ej. Soy Aida)                  |
+| - ARRENDAMIENTO PURO Y FINANCIERO  | - Agregadores de alta transaccionalidad / Pasarelas B2C       |
+| - FACTORAJE DE CARTERA             | - Wallets transaccionales masivos (excepto casos contados)   |
+| (Baja transaccionalidad: 1 pago/mes| (Consumen excesivos recursos AWS de cómputo sin MRR de alto ACV)|
++------------------------------------+--------------------------------------------------------------+
+```
+
+#### 🔑 Los 2 Principios de Venta & Orquestación de Luis:
+1. **Proceso Orquestado 3-en-1:** Intelligential es la solución imbatible cuando el cliente busca el **proceso completo empaquetado** (Core + Compliance CNBV + Onboarding Digital).
+2. **Sinergia con Proveedores (ej. Nubarium):** Si el cliente ya construyó todo in-house y solo busca la API registral suelta, se canaliza directamente a aliados como **Nubarium**. Intelligential no compite por vender APIs aisladas, sino por administrar la cartera del crédito.
+
 ---
 
 ## 2. ⚔️ Matriz Ampliada de Competencia & Conclusión Única (Teardown Competitivo)
@@ -51,32 +71,7 @@ Para evitar la fuga de prospectos al responder preguntas en el mercado (*"Le man
 
 ---
 
-### 💬 Script de Cierre Anti-Fuga: ¿Qué responder cuando un cliente dice "Estoy evaluando a Nubarium"?
-
-> **Cliente:** *"Justo estoy evaluando contratar a Nubarium para mi proceso..."*
->
-> **Respuesta de Antonio (AE):**  
-> *"¡Excelente opción, [Nombre]! **Nubarium es un gran aliado de data biométrica y en Intelligential lo tenemos integrado nativamente por dentro.** 
->
-> Solo toma en cuenta un detalle clave de arquitectura: **Nubarium es una API de consulta de identidad, NO es un Core Bancario ni administra cartera de crédito**. 
-> 
-> Si contratas solo a Nubarium, tu equipo va a tener que contratar programadores por 6 meses para armar un software que reciba los datos, calcule las amortizaciones y lleve la contabilidad CNBV. 
-> 
-> **Con Intelligential no tienes que programar nada:** ya tienes la biometría de Nubarium pre-conectada + el expediente digital + el Core bancario de cartera en 1 sola plataforma activable en 30 días. ¿Te muestro en 10 min cómo se ve integrado en Sandbox?"*
-
----
-
 ## 3. 🔬 Ajuste Metodológico de Nicho: B2B Enterprise (Intelligential) vs. B2B Masivo (Clip)
-
-Es crítico distinguir la diferencia estructural de ambos modelos de negocio para evitar cometer el error de trasladar tácticas de volumen masivo a un mercado finito:
-
-| Dimensión Estratégica | Modelo Clip (Agregador / B2B Masivo) | Modelo Intelligential (Infrastructure SaaS / Nicho B2B) |
-| :--- | :--- | :--- |
-| **Tamaño del Mercado (TAM/SAM)** | Masivo (Millones de PyMEs y comercios) | **Finito de Nicho (~600 Cuentas Objetivo en México)** |
-| **Ticket Promedio (ACV)** | Transaccional (Bajo por usuario) | **Alto ($438,000 MXN / año promedio)** |
-| **Ciclo de Venta** | Corto / Transaccional (Días) | **Consultivo (1 a 3 meses / Decisiones de Consejo)** |
-| **Tolerancia al Error Outbound** | Alta (Perder un lead no impacta el mercado) | **CERO (Un correo genérico quema el 10% del mercado)** |
-| **Estrategia Comercial** | Campañas Inbound / Volumen Masivo | **Prospección Quirúrgica (Sniper Sales) / ABM** |
 
 ---
 
@@ -99,9 +94,9 @@ Es crítico distinguir la diferencia estructural de ambos modelos de negocio par
 ## 8. 🎙️ Cuestionario de Auditoría & Descubrimiento para la Sesión del Lunes con Luis
 
 1. **Mezcla de Canales Actuales (Eventos vs Campañas vs Referencias 5X Capital).**
-2. **Cualificación de Leads Inbound vs Outbound (Evitar quema de tiempo en leads no aptos).**
+2. **Cualificación de Leads Inbound vs Outbound (Foco exclusivo en Crédito, Arrendamiento y Factoraje).**
 3. **Mandato del Fondo 5X Capital (Crecimiento MRR vs Margin EBITDA).**
-4. **Manejo de Coopetencia & Prevención de Fuga a Partners (Nubarium / Moffin / Syntage).**
+4. **Manejo de Coopetencia & Alianza con Nubarium (Orquestación 3-en-1 vs API suelta).**
 5. **Desplazamiento Directo de DynamiCore (La única competencia real en el SAM).**
 6. **Benchmark & Flexibilidad de Setup Fee.**
 7. **Adopción de Samu.ai para Inteligencia Conversacional en Demos ($150 USD/mes).**
