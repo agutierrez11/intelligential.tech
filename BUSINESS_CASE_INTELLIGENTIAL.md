@@ -4,6 +4,7 @@
 **Líder de Proyecto / Full-Cycle AE & RevOps:** Antonio Gutiérrez  
 **Objetivo Q3-Q4:** +20 Clientes Nuevos (+ $200,000 MXN MRR Adicional)  
 **Meta SOM (12 Meses):** 40 Clientes Nuevos (Ritmo Anualizado)  
+**Meta Estratégica 3 Años:** 100 Clientes Activos ($3.5M - $5.0M MXN MRR)  
 **Mercado Objetivo Calificado (SAM Total):** 1,113 Entidades en México (~ $500,000,000 MXN en Valor de Mercado)  
 **SAM Core Directo (Crédito, Arrendamiento & Factoraje):** 600 Entidades de Alto ACV  
 
@@ -56,69 +57,39 @@ Basado en la alineación directa con el CEO, se establece la frontera clara del 
 +------------------------------------+--------------------------------------------------------------+
 ```
 
----
+### 🌎 Hoja de Ruta a 3 Años: Meta de 100 Clientes ($3.5M-$5M MXN MRR) & Expansión LatAm
 
-## 2. ⚔️ Matriz Ampliada de Competencia & Conclusión Única (Teardown Competitivo)
-
-### 🎯 La Conclusión Clave: DynamiCore es el ÚNICO Rival Directo en el SAM
-
-Tras auditar a todos los actores locales e internacionales, **DynamiCore es la ÚNICA competencia real directa en el mercado objetivo de 600 SOFOMes calificadas de México**. Los demás actores no compiten directamente en el mismo segmento:
-
-* **Mambu:** Inalcanzable en precio ($80k+ USD/año) y sin PLD/CNBV nativo de México. *(Fuera de segmento)*.
-* **Ascendes:** Software on-premise/legado obsoleto en servidores locales a punto de churnear. *(Target de migración)*.
-* **Softcrédito / Moffin / Expediente Azul:** Herramientas modulares básicas sin Core bancario completo ni motor regulatorio CNBV. *(Módulos parciales)*.
-* **Fintechland:** Boutique de desarrollo a la medida por proyecto (4-6 meses) a $300k+ setup. *(No es SaaS empaquetado)*.
-* **Adamo / Truora:** RegTechs extranjeras de identidad sin contabilidad ni compliance SOFOM para México. *(Proveedores de data)*.
-
-### 🤝 Matriz Estratégica de Coopetencia: Colaboración vs. Choque Frontal & Prevención de Fuga de Leads
-
-| Aliado / Partner | Dónde Colaboramos (Integración Nativa) | Dónde Chocamos Frontalmente | Por Qué NO Le Resuelven a la SOFOM (El Argumento de Cierre) |
-| :--- | :--- | :--- | :--- |
-| **Nubarium** (`nubarium.com`) | Biometría facial (1-1, 1-N), OCR de INE/pasaportes y consulta RENAPO. | Venden la API suelta e intentan abarcar OCR + NOM-151 + PEPs. | **NO ES UN CORE BANCARIO.** Nubarium no administra la cartera de crédito, no calcula TIIE, no hace devengamiento contable ni lleva la contabilidad CNBV. Si compran solo Nubarium, la SOFOM tiene que contratar programadores por 6 meses para armar su software. **Intelligential ya trae a Nubarium pre-conectado por dentro.** |
-| **Moffin / Nufi** | Conexión API a Buró / Círculo de Crédito y scoring crediticio. | Intentan vender formularios de KYC y listas negras por su cuenta. | **NO TIENEN MOTOR DE CARTERA.** Son herramientas de consulta aisladas; no generan tablas de amortización ni gestionan la cobranza. |
-| **Syntage** | Infraestructura fiscal SAT, CIEC y facturación electrónica. | Ninguno *(Partner Puro de Data Fiscal)*. | **Punto de Alianza Directa.** Intelligential conecta Syntage para automatizar el expediente fiscal en 1 clic. |
-| **Mifiel / Weetrust** | Firma electrónica NOM-151 y pagarés digitales ejecutivos. | Ninguno *(Partner Puro de Firma)*. | **Punto de Alianza Directa.** Intelligential orquesta la firma de Mifiel de origen en el flujo de solicitud digital. |
-| **STP (Banxico)** | Riel bancario SPEI y asignación de CLABEs personalizadas. | Ninguno *(Partner Puro de Pagos)*. | **Punto de Alianza Directa.** Dispersión y cobranza automática integrada nativamente al Core. |
-
-### ⚠️ Teardown Técnico: Validadores de PDF Superficiales vs. Orquestación Directa a Fuentes Oficiales
+Basado en las respuestas del CEO sobre la suficiencia del mercado y los siguientes pasos estratégicos:
 
 ```
 +---------------------------------------------------------------------------------------------------+
-|               DIFERENCIA ENTRE FAKE VALIDATION (OCR PDF) VS. ORQUESTACIÓN REAL FUENTES OFICIALES  |
+|                 HOJA DE RUTA ESTRATÉGICA A 3 AÑOS (MÉXICO + EXPANSIÓN REGIONAL LATAM)             |
 +------------------------------------+--------------------------------------------------------------+
-| ❌ FAKE VALIDATION (OCR SUBIR PDF)  | 🟢 ORQUESTACIÓN INTELLIGENTIAL (FUENTES OFICIALES EN TIEMPO REAL)|
-| - El usuario sube un PDF a una web | - Consulta directa al SAT vía CIEC / Syntage (Padrón 69-B)    |
-| - La IA lee el texto del PDF (OCR) | - Verificación biométrica facial INE vs Lista Nominal CNBV   |
-| - Vulnerable a PDFs alterados en IA| - Consulta instantánea a Buró de Crédito en tiempo real       |
-| - RECHAZADO EN AUDITORÍA CNBV/PLD  | - Expediente electrónico con sello de tiempo NOM-151 (Mifiel) |
+| 🇲🇽 META MÉXICO (100 CLIENTES ACTIVOS) | 🌎 EXPANSIÓN INTERNACIONAL LATAM (COLOMBIA & PERÚ)            |
+| - Penetración del 16.6% del SAM    | - Colombia: Neobancos / Lenders / Rieles QR Bre-B            |
+| - MRR Recurrente: $3.5M-$5.0M MXN  | - Perú: Factoring (Factura Negociable CAVALI) / Regulación SBS|
+| - ARR Anualizado: $42M-$60M MXN    | - Apertura de pipeline transfronterizo                        |
 +------------------------------------+--------------------------------------------------------------+
 ```
+
+1. **Capacidad de Leads en México:** Con un SAM de 600 SOFOMes/Arrendadoras calificadas, capturar 100 clientes activos representa un 16.6% de cuota de mercado, garantizando runway comercial sin riesgo de saturación de leads.
+2. **Despliegue Transfronterizo:** La expansión a Perú y Colombia posiciona a Intelligential como la plataforma Core & Compliance regional de referencia en el ecosistema Fintech andino y mexicano.
+
+---
+
+## 2. ⚔️ Matriz Ampliada de Competencia & Conclusión Única (Teardown Competitivo)
 
 ---
 
 ## 3. 🔬 Ajuste Metodológico de Nicho: B2B Enterprise (Intelligential) vs. B2B Masivo (Clip)
 
-Aplicando las lecciones auditadas en Clip ($10MDP/mes en ingresos adicionales):
-* **El Error de la Prospección Masiva:** Las campañas online abiertas traen "leads basura" sin RFC ni cartera de crédito.
-* **La Táctica Intelligential ("Sniper Outbound"):** Prospección quirúrgica 1-a-1 en los 600 decisores (CEOs/CFOs) de las SOFOMes y Arrendadoras identificadas en el padrón de CONDUSEF.
-
 ---
 
 ## 4. 💼 Muestra de Deals Calificados (Tiers 1, 2 y 3)
 
-| Tier | Tipo de Entidad | Renta Mensual Sugerida | Setup Fee Decompresivo | Cartera Estimada |
-| :--- | :--- | :--- | :--- | :--- |
-| **Tier 1 (Startup/Naciente)** | SOFOM ENR / Fintech Semilla | $12,500 - $18,000 MXN | $40,000 MXN (Amortizable) | < $20M MXN |
-| **Tier 2 (Growth)** | SOFOM ENR / Arrendadora Media | $25,000 - $35,000 MXN | $50,000 - $65,000 MXN | $20M - $100M MXN |
-| **Tier 3 (Enterprise)** | Arrendadora Grande / Lender Regulado | $50,000 - $85,000 MXN | $100,000 MXN | > $100M MXN |
-
 ---
 
 ## 5. 📈 Cruce TAM / SAM / SOM y Calibración Quirúrgica del Mercado ($500M MXN)
-
-### 📊 Desglose del SAM Total en México (1,113 Entidades — $500,000,000 MXN Valor de Mercado):
-
-Criterios de inclusión: Operación activa de crédito en México + Cartera activa mayor a $100M MXN.
 
 | Segmento del Mercado | Número de Entidades | Nivel de Prioridad en Intelligential |
 | :--- | :--- | :--- |
@@ -131,41 +102,13 @@ Criterios de inclusión: Operación activa de crédito en México + Cartera acti
 | **Bancos de Nicho** | **18 Entidades** | ⚪ Enterprise Especial |
 | **TOTAL UNIVERSO SAM** | **1,113 Entidades** | **💰 ~ $500,000,000 MXN Valor Total del Mercado** |
 
-```mermaid
-graph TD
-    subgraph TAM ["TAM: Total Addressable Market (~30,000+ Entidades)"]
-        style TAM fill:#0F172A,stroke:#38BDF8,stroke-width:2px,color:#F8FAFC
-        TAM_DESC["2,100+ SOFOMes registradas en CONDUSEF SIPRES + 80 Fintechs + 150 Cooperativas + 30k Microfinancieras"]
-        
-        subgraph SAM ["SAM Total (1,113 Entidades = ~$500M MXN)"]
-            style SAM fill:#1E1B4B,stroke:#818CF8,stroke-width:2px,color:#F8FAFC
-            SAM_DESC["500 SOFOMes + 200 Fintechs + 150 Cooperativas + 100 Lenders + 100 Arrendadoras + 45 SOFIPOs + 18 Bancos"]
-            
-            subgraph SAM_CORE ["SAM Core Directo Crédito/Arrendamiento (~600 Entidades Target)"]
-                style SAM_CORE fill:#311B92,stroke:#A78BFA,stroke-width:2px,color:#F8FAFC
-                SAM_CORE_DESC["500 SOFOM ENR + 100 Arrendadoras (Foco Directo Confirmado por Luis F. Sánchez)"]
-                
-                subgraph SOM ["SOM: Serviceable Obtainable Market (20 - 40 Clientes/Año)"]
-                    style SOM fill:#312E81,stroke:#4ADE80,stroke-width:2px,color:#F8FAFC
-                    SOM_DESC["Meta Q3-Q4: +20 Clientes | Meta 12 Meses: 40 Clientes ($1.4M MXN MRR de Alto Margen)"]
-                end
-            end
-        end
-    end
-```
-
 ---
 
 ## 6. 📊 Benchmark del Setup Fee (2x Renta): Estándares de la Industria Core SaaS
 
-* **El Problema del Setup Fee Plano 2x:** En tratos Enterprise ($83k - $200k renta/mes), un setup fee de $166k - $400k genera fricción extrema y congela la negociación.
-* **Propuesta de Pricing Decompresivo:** Setup fee fijo por Tier ($40k Tier 1, $50k Tier 2, $65k-$100k Tier 3), con la opción de diferir a 12 meses en contratos anuales o condonar con pago anticipado.
-
 ---
 
 ## 7. 🤖 Recomendación de Tech Stack Comercial: Conversational AI & Call Intelligence (`Samu.ai`)
-
-* Implementar **Samu.ai** ($150 - $250 USD/mes) para grabar, resumir y extraer objeciones comerciales automáticamente de las llamadas de ventas con los CEOs de las SOFOMes.
 
 ---
 
@@ -174,13 +117,13 @@ graph TD
 1. **Mezcla de Canales Actuales (Eventos vs Campañas vs Referencias 5X Capital).**
 2. **Posicionamiento de Orquestación de Core & Compliance Embebido frente a APIs sueltas.**
 3. **Validación Directa a Fuentes Oficiales (SAT/INE) vs. Herramientas de OCR de PDF superficiales.**
-4. **Calibración Quirúrgica del SAM (1,113 Entidades Total = ~$500M MXN vs. 600 Core Target de Crédito/Arrendamiento).**
-5. **Mandato del Fondo 5X Capital (Crecimiento MRR vs Margin EBITDA).**
-6. **Manejo de Coopetencia & Alianza con Nubarium (Orquestación 3-en-1 vs API suelta).**
-7. **Desplazamiento Directo de DynamiCore (La única competencia real en el SAM).**
-8. **Benchmark & Flexibilidad de Setup Fee Decompresivo.**
-9. **Adopción de Samu.ai para Inteligencia Conversacional en Demos ($150 USD/mes).**
-10. **Visión de Expansión (Verticales SOFIPOs/SOCAPs y LatAm).**
+4. **Estrategia para Alcanzar la Meta de 100 Clientes Activos en México ($3.5M-$5M MXN MRR).**
+5. **Planes de Expansión Internacional en Colombia (Bre-B / Neobancos) y Perú (Factoring CAVALI / SBS).**
+6. **Mandato del Fondo 5X Capital (Crecimiento MRR vs Margin EBITDA).**
+7. **Manejo de Coopetencia & Alianza con Nubarium (Orquestación 3-en-1 vs API suelta).**
+8. **Desplazamiento Directo de DynamiCore (La única competencia real en el SAM).**
+9. **Benchmark & Flexibilidad de Setup Fee Decompresivo.**
+10. **Adopción de Samu.ai para Inteligencia Conversacional en Demos ($150 USD/mes).**
 
 ---
 *Documento estratégico preparado para la alineación comercial con Luis Fernando Sánchez.*
