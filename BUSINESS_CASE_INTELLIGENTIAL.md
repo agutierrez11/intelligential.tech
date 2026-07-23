@@ -23,39 +23,28 @@
 
 ---
 
-## 2. ⚔️ Matriz Ampliada de Competencia Directa y RegTech Regional (Teardown LatAm)
+## 2. ⚔️ Matriz Ampliada de Competencia & Conclusión Única (Teardown Competitivo)
 
-Se incorporan al mapa competitivo **Fintechland** (México) y el benchmark regional **Adamo Services** (`adamoservices.co`, Colombia), analizando su riesgo de expansión hacia México y la barrera defensiva de Intelligential:
+### 🎯 La Conclusión Clave: DynamiCore es el ÚNICO Rival Directo en el SAM
 
-| Competidor | Origen / Alcance | Oferta Principal | Vulnerabilidad / Barrera en México | Ángulo Defensivo de Intelligential |
-| :--- | :--- | :--- | :--- | :--- |
-| **Fintechland** (`fintechland.mx`) | México | "Infraestructura 360°" & Identidad Digital | Fábrica de software a la medida. Tiempos largos (4-6 meses) y sin PLD nativo. | **SaaS Smart Native® 3-en-1 pre-construido**, Go-Live en 30 días con CNBV embebido. |
-| **Adamo Services** (`adamoservices.co`) | Colombia *(Riesgo Expansión LatAm)* | RegTech, Identidad, Dispersión de Pagos & Firma | **Sin localización regulatoria CNBV / PLD México**. No es Core Bancario de cartera. | **Moat Regulatorio Mexicano:** CNBV, listas 69-B SAT y contabilidad SOFOM nativa en AWS. |
-| **DynamiCore** | México | Core Bancario Tradicional | Software Legado Monolítico, cobros ocultos por conectores y desarrollo lento. | **Ahorro >42% en TCO**, transparencia total en conectores y arquitectura AWS. |
-| **Ascendes** | México | Core Financiero para SOFOMes | Software On-Premise / Servidor Local, interfaz obsoleta y sin onboarding nativo. | **Experiencia 100% Cloud**, expediente digital sin papel y firma NOM-151 en 1 clic. |
-| **Mambu** | Global | Core Bancario SaaS Enterprise | Precios inalcanzables ($80k+ USD/año) y sin compliance CNBV/PLD local. | **Core 3-en-1 en MXN**, empaquetado y adaptado 100% a la normativa mexicana. |
+Tras auditar a todos los actores locales e internacionales, **DynamiCore es la ÚNICA competencia real directa en el mercado objetivo de 600 SOFOMes calificadas de México**. Los demás actores no compiten directamente en el mismo segmento:
 
-### 🛡️ Matriz FODA Estratégica & Riesgo de Aterrizaje LatAm (Threat Mapping):
+* **Mambu:** Inalcanzable en precio ($80k+ USD/año) y sin PLD/CNBV nativo de México. *(Fuera de segmento)*.
+* **Ascendes:** Software on-premise/legado obsoleto en servidores locales a punto de churnear. *(Target de migración)*.
+* **Softcrédito / Moffin / Expediente Azul:** Herramientas modulares básicas sin Core bancario completo ni motor regulatorio CNBV. *(Módulos parciales)*.
+* **Fintechland:** Boutique de desarrollo a la medida por proyecto (4-6 meses) a $300k+ setup. *(No es SaaS empaquetado)*.
+* **Adamo / Truora:** RegTechs extranjeras de identidad sin contabilidad ni compliance SOFOM para México. *(Proveedores de data)*.
 
 ```
 +---------------------------------------------------------------------------------------------------+
-|                                  MATRIZ FODA DE INTELLIGENTIAL EN MÉXICO                          |
-+---------------------------------------------------+-----------------------------------------------+
-| FORTALEZAS (F)                                    | OPORTUNIDADES (O)                             |
-| - Solución 3-en-1 (Core + PLD + Onboarding) sobre AWS | - Descongelamiento de 2,262 SOFOMes calificados|
-| - Go-Live garantizado en 30 días                  | - Incremento de ARPU vía Add-ons (Samu.ai)    |
-| - Moat Regulatorio CNBV / SAT 69-B NATIVO         | - Expansión Geográfica LatAm (Colombia/Perú)  |
-+---------------------------------------------------+-----------------------------------------------+
-| DEBILIDADES (D)                                   | AMENAZAS LATAM (A - LANDING TO MEXICO)        |
-| - Proceso de ventas en estructuración inicial     | - Adamo (Colombia): RegTech & Dispersión      |
-| - Dependencia inicial de canales presenciales     | - Truora (Colombia): KYC / WhatsApp           |
-|                                                   | - Fintoc (Chile): Open Banking APIs           |
-+---------------------------------------------------+-----------------------------------------------+
+|                        INTELLIGENTIAL VS. DYNAMICORE (EL ÚNICO DUELO REAL)                         |
++------------------------------------+--------------------------------------------------------------+
+| DYNAMICORE (EL LEGADO CARO)        | INTELLIGENTIAL (SMART NATIVE®)                               |
+| - Cobros ocultos por conectores    | - Transparencia total (Conectores nativos incluidos)          |
+| - TCO Anual: $1,240,000 MXN        | - TCO Anual: $720,000 MXN (AHORRO NETO >42% / +$520k MXN)    |
+| - Implementación: 3 a 6 Meses      | - Go-Live Garantizado: 30 Días sobre AWS                      |
++------------------------------------+--------------------------------------------------------------+
 ```
-
-### 🎯 Impacto en el Diagrama Concéntrico (El Foso Regulatorio de Intelligential):
-* **Los Players LatAm atacan el TAM Masivo:** Empresas como Adamo o Truora entran a México buscando volumen (validación de identidad o KYC rápido).
-* **El SAM de Intelligential está BLINDADO:** Las 600 SOFOMes calificadas **requieren contabilidad regulada de la CNBV y prevención de lavado de dinero (PLD) obligatoria**. Ningún player sudamericano puede quitarle mercado a Intelligential en su SAM a menos que invierta años en adaptar la regulación mexicana.
 
 ---
 
@@ -94,8 +83,8 @@ Es crítico distinguir la diferencia estructural de ambos modelos de negocio par
 1. **Mezcla de Canales Actuales (Eventos vs Campañas vs Referencias 5X Capital).**
 2. **Cualificación de Leads Inbound vs Outbound (Evitar quema de tiempo en leads no aptos).**
 3. **Mandato del Fondo 5X Capital (Crecimiento MRR vs Margin EBITDA).**
-4. **Mapa de Amenazas RegTech LatAm y Foso Regulatorio en México (Adamo, Truora, Fintoc).**
-5. **Benchmark & Flexibilidad de Setup Fee.**
+4. **Desplazamiento Directo de DynamiCore (La única competencia real en el SAM).**
+5. **Benchmark & Flexibilidad of Setup Fee.**
 6. **Adopción de Samu.ai para Inteligencia Conversacional en Demos ($150 USD/mes).**
 7. **Visión de Expansión (Verticales SOFIPOs/SOCAPs y LatAm).**
 
