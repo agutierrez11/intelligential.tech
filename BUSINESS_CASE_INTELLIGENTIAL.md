@@ -6,6 +6,15 @@
 **Meta SOM (12 Meses):** 40 Clientes Nuevos (Ritmo Anualizado)  
 **Mercado Objetivo Calificado (SAM):** 1,113 Entidades en México (500 SOFOM ENR, 100 Arrendadoras, 100 Lenders Digitales, 200 Fintechs)  
 
+> [!IMPORTANT]
+> **Marco Metodológico de Prudencia RevOps (Hipótesis & Auditoría Inicial):**  
+> Toda propuesta de optimización de pricing, modelado de saturación de pipeline y sugerencias de expansión se presentan estrictamente como **hipótesis estratégicas y sugerencias a revisar a mediano plazo** durante la sesión de descubrimiento del Lunes.
+> 
+> Reconociendo la **adquisición de Intelligential por parte del fondo de inversión 5X Capital en Diciembre de 2024**, la ejecución táctica definitiva dependerá de auditar en vivo con Luis:
+> 1. **Salud de Caja & Mandato del Fondo:** Runway actual, metas de rentabilidad EBITDA vs. agresividad de gasto en adquisición (CAC).
+> 2. **Historial Real de Tracción (Últimos 12-18 Meses):** Ritmo histórico de cierre, tasa de churn y Net Retention Rate (NRR) real.
+> 3. **Mezcla de Canales de Adquisición:** Desglose del pipeline actual generado por eventos presenciales (ASOFOM/AMSOFAC), campañas de marketing inbound, referencias del portafolio de 5X Capital o prospección outbound en frío.
+
 ---
 
 ## 1. 📌 Resumen Ejecutivo y Tesis de Inversión
@@ -18,7 +27,7 @@
 * **Tier 2 - Mid-Market:** $42,000 MXN / mes ($504,000 MXN / año).
 * **Tier 3 - Multi-Producto:** $83,000 MXN / mes ($998,000 MXN / año).
 * **Tier 4 - Enterprise:** $200,000 MXN / mes ($2,400,000 MXN / año).
-* **Fee de Activación & Setup Vigente:** 2x la Renta Mensual *(Propuesta de optimización dinámica por Antonio abajo)*.
+* **Fee de Activación & Setup Vigente:** 2x la Renta Mensual *(Sugerencia de optimización a revisar a mediano plazo abajo)*.
 * **LTV Promedio (36 meses):** $1,400,000 - $3,000,000 MXN por cliente.
 
 ---
@@ -47,13 +56,16 @@ A continuación se detalla una muestra representativa de 15 tratos modelados sob
 
 ---
 
-## 3. 💳 Optimización de la Estrategia de Pricing (Propuesta de Antonio)
+## 3. 💳 Optimización de la Estrategia de Pricing (Sugerencias a Revisar a Mediano Plazo)
+
+> [!NOTE]
+> *Propuesta estratégica sujeto a validación según la política de margen del fondo 5X Capital y la elasticidad de precio de los clientes actuales.*
 
 ### 💡 Diagnóstico del Modelo Actual (Setup Fee = 2x Renta):
-* **Fricción de Entrada en Cuentas Grandes:** Para un trato Tier 3 ($83k/mes) o Enterprise ($200k/mes), cobrar un Setup Fee del 2x exige un desembolso inicial de **$166,000 a $400,000 MXN de golpe**. Esto se convierte en la **freno #1 en el Comité de Compras** y alarga el ciclo de venta.
+* **Fricción de Entrada en Cuentas Grandes:** Para un trato Tier 3 ($83k/mes) o Enterprise ($200k/mes), cobrar un Setup Fee del 2x exige un desembolso inicial de **$166,000 a $400,000 MXN de golpe**. Esto se convierte en el **freno #1 en el Comité de Compras** y alarga el ciclo de venta.
 * **El Riesgo del "Cheap Entry" en Startups:** Si vendemos muy barato o regalamos el setup a clientes pequeños ($15k-$20k/mes), el cliente no tiene "skin in the game" (compromiso operativo) y la probabilidad de **churn a los 6 meses es muy alta**.
 
-### 🛠️ Las 3 Opciones Dinámicas para Elevar Rentabilidad y Acelerar el Cierre:
+### 🛠️ Las 3 Opciones Dinámicas para Analizar a Mediano Plazo:
 
 #### 🟢 Opción A: Setup Fee Decompresivo (Acelera Cierre sin Barreras)
 Mantenemos la Renta MRR alta y reducimos la tasa de Setup Fee a mayor volumen para eliminar el freno de entrada:
@@ -65,7 +77,7 @@ Mantenemos la Renta MRR alta y reducimos la tasa de Setup Fee a mayor volumen pa
 #### 🟢 Opción B: Amortización de Setup Fee en Renta (MRR Recurrente Mayor + Zero Upfront)
 Para empresas que no tienen presupuesto de Capex inicial pero cuentan con flujo operativo:
 * Eliminamos el Setup Fee ($0 de enganche) a cambio de **incrementar la Renta Mensual en un 20% a 25%** bajo un **Contrato Anual Forzoso**.
-* *Ejemplo Tier Mid-Market:* Renta de **$52,000 MXN/mes sin Setup Fee** (vs $42k/mes + $84k setup). El cliente aprueba la compra de inmediato y nosotros garantizamos $624,000 MXN de ingresos anuales recurrentes.
+* *Ejemplo Tier Mid-Market:* Renta de **$52,000 MXN/mes sin Setup Fee** (vs $42k/mes + $84k setup). El cliente no siente el golpe inicial y nosotros garantizamos $624,000 MXN de ingresos anuales recurrentes.
 
 #### 🟢 Opción C: Descuento del 100% en Setup por Pago Anual Anticipado
 * Si el cliente paga por adelantado el contrato anual completo (12 meses de MRR de contado), se le **bonifica el 100% del Setup Fee**.
@@ -91,53 +103,27 @@ Para empresas que no tienen presupuesto de Capex inicial pero cuentan con flujo 
 +------------------------------------+----------------------------------------------------+
 ```
 
-### ⚡ El Cuello de Botella: ¿En cuánto tiempo se agotan los deals en México?
+---
 
-1. **Velocidad de Barrido del Pipeline Outbound:**
-   - Un solo ejecutivo comercial (Full-Cycle AE) contacta **100 SOFOMes calificadas al mes** (~1,200 contactos al año).
-   - En **6 a 12 meses**, Antonio habrá tocado y prospectado el **100% de las 600 SOFOMes y Arrendadoras objetivo del SAM en México**.
+## 5. 🎙️ Cuestionario de Auditoría & Descubrimiento para la Sesión del Lunes con Luis
 
-2. **Horizonte de Saturación (Techo del Mercado Local):**
-   * **En Escenario Conservador (20 cierres/año):** Alcanzamos la penetración máxima en **24 a 30 meses** (~50 a 60 clientes activos, representando el 10% del mercado calificado).
-   * **En Escenario Optimista (40-50 cierres/año):** En **18 a 24 meses** se alcanza el techo de penetración local (~100 a 120 clientes activos), donde adquirir el siguiente cliente en México se vuelve costoso por contratos vigentes a largo plazo de la competencia.
+En lugar de imponer certezas, la llamada del Lunes servirá para auditar la realidad de Intelligential con estas 4 preguntas clave:
+
+### ❓ Pregunta 1: Canales Actuales de Adquisición y Mezcla de Marketing
+> *"Luis, para calibrar la velocidad del pipeline: **¿cuál es la mezcla real de adquisición que mejor les ha funcionado en los últimos 12 meses** (eventos de ASOFOM/AMSOFAC, campañas de marketing digital inbound, referidos del fondo 5X Capital o prospección directa)?"*
+
+### ❓ Pregunta 2: Mandato del Fondo 5X Capital (Crecimiento vs. EBITDA)
+> *"Con la adquisición por parte de 5X Capital en Diciembre 2024, **¿cuál es la prioridad actual del directorio: acelerar agresivamente el MRR invirtiendo en adquisición o mantener un margen EBITDA controlado y bajo burn rate**?"*
+
+### ❓ Pregunta 3: Flexibilización de Setup Fee a Mediano Plazo
+> *"En tratos de $83k o $200k/mes, pedir 2x de setup frena la firma. **¿Estarían abiertos a analizar a mediano plazo opciones como fijar el setup o amortizarlo en contratos anuales forzosos** si vemos que eso acelera los cierres del primer mes?"*
+
+### ❓ Pregunta 4: Visión de Expansión de Producto y LatAm
+> *"Si en 18 meses completamos el barrido del nicho SOFOM en México, **¿cuál es la visión a mediano plazo: expandir el core a SOFIPOs y Cooperativas, o adaptar la plataforma para abrir mercados en Colombia y Perú**?"*
 
 ---
 
-## 5. 🎙️ Preguntas Estratégicas para la Sesión del Lunes con Luis
-
-Estas 4 preguntas demuestran un dominio total de la visión de negocio a largo plazo (RevOps, Pricing & Product Strategy):
-
-### ❓ Pregunta 1: Flexibilización del Setup Fee (Speed to Sell vs. Risk)
-> *"Luis, hoy cobramos 2x la Renta de Setup. En proyectos de $83k o $200k/mes, pedir $166k a $400k de enganche frena la firma en el Comité de Compras. **¿Qué opinas de fijar el Setup Fee en una suma fija de $50k-$65k en Tiers altos o amortizarlo en la renta a cambio de un contrato anual forzoso**, para eliminar la barrera de entrada y acelerar los cierres del Mes 1?"*
-
-### ❓ Pregunta 2: Expansión Geográfica (Nuevos Países en LatAm)
-> *"Luis, con nuestra capacidad outbound, en 12 a 18 meses habremos barrido el 100% de las 600 SOFOMes calificadas en México. **¿Cuál es el roadmap para adaptar el Core y Compliance a mercados como Colombia, Perú o Chile** (donde los cores locales también son legados obsoletos y facturan en USD)?"*
-
-### ❓ Pregunta 3: Expansión de Verticales (Nuevos Sectores en México)
-> *"Para no agotar el nicho en México, **¿cuándo está planeado habilitar el módulo contable regulado para SOFIPOs (Sector 27) y SOCAPs / Cooperativas (Sector 29)**, lo que duplicaría de inmediato nuestro SAM en +350 instituciones adicionales?"*
-
-### ❓ Pregunta 4: Expansión de ARPU / NRR (Monopolio de Ecosistema)
-> *"En un mercado finito, la clave del valor de la empresa está en elevar el Net Retention Rate (NRR > 120%). **¿Qué nuevos features están planeados en la hoja de ruta** (ej. Emisión de Tarjetas BaaS con Pomelo, Scoring Crediticio con IA, u Orquestación de Cobranza automatizada) para duplicar el ticket promedio de $36.5k a $80k MXN por cliente?"*
-
----
-
-## 6. ⚡ Respuesta al Dilema Estratégico de Luis (Slide 13)
-
-> **Pregunta de Luis:** *“¿Si nuestra propuesta de valor se basa en integrar nativamente core, cumplimiento y onboarding, deberíamos dejar de ofrecerlo por partes o empaquetarlo todo?”*
-
-### 🏆 La Propuesta de Antonio (Estrategia "Land & Expand con Core Bundle Base"):
-
-1. **NO regalar el Onboarding a $5k MXN:** 
-   - Las empresas que venden solo onboarding a $5k MXN (como Expediente Azul o Moffin) no administran cartera ni resuelven el cumplimiento CNBV. Competir a $5k destruye el posicionamiento enterprise de Intelligential.
-2. **Establecer el "Core Bundle Base" a $36.5k - $42k MXN/mes (Techo de Mercado):**
-   - El onboarding digital (INE, SAT, IMSS) y el cumplimiento PLD son la **ventaja competitiva nativa** de Intelligential; no se venden como módulos aislados baratos, sino como el **núcleo inseparable del Core**.
-3. **Monetizar con Add-Ons de Volumen y Conectores Premium (Land & Expand):**
-   - La oferta base cubre hasta 500 solicitudes/mes y 1-2 productos financieros.
-   - Se cobran **Add-Ons de valor claro**: paquetes extra de solicitudes de onboarding, conectores adicionales de Buró/Mifiel, y usuarios adicionales de mesa de control.
-
----
-
-## 7. 🗓️ Rutina Diaria y Ejecución Punta a Punta de Antonio (Full-Cycle AE)
+## 6. 🗓️ Rutina Diaria y Ejecución Punta a Punta de Antonio (Full-Cycle AE)
 
 ### 📅 Rutina Semanal Operativa:
 * **Lunes (Planeación & Outbound Enriquecido):** 
