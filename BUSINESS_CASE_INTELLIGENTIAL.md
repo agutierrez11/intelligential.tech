@@ -32,9 +32,11 @@
 
 ---
 
-## 2. 🏆 Benchmark de Ejecución Probada: Metodología RevOps de Clip ($10MDP Adicionales/Mes)
+## 2. 🏆 Aprendizaje RevOps de Clip: Filtrado de Leads Basura y Foco en ICP Calificado
 
-Antonio Gutiérrez aporta al proyecto la metodología exacta de segmentación y campañas de aceleración de pipeline ejecutada en **Clip**, donde contactando solo al 7% de la cartera se generaron **1,400 Oportunidades Calificadas (5% de conversión)** y **$10,000,000 MXN adicionales de facturación** en un solo mes.
+Antonio Gutiérrez aporta el análisis analítico y de cualificación de funnel experimentado en **Clip**. Al auditar las campañas iniciales, se detectó que los *online leads* generados por formularios web en frío tenían una bajísima cualificación ("leads basura" sin presupuesto ni madurez operativa). 
+
+La intervención analítica permitió reorientar el enfoque hacia la **segmentación inteligente de cartera**, donde al auditar al 7% de las cuentas clave se generaron **1,400 Oportunidades Calificadas (5% de conversión)** y **$10,000,000 MXN adicionales de facturación** en un solo mes.
 
 ```
 +---------------------------------------------------------------------------------------------------+
@@ -47,10 +49,10 @@ Antonio Gutiérrez aporta al proyecto la metodología exacta de segmentación y 
 +------------------------------------+------------------------------------+-------------------------+
 ```
 
-### ⚡ Aplicación Directa de la Metodología Clip en Intelligential:
-1. **Campaña de Reactivación (344 Ops Benchmark):** Re-engagement sobre el histórico de SOFOMes que vieron demo pero no cerraron por contrato vigente con competencia. Oferta *"Migración Sin Doble Costo"*.
-2. **Campaña de Retención Anti-Churn (572 Ops Benchmark):** Setup Fee calibrado para asegurar *"skin in the game"* en Tiers pequeños y soporte dedicado durante las primeras 4 semanas.
-3. **Campaña de Expansión (189 Ops Benchmark):** Incremento de ARPU mediante venta de paquetes extra de KYC, conectores de STP y firma digital NOM-151 a la base instalada.
+### ⚡ Prevención de "Leads Basura" en Intelligential:
+1. **No quemar presupuesto en inbound masivo sin filtro:** Las SOFOMes pequeñas sin cartera o sin registro oficial ante CONDUSEF consumen tiempo en demos sin capacidad de pago.
+2. **Cualificación Rigurosa sobre Dataset Oficial (2,262 registros):** Prospección quirúrgica únicamente sobre instituciones con cartera activa relevante ($50M a $350M MXN) y decisores validados (CEOs / Directores de Operaciones).
+3. **Campaña de Reactivación (344 Ops Benchmark):** Re-engagement sobre el histórico de SOFOMes que vieron demo pero no cerraron por contrato vigente con competencia. Oferta *"Migración Sin Doble Costo"*.
 
 ---
 
@@ -83,27 +85,19 @@ A continuación se detalla una muestra representativa de 15 tratos modelados sob
 > [!NOTE]
 > *Propuesta estratégica sujeto a validación según la política de margen del fondo 5X Capital y la elasticidad de precio de los clientes actuales.*
 
-### 💡 Diagnóstico del Modelo Actual (Setup Fee = 2x Renta):
-* **Fricción de Entrada en Cuentas Grandes:** Para un trato Tier 3 ($83k/mes) o Enterprise ($200k/mes), cobrar un Setup Fee del 2x exige un desembolso inicial de **$166,000 a $400,000 MXN de golpe**. Esto se convierte en el **freno #1 en el Comité de Compras** y alarga el ciclo de venta.
-* **El Riesgo del "Cheap Entry" en Startups:** Si vendemos muy barato o regalamos el setup a clientes pequeños ($15k-$20k/mes), el cliente no tiene "skin in the game" (compromiso operativo) y la probabilidad de **churn a los 6 meses es muy alta**.
-
 ---
 
 ## 5. 📈 Cruce TAM / SAM / SOM y Análisis de Saturación de Mercado
-
-### 📊 Las Cifras del Mercado en México:
-* **TAM (Total Addressable Market):** 2,100+ SOFOMes registradas (CONDUSEF SIPRES) + 80 Fintechs + 150 Cooperativas + 30k Microfinancieras.
-* **SAM (Serviceable Addressable Market Calificado):** **600 Entidades Objetivo Reales** (500 SOFOM ENR + 100 Arrendadoras Financieras activas con cartera de $50M a $350M MXN).
-* **SOM (Serviceable Obtainable Market):** **20 a 40 clientes nuevos por año**.
 
 ---
 
 ## 6. 🎙️ Cuestionario de Auditoría & Descubrimiento para la Sesión del Lunes con Luis
 
 1. **Mezcla de Canales Actuales (Eventos vs Campañas vs Referencias 5X Capital).**
-2. **Mandato del Fondo 5X Capital (Crecimiento MRR vs Margin EBITDA).**
-3. **Flexibilización de Setup Fee a Mediano Plazo.**
-4. **Visión de Expansión (Verticales SOFIPO/SOCAP y LatAm).**
+2. **Cualificación de Leads Inbound vs Outbound (Evitar quema de tiempo en leads no aptos).**
+3. **Mandato del Fondo 5X Capital (Crecimiento MRR vs Margin EBITDA).**
+4. **Flexibilización de Setup Fee a Mediano Plazo.**
+5. **Visión de Expansión (Verticales SOFIPOs/SOCAPs y LatAm).**
 
 ---
 *Documento estratégico preparado para la alineación comercial con Luis Fernando Sánchez.*
