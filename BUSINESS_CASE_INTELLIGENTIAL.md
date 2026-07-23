@@ -44,11 +44,6 @@ Es crítico distinguir la diferencia estructural de ambos modelos de negocio par
 | **Tolerancia al Error Outbound** | Alta (Perder un lead no impacta el mercado) | **CERO (Un correo genérico quema el 10% del mercado)** |
 | **Estrategia Comercial** | Campañas Inbound / Volumen Masivo | **Prospección Quirúrgica (Sniper Sales) / ABM** |
 
-### ⚡ La Estrategia "Sniper Sales" de Antonio para Intelligential:
-1. **Zero Spam / Zero Campañas Genéricas:** En un mercado de 600 SOFOMes calificadas, no se pueden enviar correos masivos automatizados. Cada contacto debe ser hiper-personalizado según el estado de la SOFOM, sus productos financieros y su competidor actual.
-2. **Cualificación Basada en Cartera Real:** Al auditar funnels masivos en Clip se comprobó que el tráfico en frío genera "leads basura". En Intelligential solo se prospectarán decisiones de nivel C-Level (CEO, DG, Director de Operaciones) en empresas con cartera auditada >$50M MXN.
-3. **Máximo Valor por Cuenta (LTV $1.5M - $3M MXN):** Cada trato ganado equivale al ingreso de 50 comercios tradicionales de Clip, por lo que el tiempo de preparación de demo y propuesta ejecutiva es quirúrgico.
-
 ---
 
 ## 3. 💼 Muestra de Deals Calificados (Tiers 1, 2 y 3)
@@ -75,7 +70,7 @@ A continuación se detalla una muestra representativa de 15 tratos modelados sob
 
 ---
 
-## 4. 📈 Diagrama de Cruce TAM / SAM / SOM y Capas de Mercado
+## 4. 📈 Cruce TAM / SAM / SOM y Capas de Mercado
 
 ```mermaid
 graph TD
@@ -95,24 +90,9 @@ graph TD
     end
 ```
 
-### ⏱️ Horizonte Visual de Saturación de Mercado:
-```
-+---------------------------------------------------------------------------------------------------+
-|                          VELOCIDAD DE BARRIDO Y TECHO DEL MERCADO EN MÉXICO                       |
-+------------------------------------+--------------------------------------------------------------+
-| ESCENARIO CONSERVADOR (20/año)     | ESCENARIO OPTIMISTA (40-50/año)                              |
-| - Outbound Barrido: 100 cuentas/mes| - Outbound Barrido: 150 cuentas/mes                          |
-| - Barrido 100% SAM: 12-18 Meses    | - Barrido 100% SAM: 8-12 Meses                               |
-| - Techo de Mercado: En 24 Meses    | - Techo de Mercado: En 18 Meses (Techo de 150-200 clientes)   |
-+------------------------------------+--------------------------------------------------------------+
-```
-
 ---
 
 ## 5. 📊 Benchmark del Setup Fee (2x Renta): Estándares de la Industria Core SaaS
-
-> [!NOTE]
-> *Análisis comparativo de mercado para abrir la discusión con Luis sobre la flexibilidad del Fee de Setup.*
 
 | Categoría de Core SaaS | Setup Fee Promedio de la Industria | Rationale y Fricción Comercial |
 | :--- | :--- | :--- |
@@ -120,18 +100,39 @@ graph TD
 | **Regional Mid-Market Core** *(DynamiCore, Ascendes, Intelligential)* | **1x a 2x Renta Mensual** *($40k - $84k MXN)* | Estándar regional. Recupera costo de onboarding pero frena cierres en tratos de $83k+/mes. |
 | **Startup / Modular SaaS** *(Softcrédito, Moffin, Expediente Azul)* | **0.5x Renta o Fee Fijo** *($15k - $30k MXN)* | Entradas baratas. Fomenta el churn alto si el cliente no tiene compromiso operativo. |
 
-### 🎙️ Pregunta de Benchmark para Luis:
-> *"Luis, hoy tenemos el Setup Fee en 2x la Renta Mensual. En la industria regional de Cores (DynamiCore/Ascendes), el 1x a 2x es habitual para cubrir el onboarding. **¿En la historia de Intelligential el 2x ha sido una regla rígida o han sido flexibles según el tamaño de la cuenta para acelerar la firma**?"*
+---
+
+## 6. 🤖 Recomendación de Tech Stack Comercial: Conversational AI & Call Intelligence (`Samu.ai`)
+
+Para auditar y transparentar el 100% de las conversaciones comerciales del equipo de ventas sin cargar costos inflados, Antonio propone la adopción de **Samu.ai**, plataforma de inteligencia conversacional con precios sumamente accesibles:
+
+```
++-----------------------------------------------------------------------------------------+
+|                       MATRIZ DE PRICING ACCESIBLE DE SAMU.AI (REVOPS STACK)             |
++------------------------------------+----------------------------------------------------+
+| PLAN GROWTH ($150 USD/mes)         | PLAN PRO ($250 USD/mes - RECOMENDADO)               |
+| - Incluye 3 Usuarios               | - Incluye 5 Usuarios                               |
+| - Grabación Ilimitada de Llamadas  | - Integración Avanzada con CRM                      |
+| - Integración WhatsApp & Video     | - Samu Score (Puntaje de Reunión por IA)           |
+| - Notas y compromisos directos al CRM| - Extractor de Objeciones y Menciones de Competencia|
++------------------------------------+----------------------------------------------------+
+```
+
+### ⚡ Beneficios Directos para Luis y el Consejo de Intelligential:
+1. **Visibilidad 100% de Llamadas ($150-$250 USD/mes):** Permite a Luis y al equipo directivo auditar qué se habla en cada demo de originación y core bancario.
+2. **Detección Automática de Objeciones:** La IA extrae menciones de competidores (*"DynamiCore es muy caro"*, *"Mambu no tiene PLD"*) y dudas regulatorias de la CNBV.
+3. **Puntuación Automática de Demos (Samu Score):** Evalúa si el vendedor aplicó la metodología MEDDIC y calificó al Comprador Económico correctamente.
 
 ---
 
-## 6. 🎙️ Cuestionario de Auditoría & Descubrimiento para la Sesión del Lunes con Luis
+## 7. 🎙️ Cuestionario de Auditoría & Descubrimiento para la Sesión del Lunes con Luis
 
 1. **Mezcla de Canales Actuales (Eventos vs Campañas vs Referencias 5X Capital).**
 2. **Cualificación de Leads Inbound vs Outbound (Evitar quema de tiempo en leads no aptos).**
 3. **Mandato del Fondo 5X Capital (Crecimiento MRR vs Margin EBITDA).**
 4. **Benchmark & Flexibilidad de Setup Fee.**
-5. **Visión de Expansión (Verticales SOFIPOs/SOCAPs y LatAm).**
+5. **Adopción de Samu.ai para Inteligencia Conversacional en Demos ($150 USD/mes).**
+6. **Visión de Expansión (Verticales SOFIPOs/SOCAPs y LatAm).**
 
 ---
 *Documento estratégico preparado para la alineación comercial con Luis Fernando Sánchez.*
