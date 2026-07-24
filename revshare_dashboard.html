@@ -279,7 +279,7 @@
         /* Key Metrics Grid */
         .kpi-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 1rem;
             margin-bottom: 1.5rem;
         }
@@ -292,6 +292,9 @@
             box-shadow: var(--box-shadow);
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .kpi-card.highlight {
@@ -313,7 +316,7 @@
             font-size: 1.8rem;
             font-weight: 800;
             color: var(--text-main);
-            margin: 0.4rem 0;
+            margin: 0.3rem 0;
             letter-spacing: -0.02em;
         }
 
@@ -325,6 +328,25 @@
             font-size: 0.8rem;
             color: var(--text-dim);
             font-weight: 500;
+        }
+
+        /* Explicit Mathematical Formula Note Inside Cards */
+        .math-note {
+            margin-top: 0.6rem;
+            padding-top: 0.5rem;
+            border-top: 1px dashed var(--border-color);
+            font-size: 0.74rem;
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+            line-height: 1.35;
+        }
+
+        .math-note strong {
+            color: var(--accent-purple);
+        }
+
+        .kpi-card.highlight .math-note strong {
+            color: var(--accent-green);
         }
 
         /* Waterfall Visual Bar */
@@ -635,7 +657,7 @@
     <header>
         <div class="header-title">
             <div class="badge-tag">
-                <span class="badge-dot"></span> Generic FinTech Partnership Framework v3.2
+                <span class="badge-dot"></span> Generic FinTech Partnership Framework v3.3
             </div>
             <h1 style="margin-top: 0.5rem;">Business Case: Adquirente FinTech x Software POS</h1>
             <p>Simulador Financiero, Arquitectura de Integración API & Modelo de Revenue Sharing Portátil</p>
@@ -740,28 +762,52 @@
         <div>
             <!-- KPI Cards Grid -->
             <div class="kpi-grid">
+                <!-- Card 1 -->
                 <div class="kpi-card">
-                    <div class="kpi-label">TPV Cartera Mensual</div>
-                    <div class="kpi-value" id="kpi-tpvtotal">$30.0 MDP</div>
-                    <div class="kpi-subtext">Volumen procesado por canal</div>
+                    <div>
+                        <div class="kpi-label">TPV CARTERA MENSUAL</div>
+                        <div class="kpi-value" id="kpi-tpvtotal">$30.0 MDP</div>
+                        <div class="kpi-subtext">Volumen procesado por canal</div>
+                    </div>
+                    <div class="math-note" id="math-note-tpv">
+                        💡 <strong>Fórmula:</strong> 50 Nodos × $600,000 TPV = $30.0 MDP/mes.
+                    </div>
                 </div>
 
+                <!-- Card 2 -->
                 <div class="kpi-card">
-                    <div class="kpi-label">Net Margin Adquirente</div>
-                    <div class="kpi-value" id="kpi-acquirernet">$382,500</div>
-                    <div class="kpi-subtext" id="kpi-netbps-effective">Libre de red (~127.5 bps)</div>
+                    <div>
+                        <div class="kpi-label">NET MARGIN ADQUIRENTE</div>
+                        <div class="kpi-value" id="kpi-acquirernet">$382,500</div>
+                        <div class="kpi-subtext" id="kpi-netbps-effective">Libre de red (~127.5 bps)</div>
+                    </div>
+                    <div class="math-note" id="math-note-netmargin">
+                        💡 <strong>Fórmula:</strong> $30.0 MDP × 127.5 bps (1.275%) = $382,500.
+                    </div>
                 </div>
 
+                <!-- Card 3 (Highlight) -->
                 <div class="kpi-card highlight">
-                    <div class="kpi-label">REVENUE 3 SOCIOS (7.5%)</div>
-                    <div class="kpi-value" id="kpi-partnerrev">$28,688</div>
-                    <div class="kpi-subtext" id="kpi-annually">$344,250 MXN / año recurrente</div>
+                    <div>
+                        <div class="kpi-label">REVENUE 3 SOCIOS (7.5%)</div>
+                        <div class="kpi-value" id="kpi-partnerrev">$28,688</div>
+                        <div class="kpi-subtext" id="kpi-annually">$344,250 MXN / año recurrente</div>
+                    </div>
+                    <div class="math-note" id="math-note-partners">
+                        💡 <strong>Fórmula:</strong> 7.5% de $382,500 Net Margin = $28,688/mes (~9.56 bps del TPV).
+                    </div>
                 </div>
 
+                <!-- Card 4 -->
                 <div class="kpi-card">
-                    <div class="kpi-label">Revenue Software (25%)</div>
-                    <div class="kpi-value" id="kpi-softrev">$95,625</div>
-                    <div class="kpi-subtext">Incentivo recurrente POS</div>
+                    <div>
+                        <div class="kpi-label">REVENUE SOFTWARE (25%)</div>
+                        <div class="kpi-value" id="kpi-softrev">$95,625</div>
+                        <div class="kpi-subtext">Incentivo recurrente POS</div>
+                    </div>
+                    <div class="math-note" id="math-note-software">
+                        💡 <strong>Fórmula:</strong> 25.0% de $382,500 Net Margin = $95,625/mes (~31.88 bps del TPV).
+                    </div>
                 </div>
             </div>
 
@@ -998,6 +1044,7 @@
         const acquirerRev = totalNetMargin * (acquirerRetainedShare / 100);
 
         const effectivePartnerBps = (effectiveNetBps * (partnerShare / 100)).toFixed(2);
+        const effectiveSoftBps = (effectiveNetBps * (softShare / 100)).toFixed(2);
         document.getElementById('lbl-effective-partner-bps').innerText = effectivePartnerBps + ' bps';
 
         const successFeeTotal = nodes * successFee;
@@ -1008,6 +1055,12 @@
         document.getElementById('kpi-partnerrev').innerText = formatMXN(partnerRev);
         document.getElementById('kpi-annually').innerText = formatMXN(partnerRev * 12) + ' / año + ' + formatMXN(successFeeTotal) + ' fee único';
         document.getElementById('kpi-softrev').innerText = formatMXN(softRev);
+
+        // Update Math Note Explanations inside Cards
+        document.getElementById('math-note-tpv').innerHTML = `💡 <strong>Fórmula:</strong> ${nodes} Nodos × ${formatMXN(tpvPerNode)} TPV = ${formatCompact(totalTPV)}/mes.`;
+        document.getElementById('math-note-netmargin').innerHTML = `💡 <strong>Fórmula:</strong> ${formatCompact(totalTPV)} TPV × ${effectiveNetBps.toFixed(1)} bps (${effectiveNetRate.toFixed(3)}%) = ${formatMXN(totalNetMargin)}.`;
+        document.getElementById('math-note-partners').innerHTML = `💡 <strong>Fórmula:</strong> ${partnerShare}% de ${formatMXN(totalNetMargin)} Net Margin = ${formatMXN(partnerRev)}/mes (~${effectivePartnerBps} bps TPV).`;
+        document.getElementById('math-note-software').innerHTML = `💡 <strong>Fórmula:</strong> ${softShare}% de ${formatMXN(totalNetMargin)} Net Margin = ${formatMXN(softRev)}/mes (~${effectiveSoftBps} bps TPV).`;
 
         // Waterfall Visual Updates
         document.getElementById('bar-acquirer').style.width = acquirerRetainedShare + '%';
