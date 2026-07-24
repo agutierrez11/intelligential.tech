@@ -42,6 +42,11 @@
 * **La Propuesta a Pelotear con Luis:**  
   > *"Luis, para alcanzar los 40 clientes del año, estuve modelando un experimento ágil de 5 cuentas al día en multicanal (LinkedIn + Mail + WA) durante los primeros 30 días para medir qué canal responde mejor. **¿Te parece bien que arranquemos con esta hipótesis para medir datos reales y presentarte los resultados en 4 semanas?**"*
 
+### 💬 Tema D: Estrategia de Flanqueo (Océano Azul en Neobancos como Nu, Klar, Stori)
+* **La Realidad:** Intentar vender el Core completo a neobancos gigantescos con Mambu es un ataque frontal fallido y de larguísimo ciclo de venta.
+* **La Propuesta a Pelotear con Luis:**  
+  > *"Luis, en neobancos grandes tipo Nu, Klar o Stori, en lugar de intentar sustituir su Core principal Mambu... **¿hemos explorado una estrategia de flanqueo entrando únicamente por la pata de Compliance CNBV/SAT como un módulo empaquetado por API?** Entrar por esa grieta nos daría un pie dentro de esas empresas con CAC cero y un MRR recurrente alto."*
+
 ---
 
 ## 📋 3. Matriz Resumen de Respeto Institucional
@@ -51,7 +56,7 @@
 | **Pricing Renta** | Tiers de $20k a $200k/mes (Blended $36.5k) | Mantener Tiers oficiales del Consejo | *"Alineado a los números oficiales del Consejo."* |
 | **Setup Fee** | $100,000 MXN (2x Renta oficial) | Explorar flexibilización decompresiva | *"¿Cómo has sentido la recepción de los clientes con el Setup?"* |
 | **Canal Outbound** | Founder Driven + Eventos ASOFOM | Probar cadencia ágil de 5 cuentas/día | *"¿Te parece si probamos este experimento en el Mes 1?"* |
-| **Integraciones** | APIs de Nubarium, Syntage, Mifiel, STP | Explorar alianzas GRC con REACH | *"¿Ves potencial en buscar una alianza con tableros de GRC?"* |
+| **Flanqueo Neobancos** | Venta directa de Core completo | Entrar por Compliance CNBV (Trojan Horse) | *"¿Hemos explorado entrar a Nu/Klar solo por la pata CNBV/SAT?"* |
 
 ---
 *Guía Consultiva de Diálogo Institucional — Intelligential 2026.*

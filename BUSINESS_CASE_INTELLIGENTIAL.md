@@ -229,4 +229,28 @@ Intelligential crea y domina un **Océano Azul sin competencia directa** mediant
 * **Ahora (Océano Azul):** *"Te protejo contra la ola de $216 MDP en multas de la CNBV automatizando la norma CNBV-2026-001 y tu cartera en AWS en 14 días."* (Alta conversión, cero objeción de precio).
 
 ---
+
+## 13. ⚔️ Estrategia de Flanqueo Comercial & Caballo de Troya (Flanking Strategy)
+
+### 🔴 El Ataque Frontal (Imposible y Costoso):
+Tratar de venderle a neobancos gigantescos como **Nu México, Stori o Klar** para que reemplacen su Core principal (Mambu/Pismo) por Intelligential es un ataque frontal fallido: tienen millones de dólares invertidos y comités de TI que tardan años en decidir.
+
+### 🔵 La Estrategia de Flanqueo (Entrar por la Grieta del Cumplimiento CNBV):
+En lugar de atacar el Core, la **Estrategia de Flanqueo (Flanking Strategy / Caballo de Troya)** entra por el punto de mayor dolor operativo: **la capa de regulación CNBV, reporte SITI y facturación del SAT**.
+
+```
++---------------------------------------------------------------------------------------------------+
+|               ESTRATEGIA DE FLANQUEO COMERCIAL EN NEOBANCOS GIGANTES (CABALLO DE TROYA)          |
++------------------------------------+--------------------------------------------------------------+
+| 1. NO ATACAR EL CORE PRINCIPAL     | Mambu sigue manejando las tarjetas de crédito y saldos.       |
++------------------------------------+--------------------------------------------------------------+
+| 2. ENTRAR POR LA GRIETA REGULATORIA| Intelligential se conecta por API como el **Motor CNBV/SAT**  |
+|    (CABALLO DE TROYA)              | evitando que el neobanco mantenga 30 desarrolladores in-house.|
++------------------------------------+--------------------------------------------------------------+
+| 3. EXPANSIÓN SILENCIOSA            | Una vez dentro de la infraestructura del neobanco,           |
+|    (LAND AND EXPAND)               | capturamos nuevas líneas de negocio (ej. Crédito PyME).       |
++---------------------------------------------------------------------------------------------------+
+```
+
+---
 *Documento estratégico preparado para la alineación comercial con Luis Fernando Sánchez.*
