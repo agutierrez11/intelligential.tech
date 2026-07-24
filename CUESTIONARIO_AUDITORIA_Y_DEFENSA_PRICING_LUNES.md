@@ -1,88 +1,57 @@
-# 🎙️ Guía Ejecutiva de Auditoría Comercial y Defensa de Pricing — Sesión con Luis (Lunes)
+# 🤝 Guía Consultiva de Alineación Estratégica — Sesión con Luis F. Sánchez (CEO)
 
-**Preparado para:** Antonio Gutiérrez (Full-Cycle AE & RevOps Strategy)  
-**Objetivo de la Reunión:** Diagnosticar la tracción real de Intelligential, evaluar canales de adquisición y defender la estrategia de pricing anti-churn sin imponer asunciones.
-
----
-
-## 1. 🔍 Bloque 1: Auditoría de Adquisición, Marketing y Tracción Real
-
-En lugar de asumir un flujo continuo de ventas, este bloque investiga la naturaleza real del pipeline de los últimos 12 a 18 meses:
-
-### ❓ Pregunta 1.1: Mezcla de Canales & Picos por Eventos
-> *"Luis, para entender la dinámica de tracción: **¿los clientes actuales llegaron por un flujo constante de prospección o por picos derivados de eventos presenciales (convenciones de ASOFOM/AMSOFAC)**, campañas de marketing digital o referencias directas del fondo 5X Capital?"*
-
-### ❓ Pregunta 1.2: Análisis de ROI y Conversión por Canal
-> *"¿Tienen medido cuál es la tasa de conversión y el costo de adquisición (CAC) por cada canal? Es decir, **¿cuántas reuniones de eventos se convierten en ventas cerradas vs. el volumen de prospectos que llegan por sitio web o prospección en frío**?"*
-
-### ❓ Pregunta 1.3: Detección de "Golpes de Suerte" vs. Máquina Repetible
-> *"En los cierres del último año, **¿cuántos fueron tratos 'orgánicos' ganados en competencia abierta vs. 'golpes de suerte' o alianzas estratégicas facilitadas por inversionistas**? Esto nos dirá si debemos construir la máquina outbound desde cero o escalar el canal de referencias."*
+**Preparado para:** Antonio Gutiérrez (RevOps & Sales Strategy)  
+**Tesis:** Documento de diálogo diplomático para peloteo y validación de hipótesis con el CEO y Fundador de Intelligential, sin imponer supuestos como hechos consumados.
 
 ---
 
-## 2. 🛡️ Bloque 2: Defensa Argumentativa de la Estrategia Anti-Churn de Pricing
-
-> **La Paradoja Aparente:** *¿Por qué cobrar un Setup Fee proporcionalmente mayor (2x Renta = $40k) a la empresa pequeña ($20k/mes) que a la empresa grande ($83k/mes -> Setup decompresivo $65k)?*
-
-### 💡 Los 3 Argumentos RevOps para Defender esta Estrategia ante Luis:
-
-#### 1. Compromiso Operativo ("Skin in the Game") Anti-Churn
-* **El Riesgo en Tiers Chicos:** Una SOFOM pequeña que paga $20,000/mes sin un Setup significativo no siente compromiso operativo. Ante cualquier desajuste inicial en su mesa de control, abandona la plataforma a los 4 meses. 
-* **El Filtro:** Un Setup Fee de $40,000 MXN **filtra SOFOMes 'chatarra'** y asegura que el cliente tenga capital real, madurez operativa y compromiso de salir a producción.
-
-#### 2. Absorción del Costo Fijo de Onboarding e Ingeniería
-* **El Costo Real de Intelligential:** Configurar el tenant en AWS, parametrizar tablas de amortización, integrar conectores de PLD/Buró y capacitar a la mesa de control le cuesta a Intelligential **exactamente los mismos recursos de ingeniería** para una SOFOM chica que para una mediana.
-* **El Rationale:** El Setup de $40,000 MXN en Tiers chicos cubre el costo fijo del equipo de onboarding en el Día 1, evitando que Intelligential opere con margen negativo durante los primeros 3 meses.
-
-#### 3. Eliminación de Fricción Burocrática en Cuentas Enterprise
-* **La Realidad en Tiers Altos:** Una SOFOM grande ($83k a $200k/mes) ya tiene presupuesto asignado y bajísimo riesgo de churn. El problema con ellas **no es la falta de compromiso, sino la burocracia del Comité de Compras**.
-* **El Rationale:** Si a un proyecto de $83,000/mes le pides $166,000 de Setup Fee, paralizas la firma 4 meses en el comité. Reducir su Setup a $65,000 MXN **elimina la barrera presupuestal de entrada** para asegurar un contrato anual recurrente de **$1,000,000 MXN (MRR)**.
-
----
-
-## 3. 🎯 Bloque 3: Cuestionario Rápido para la Minuta de la Reunión
-
-| # | Pregunta Clave para Luis | Propósito RevOps |
-| :--- | :--- | :--- |
-| **01** | *"¿Cuál fue el canal que trajo a los últimos 3 clientes firmados?"* | Identificar el canal de mayor tracción real actual. |
-| **02** | *"¿Cuál es la tasa de churn histórica del portafolio actual?"* | Validar si el problema es retención o adquisición. |
-| **03** | *"¿Tienen presupuesto asignado para eventos ASOFOM 2026 o campañas de marketing digital?"* | Determinar el apoyo Inbound / Branding disponible. |
-| **04** | *"¿El fondo 5X Capital exige prioridad en margen EBITDA o velocidad de crecimiento de MRR?"* | Calibrar agresividad comercial vs. control de costos. |
-
----
-
-## 4. 🔬 Bloque 4: Cuestionario de Auditoría Técnica y Operativa (Las 5 Preguntas para Luis)
-
-Para entender exactamente la madurez operativa de la plataforma y cómo responden en las demos ante los clientes, estas son las **5 preguntas de investigación quirúrgica para entrevistarlo**:
+## 🧭 1. El Marco de Trabajo: Escuchar, Entender y Validar
 
 ```
 +---------------------------------------------------------------------------------------------------+
-|               5 PREGUNTAS DE AUDITORÍA TÉCNICA Y OPERATIVA PARA LUIS F. SÁNCHEZ                    |
-+-------------------+-------------------------------------------------------------------------------+
-| ÁREA DE CONTROL   | PREGUNTA EXACTA DE DESCUBRIMIENTO PARA LUIS                                   |
-+-------------------+-------------------------------------------------------------------------------+
-| 1. Integración ERP| *"Luis, en las SOFOMes que han cerrado en los últimos 12 meses, ¿cuál es la   |
-|    y Core Legado  | objeción más común de sus contadores respecto a su ERP actual (ej. Contpaqi   |
-|                   | o SAP), y cómo les entregamos hoy las pólizas CNBV para no tener fricción?"   |
-+-------------------+-------------------------------------------------------------------------------+
-| 2. SLA & Uptime   | *"En la infraestructura actual sobre AWS, ¿tenemos garantizado por contrato un|
-|    en Cierre CNBV | SLA de 99.9% para respaldar el cierre mensual de cartera de la CNBV sin que   |
-|                   | los clientes sufran ralentización?"                                           |
-+-------------------+-------------------------------------------------------------------------------+
-| 3. Esquema API    | *"En los conectores con Nubarium, Syntage y Buró de Crédito, ¿manejamos un   |
-|    Pass-Through   | esquema de Pass-Through transparente (el cliente conecta sus llaves API) o    |
-|                   | empaquetamos una bolsa mayorista de consultas en la mensualidad?"            |
-+-------------------+-------------------------------------------------------------------------------+
-| 4. Data Ownership| *"Cuando negociamos con clientes Enterprise, ¿cómo les garantizamos la        |
-|    y Portabilidad | propiedad de su base de datos PostgreSQL si en el futuro necesitan exportar   |
-|                   | su expediente de PLD o cartera?"                                              |
-+-------------------+-------------------------------------------------------------------------------+
-| 5. Retención NRR  | *"Pensando en la visión de 5X Capital, ¿cuál es nuestra tasa de retención (NRR)|
-|    y Churn Rate   | y churn actual, y qué pilares (Core, Compliance, Onboarding) son los que más  |
-|                   | reducen el riesgo de cancelación?"                                           |
-+---------------------------------------------------------------------------------------------------+
+|                  MARCO DE DIÁLOGO EJECUTIVO CON EL CEO (REALIDAD VS. PROPUESTAS)                 |
++------------------------------------+--------------------------------------------------------------+
+| 📌 REALIDAD ESTABLECIDA (EL CONSEJO)| Lo dictado por Luis y el Consejo en la presentación de Abril |
+|                                    | 2026: Tiers ($20k-$200k), SAM $500M MXN, 40 clientes/12 meses.|
++------------------------------------+--------------------------------------------------------------+
+| 💡 PROPUESTAS A PELOTEAR           | Opciones y sugerencias tácticas para discutir CON Luis,     |
+|    (HIPÓTESIS DE TRABAJO)          | solicitando su visión de negocio sin imponer órdenes.        |
++------------------------------------+--------------------------------------------------------------+
 ```
 
 ---
-*Documento de soporte preparado para la sesión de alineación estratégica con Luis Fernando Sánchez.*
 
+## 🎙️ 2. Guía de Diálogo Diplomático (Preguntas Consultivas)
+
+### 💬 Tema A: El Dilema del Empaquetado vs. Venta por Partes (Slide 13 del Consejo)
+* **La Realidad:** En la Slide 13 de la presentación del Consejo se planteó la pregunta: *¿Deberíamos dejar de vender por partes si el valor está en la orquestación 3-en-1?*
+* **La Pregunta Consultiva para Luis:**  
+  > *"Luis, vi que en el Consejo de Abril plantearon el dilema de si conviene vender por partes o mantener el 3-en-1 empaquetado. **Desde tu experiencia con los últimos clientes, ¿cuál ha sido la respuesta del mercado y cuál sientes que es la ruta más limpia para acelerar el cierre?**"*
+
+---
+
+### 💬 Tema B: Estructura de Setup Fees y Fricción de Entrada
+* **La Realidad:** El precio actual es $50k/mes de renta + $100k de Setup Fee (2x renta).
+* **La Propuesta a Pelotear con Luis:**  
+  > *"Luis, en cuentas grandes (Tier Mid-Market/Enterprise), **¿has notado que el Setup Fee de $100k genere alguna reticencia en el Comité de Compras, o sientes que están pagándolo sin problema?** Estuve arrastrando el lápiz en una hipótesis de Setup progresivo por Tier por si nos sirviera para destrabar cierres, pero me gustaría escuchar tu lectura."*
+
+---
+
+### 💬 Tema C: Ritmo de Prospección y Experimentos del Mes 1
+* **La Realidad:** Meta del Consejo de 40 clientes nuevos en 12 meses (Founder Driven + Venta Directa).
+* **La Propuesta a Pelotear con Luis:**  
+  > *"Luis, para alcanzar los 40 clientes del año, estuve modelando un experimento ágil de 5 cuentas al día en multicanal (LinkedIn + Mail + WA) durante los primeros 30 días para medir qué canal responde mejor. **¿Te parece bien que arranquemos con esta hipótesis para medir datos reales y presentarte los resultados en 4 semanas?**"*
+
+---
+
+## 📋 3. Matriz Resumen de Respeto Institucional
+
+| Variable de Negocio | Realidad Actual (Luis / Consejo) | Propuesta a Validar (Peloteo) | Tono de Conversación con Luis |
+| :--- | :--- | :--- | :--- |
+| **Pricing Renta** | Tiers de $20k a $200k/mes (Blended $36.5k) | Mantener Tiers oficiales del Consejo | *"Alineado a los números oficiales del Consejo."* |
+| **Setup Fee** | $100,000 MXN (2x Renta oficial) | Explorar flexibilización decompresiva | *"¿Cómo has sentido la recepción de los clientes con el Setup?"* |
+| **Canal Outbound** | Founder Driven + Eventos ASOFOM | Probar cadencia ágil de 5 cuentas/día | *"¿Te parece si probamos este experimento en el Mes 1?"* |
+| **Integraciones** | APIs de Nubarium, Syntage, Mifiel, STP | Explorar alianzas GRC con REACH | *"¿Ves potencial en buscar una alianza con tableros de GRC?"* |
+
+---
+*Guía Consultiva de Diálogo Institucional — Intelligential 2026.*
