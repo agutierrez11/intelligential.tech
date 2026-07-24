@@ -5,8 +5,7 @@ import time
 import urllib.request
 import pandas as pd
 
-# Firecrawl API script for SOFOM enrichment
-FIRECRAWL_API_KEY = os.getenv('FIRECRAWL_API_KEY', '')
+FIRECRAWL_API_KEY = os.getenv('FIRECRAWL_API_KEY', 'fc-a826332a3caa44278ce22953865de09a')
 
 def search_firecrawl(query, api_key):
     url = "https://api.firecrawl.dev/v1/search"
@@ -28,12 +27,24 @@ def search_firecrawl(query, api_key):
         print(f"Error calling Firecrawl for '{query}': {e}")
         return None
 
+def detect_tech_stack(url, snippet):
+    combined = (str(url) + " " + str(snippet)).lower()
+    if 'dynamicore' in combined:
+        return 'DynamiCore (Detectado)'
+    elif 'softcredito' in combined or 'softcrédito' in combined:
+        return 'Softcrédito (Detectado)'
+    elif 'ascendes' in combined:
+        return 'Ascendes (Detectado)'
+    elif 'mambu' in combined:
+        return 'Mambu (Detectado)'
+    elif 'aws' in combined or 'amazon' in combined:
+        return 'AWS In-House (Detectado)'
+    else:
+        return 'Sistema Legado In-House'
+
 def main():
     print("=== FIRECRAWL SOFOM ENRICHMENT ENGINE ===")
     api_key = FIRECRAWL_API_KEY
-    if not api_key:
-        api_key = input("Ingresa tu API Key de Firecrawl (fc-...): ").strip()
-    
     if not api_key:
         print("Error: No Firecrawl API key provided.")
         sys.exit(1)
@@ -46,23 +57,35 @@ def main():
     df = pd.read_csv(csv_path)
     print(f"Loaded {len(df)} SOFOMes from dataset.")
     
-    # Process sample/top entries
+    if 'sitio_web_oficial' not in df.columns:
+        df['sitio_web_oficial'] = ''
+        
     processed = 0
-    for idx, row in df.head(10).iterrows():
-        nombre = str(row.get('denominacion_social_real', '')).split(',')[0]
-        query = f"SOFOM {nombre} Mexico portal"
-        print(f"[{idx+1}/10] Buscando con Firecrawl: {query}...")
+    max_to_process = 30  # Batch size
+    
+    for idx, row in df.head(max_to_process).iterrows():
+        nombre_raw = str(row.get('denominacion_social_real', '')).split(',')[0]
+        query = f"SOFOM {nombre_raw} Mexico portal credito"
+        print(f"[{idx+1}/{max_to_process}] Buscando con Firecrawl: {query}...")
         
         res = search_firecrawl(query, api_key)
         if res and res.get('success') and res.get('data'):
             top_result = res['data'][0]
             site_url = top_result.get('url', '')
             snippet = top_result.get('description', '')
-            print(f"   ✔ URL encontrada: {site_url}")
+            
+            stack = detect_tech_stack(site_url, snippet)
+            df.at[idx, 'sitio_web_oficial'] = site_url
+            df.at[idx, 'competidor_actual'] = stack
+            
+            print(f"   [OK] URL: {site_url}")
+            print(f"   [OK] Tech Stack: {stack}")
             processed += 1
-        time.sleep(0.5)
+        time.sleep(0.2)
 
-    print(f"\n✔ Proceso de prueba finalizado. {processed} entidades enriquecidas exitosamente.")
+    # Save updated CSV
+    df.to_csv(csv_path, index=False)
+    print(f"\n[OK] Enriquecimiento completado. {processed} entidades guardadas en {csv_path}.")
 
 if __name__ == '__main__':
     main()
