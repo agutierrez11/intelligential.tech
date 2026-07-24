@@ -595,6 +595,44 @@
             border-left: 4px solid var(--accent-green);
         }
 
+        /* Rate Matrix Table Styling */
+        .rate-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            margin-top: 0.75rem;
+        }
+
+        .rate-table th {
+            padding: 0.75rem 1rem;
+            background: rgba(79, 70, 229, 0.05);
+            color: var(--text-muted);
+            font-weight: 700;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .rate-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+            font-family: var(--font-mono);
+        }
+
+        .rate-table tr:hover td {
+            background: rgba(79, 70, 229, 0.02);
+        }
+
+        .tag-rate {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        .tag-debit { background: rgba(2, 132, 199, 0.1); color: var(--accent-cyan); }
+        .tag-credit { background: rgba(79, 70, 229, 0.1); color: var(--accent-purple); }
+        .tag-intl { background: rgba(5, 150, 105, 0.1); color: var(--accent-green); }
+
         /* Charts section */
         .charts-row {
             display: grid;
@@ -699,7 +737,7 @@
     <header>
         <div class="header-title">
             <div class="badge-tag">
-                <span class="badge-dot"></span> Generic FinTech Partnership Framework v3.6
+                <span class="badge-dot"></span> Generic FinTech Partnership Framework v3.7
             </div>
             <h1 style="margin-top: 0.5rem;">Business Case: Adquirente FinTech x Software POS</h1>
             <p>Simulador Financiero, Arquitectura de Integración API & Modelo de Revenue Sharing Portátil</p>
@@ -735,7 +773,7 @@
                 </div>
             </div>
 
-            <!-- Control 1: Nodos (EXTENDED TO 5,000 NODES AS REQUESTED) -->
+            <!-- Control 1: Nodos -->
             <div class="control-group">
                 <div class="control-label">
                     <span>Restaurantes / Nodos Activos</span>
@@ -764,7 +802,7 @@
 
             <hr style="border: none; border-top: 1px solid var(--border-color); margin: 1.25rem 0;">
 
-            <!-- Control 4: Net Margin bps Base (EXTENDED TO 360 BPS / 3.60% AS REQUESTED) -->
+            <!-- Control 4: Net Margin bps Base -->
             <div class="control-group">
                 <div class="control-label">
                     <span>Net Margin Base Nacional (bps)</span>
@@ -850,6 +888,58 @@
                     </div>
                     <div class="math-note" id="math-note-software">
                         💡 <strong>Fórmula:</strong> 25.0% de $382,500 Net Margin = $95,625/mes (~31.88 bps TPV).
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurant Industry Acquiring Rate Matrix Card -->
+            <div class="glass-card">
+                <div class="card-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                    Matriz de Tasas Reales de Adquirencia — Industria Restaurantera (MCC 5812)
+                </div>
+
+                <div class="table-container">
+                    <table class="rate-table">
+                        <thead>
+                            <tr>
+                                <th>Tipo de Tarjeta</th>
+                                <th>Tasa de Descuento (MDR al Comercio)</th>
+                                <th>Costo de Intercambio (Red / Banco)</th>
+                                <th>Net Margin Limpio (Adquirente / Canal)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="tag-rate tag-debit">💳 Débito Nacional</span></td>
+                                <td><strong>1.85% – 2.26%</strong></td>
+                                <td>~0.70% – 0.90%</td>
+                                <td style="color: var(--accent-purple); font-weight: 700;">~115 – 136 bps (1.15% – 1.36%)</td>
+                            </tr>
+                            <tr>
+                                <td><span class="tag-rate tag-credit">💳 Crédito Nacional</span></td>
+                                <td><strong>2.45% – 2.74%</strong></td>
+                                <td>~1.40% – 1.60%</td>
+                                <td style="color: var(--accent-purple); font-weight: 700;">~105 – 114 bps (1.05% – 1.14%)</td>
+                            </tr>
+                            <tr>
+                                <td><span class="tag-rate tag-intl">✈️ Tarjeta Internacional (Visa/MC)</span></td>
+                                <td><strong>3.20% – 3.50%</strong></td>
+                                <td>~1.75% – 1.95%</td>
+                                <td style="color: var(--accent-green); font-weight: 800;">~145 – 155 bps (+35 bps extra directo)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+                    <div style="font-size: 0.82rem; color: var(--text-muted); background: rgba(2, 132, 199, 0.05); padding: 0.8rem 1rem; border-radius: 10px; border-left: 3px solid var(--accent-cyan); line-height: 1.5;">
+                        <strong>🌴 Mezcla Ponderada Turística (50% Nac / 50% Intl):</strong><br>
+                        Tasa Promedio al Restaurante: <strong>2.85%</strong>. Net Margin Ponderado Adquirente: <strong>~127.5 bps (1.275%)</strong>.
+                    </div>
+                    <div style="font-size: 0.82rem; color: var(--text-muted); background: rgba(5, 150, 105, 0.05); padding: 0.8rem 1rem; border-radius: 10px; border-left: 3px solid var(--accent-green); line-height: 1.5;">
+                        <strong>🚀 Multiplicador DCC (Dynamic Currency Conversion):</strong><br>
+                        Suma un <strong>spread FX de +1.5% a +3.0% adicional</strong> en tarjetas extranjeras, triplicando el margen neto en zonas turísticas.
                     </div>
                 </div>
             </div>
