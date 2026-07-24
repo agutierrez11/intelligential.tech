@@ -301,6 +301,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- LIVE REGULATORY NEWS TRIGGER BUTTON ---
+  const btnTriggerLiveNews = document.getElementById('btnTriggerLiveNews');
+  if (btnTriggerLiveNews) {
+    btnTriggerLiveNews.addEventListener('click', () => {
+      window.open('https://www.google.com/search?q=CNBV+Diario+Oficial+de+la+Federacion+SOFOM+PLD+SITI+2026', '_blank');
+    });
+  }
+
   // --- PRESET TOGGLE BUTTON LOGIC FOR SECTION 5 ---
   const btnTierPreset1 = document.getElementById('btnTierPreset1');
   const btnTierPreset2 = document.getElementById('btnTierPreset2');
