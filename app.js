@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Existing DynamiCore comparison calculator:
   const rentaSlider = document.getElementById('rentaSlider');
   const rentaValue = document.getElementById('rentaValue');
   
@@ -19,21 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateCalculator() {
+    if (!rentaSlider) return;
     const renta = parseInt(rentaSlider.value, 10);
-    rentaValue.textContent = '$' + renta.toLocaleString('es-MX');
+    if (rentaValue) rentaValue.textContent = '$' + renta.toLocaleString('es-MX');
 
-    // Formula Intelligential:
-    // Setup = 2x Renta
-    // Renta Anual = 12 * Renta
-    // TCO Intelligential = Setup + Renta Anual
     const setupInt = renta * 2;
     const rentaAnualInt = renta * 12;
     const totalInt = setupInt + rentaAnualInt;
 
-    // Formula Competidor DynamiCore + Extras:
-    // Renta base suele ser ~20% mayor por comisiones/módulos
-    // Setup base de desarrollos = ~$350,000 MXN fijas promedio
-    // Extras (PLD + conectores) = ~$200,000 MXN al año
     const setupDyn = 350000;
     const rentaAnualDyn = Math.round(renta * 1.2) * 12;
     const extrasDyn = 200000;
@@ -42,22 +36,112 @@ document.addEventListener('DOMContentLoaded', () => {
     const ahorro = totalDyn - totalInt;
     const porcentaje = ((ahorro / totalDyn) * 100).toFixed(1);
 
-    // Update UI:
-    setupIntelligential.textContent = formatCurrency(setupInt);
-    rentaAnualIntelligential.textContent = formatCurrency(rentaAnualInt);
-    tcoIntelligential.textContent = formatCurrency(totalInt);
+    if (setupIntelligential) setupIntelligential.textContent = formatCurrency(setupInt);
+    if (rentaAnualIntelligential) rentaAnualIntelligential.textContent = formatCurrency(rentaAnualInt);
+    if (tcoIntelligential) tcoIntelligential.textContent = formatCurrency(totalInt);
 
-    setupDynamicore.textContent = formatCurrency(setupDyn);
-    rentaAnualDynamicore.textContent = formatCurrency(rentaAnualDyn);
-    extrasDynamicore.textContent = formatCurrency(extrasDyn);
-    tcoDynamicore.textContent = formatCurrency(totalDyn);
+    if (setupDynamicore) setupDynamicore.textContent = formatCurrency(setupDyn);
+    if (rentaAnualDynamicore) rentaAnualDynamicore.textContent = formatCurrency(rentaAnualDyn);
+    if (extrasDynamicore) extrasDynamicore.textContent = formatCurrency(extrasDyn);
+    if (tcoDynamicore) tcoDynamicore.textContent = formatCurrency(totalDyn);
 
-    savingsAmount.textContent = formatCurrency(ahorro);
-    savingsPercent.textContent = `(${porcentaje}% de Ahorro Real)`;
+    if (savingsAmount) savingsAmount.textContent = formatCurrency(ahorro);
+    if (savingsPercent) savingsPercent.textContent = `(${porcentaje}% de Ahorro Real)`;
   }
 
   if (rentaSlider) {
     rentaSlider.addEventListener('input', updateCalculator);
-    updateCalculator(); // Initialize on load
+    updateCalculator();
+  }
+
+  // --- NEW: RevOps Capacity & ARR/MRR KISS Calculator ---
+  const calcSliderClientes = document.getElementById('calcSliderClientes');
+  const calcSliderMeses = document.getElementById('calcSliderMeses');
+  const calcSliderAEs = document.getElementById('calcSliderAEs');
+  const calcSliderTicket = document.getElementById('calcSliderTicket');
+  const calcSliderSetup = document.getElementById('calcSliderSetup');
+
+  const calcValClientes = document.getElementById('calcValClientes');
+  const calcValMeses = document.getElementById('calcValMeses');
+  const calcValAEs = document.getElementById('calcValAEs');
+  const calcValTicket = document.getElementById('calcValTicket');
+  const calcValSetup = document.getElementById('calcValSetup');
+
+  const calcKpiRitmoEmpresa = document.getElementById('calcKpiRitmoEmpresa');
+  const calcKpiCuotaAE = document.getElementById('calcKpiCuotaAE');
+  const calcKpiMrrTotal = document.getElementById('calcKpiMrrTotal');
+  const calcKpiArrTotal = document.getElementById('calcKpiArrTotal');
+  const calcKpiSetupTotal = document.getElementById('calcKpiSetupTotal');
+
+  const calcBarMrr = document.getElementById('calcBarMrr');
+  const calcBarSetup = document.getElementById('calcBarSetup');
+  const calcLegMrrPct = document.getElementById('calcLegMrrPct');
+  const calcLegSetupPct = document.getElementById('calcLegSetupPct');
+  const calcMecanicaText = document.getElementById('calcMecanicaText');
+
+  function updateRevOpsCalculator() {
+    if (!calcSliderClientes) return;
+
+    const clientes = parseInt(calcSliderClientes.value, 10);
+    const meses = parseInt(calcSliderMeses.value, 10);
+    const aes = parseInt(calcSliderAEs.value, 10);
+    const ticket = parseInt(calcSliderTicket.value, 10);
+    const setup = parseInt(calcSliderSetup.value, 10);
+
+    // Update Slider Labels:
+    if (calcValClientes) calcValClientes.textContent = clientes.toLocaleString('es-MX');
+    if (calcValMeses) calcValMeses.textContent = meses + ' Meses';
+    if (calcValAEs) calcValAEs.textContent = aes + (aes === 1 ? ' AE' : ' AEs');
+    if (calcValTicket) calcValTicket.textContent = '$' + ticket.toLocaleString('es-MX') + ' MXN';
+    if (calcValSetup) calcValSetup.textContent = '$' + setup.toLocaleString('es-MX') + ' MXN';
+
+    // Math Calculations:
+    const ritmoEmpresa = (clientes / meses).toFixed(2);
+    const cuotaAE = (clientes / meses / aes).toFixed(2);
+    const mrrTotal = clientes * ticket;
+    const arrTotal = mrrTotal * 12;
+    const setupTotal = clientes * setup;
+
+    // Helper format MDP or MXN:
+    function formatMdp(val) {
+      if (val >= 1000000) {
+        return '$' + (val / 1000000).toFixed(2) + ' MDP';
+      }
+      return '$' + (val / 1000).toFixed(0) + 'k MXN';
+    }
+
+    // Update Output Cards:
+    if (calcKpiRitmoEmpresa) calcKpiRitmoEmpresa.textContent = ritmoEmpresa;
+    if (calcKpiCuotaAE) calcKpiCuotaAE.textContent = cuotaAE;
+    if (calcKpiMrrTotal) calcKpiMrrTotal.textContent = formatMdp(mrrTotal);
+    if (calcKpiArrTotal) calcKpiArrTotal.textContent = formatMdp(arrTotal);
+    if (calcKpiSetupTotal) calcKpiSetupTotal.textContent = 'Setup Cash: ' + formatMdp(setupTotal);
+
+    // Waterfall percentages:
+    const totalRev = mrrTotal + setupTotal;
+    const mrrPct = Math.round((mrrTotal / totalRev) * 100);
+    const setupPct = 100 - mrrPct;
+
+    if (calcBarMrr) calcBarMrr.style.width = mrrPct + '%';
+    if (calcBarSetup) calcBarSetup.style.width = setupPct + '%';
+    if (calcLegMrrPct) calcLegMrrPct.textContent = mrrPct + '%';
+    if (calcLegSetupPct) calcLegSetupPct.textContent = setupPct + '%';
+
+    const diasPorCierre = Math.round(30 / (clientes / meses / aes));
+
+    if (calcMecanicaText) {
+      calcMecanicaText.innerHTML = `
+        Para alcanzar la meta de <strong>${clientes} clientes</strong> en <strong>${meses} meses</strong> con <strong>${aes} Ejecutivo(s) de Cuenta (AE)</strong>, solo se requiere un ritmo de <strong>${cuotaAE} cierres al mes por persona</strong> (1 cierre cada ${diasPorCierre} días). Esto genera <strong>${formatMdp(mrrTotal)}/mes en MRR</strong> (${formatMdp(arrTotal)} ARR) con una recaudación inmediata de <strong>${formatMdp(setupTotal)} en Setup Fees</strong>.
+      `;
+    }
+  }
+
+  if (calcSliderClientes) {
+    calcSliderClientes.addEventListener('input', updateRevOpsCalculator);
+    calcSliderMeses.addEventListener('input', updateRevOpsCalculator);
+    calcSliderAEs.addEventListener('input', updateRevOpsCalculator);
+    calcSliderTicket.addEventListener('input', updateRevOpsCalculator);
+    calcSliderSetup.addEventListener('input', updateRevOpsCalculator);
+    updateRevOpsCalculator();
   }
 });

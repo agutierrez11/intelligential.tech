@@ -250,6 +250,150 @@
       </div>
     </section>
 
+    <!-- Section 4: Calculadora Interactiva RevOps & Capacidad Comercial (KISS) -->
+    <section class="dash-section" id="revops-calculator">
+      <div class="section-title-row">
+        <h2>4. 🧮 Calculadora Interactiva RevOps: Capacidad Comercial & Proyección ARR/MRR (KISS)</h2>
+        <span class="section-badge badge-blue">SIMULACIÓN EN TIEMPO REAL</span>
+      </div>
+      <p class="section-intro">
+        Modifica las variables de entrada para calcular el ritmo de ventas mensual, la cuota por ejecutivo (AE) y el impacto financiero en MRR y ARR recurrente.
+      </p>
+
+      <div style="display:grid; grid-template-columns: 340px 1fr; gap:24px; margin-top:20px;">
+        
+        <!-- Left Panel: Input Sliders -->
+        <div style="background:#FFFFFF; border:1px solid #E2E8F0; padding:24px; border-radius:16px; box-shadow:0 4px 6px -1px rgba(0,0,0,0.05);">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:20px;">
+            <span style="font-size:1.2rem;">⚙️</span>
+            <h3 style="font-family:'JetBrains Mono',monospace; font-size:0.95rem; font-weight:800; color:#0F172A; text-transform:uppercase;">Variables de Entrada</h3>
+          </div>
+
+          <!-- Slider 1: Meta Clientes -->
+          <div style="margin-bottom:20px;">
+            <div style="display:flex; justify-content:space-between; font-size:0.85rem; font-weight:600; margin-bottom:6px;">
+              <span style="color:#475569;">Meta Clientes Activos</span>
+              <span id="calcValClientes" style="color:#2563EB; font-family:'JetBrains Mono',monospace; font-weight:800;">100</span>
+            </div>
+            <input type="range" id="calcSliderClientes" min="10" max="200" step="5" value="100" style="width:100%; accent-color:#2563EB; cursor:pointer;">
+          </div>
+
+          <!-- Slider 2: Plazo Meses -->
+          <div style="margin-bottom:20px;">
+            <div style="display:flex; justify-content:space-between; font-size:0.85rem; font-weight:600; margin-bottom:6px;">
+              <span style="color:#475569;">Plazo del Horizonte (Meses)</span>
+              <span id="calcValMeses" style="color:#2563EB; font-family:'JetBrains Mono',monospace; font-weight:800;">36 Meses</span>
+            </div>
+            <input type="range" id="calcSliderMeses" min="6" max="60" step="6" value="36" style="width:100%; accent-color:#2563EB; cursor:pointer;">
+          </div>
+
+          <!-- Slider 3: Vendedores AEs -->
+          <div style="margin-bottom:20px;">
+            <div style="display:flex; justify-content:space-between; font-size:0.85rem; font-weight:600; margin-bottom:6px;">
+              <span style="color:#475569;">Vendedores Full-Time (AEs)</span>
+              <span id="calcValAEs" style="color:#7C3AED; font-family:'JetBrains Mono',monospace; font-weight:800;">1 AE</span>
+            </div>
+            <input type="range" id="calcSliderAEs" min="1" max="6" step="1" value="1" style="width:100%; accent-color:#7C3AED; cursor:pointer;">
+          </div>
+
+          <!-- Slider 4: Ticket Renta (MRR) -->
+          <div style="margin-bottom:20px;">
+            <div style="display:flex; justify-content:space-between; font-size:0.85rem; font-weight:600; margin-bottom:6px;">
+              <span style="color:#475569;">Ticket Promedio Renta (MRR)</span>
+              <span id="calcValTicket" style="color:#059669; font-family:'JetBrains Mono',monospace; font-weight:800;">$45,000 MXN</span>
+            </div>
+            <input type="range" id="calcSliderTicket" min="15000" max="100000" step="2500" value="45000" style="width:100%; accent-color:#059669; cursor:pointer;">
+          </div>
+
+          <!-- Slider 5: Setup Fee Promedio -->
+          <div style="margin-bottom:10px;">
+            <div style="display:flex; justify-content:space-between; font-size:0.85rem; font-weight:600; margin-bottom:6px;">
+              <span style="color:#475569;">Setup Fee Promedio (Único)</span>
+              <span id="calcValSetup" style="color:#D97706; font-family:'JetBrains Mono',monospace; font-weight:800;">$60,000 MXN</span>
+            </div>
+            <input type="range" id="calcSliderSetup" min="20000" max="150000" step="5000" value="60000" style="width:100%; accent-color:#D97706; cursor:pointer;">
+          </div>
+        </div>
+
+        <!-- Right Panel: High Impact KPI Cards & Mechanics -->
+        <div style="display:flex; flex-direction:column; gap:20px;">
+
+          <!-- Top Row 4 KPI Cards -->
+          <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:14px;">
+            
+            <!-- Card 1: Ritmo Empresa -->
+            <div style="background:#FFFFFF; border:1px solid #E2E8F0; padding:16px; border-radius:12px; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:0.68rem; font-weight:700; color:#64748B; text-transform:uppercase;">RITMO EMPRESA / MES</span>
+              <div id="calcKpiRitmoEmpresa" style="font-family:'JetBrains Mono',monospace; font-size:1.5rem; font-weight:800; color:#0F172A; margin:6px 0 2px 0;">2.78</div>
+              <span style="font-size:0.75rem; color:#64748B;">Cierres por mes total</span>
+            </div>
+
+            <!-- Card 2: Cuota por AE -->
+            <div style="background:#F5F3FF; border:1px solid #DDD6FE; padding:16px; border-radius:12px; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:0.68rem; font-weight:700; color:#7C3AED; text-transform:uppercase;">CUOTA POR VENDEDOR</span>
+              <div id="calcKpiCuotaAE" style="font-family:'JetBrains Mono',monospace; font-size:1.5rem; font-weight:800; color:#6D28D9; margin:6px 0 2px 0;">2.78</div>
+              <span style="font-size:0.75rem; color:#7C3AED; font-weight:600;">Cierres / mes por AE</span>
+            </div>
+
+            <!-- Card 3: MRR Final -->
+            <div style="background:#ECFDF5; border:1px solid #A7F3D0; padding:16px; border-radius:12px; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:0.68rem; font-weight:700; color:#059669; text-transform:uppercase;">MRR TOTAL ALCANZADO</span>
+              <div id="calcKpiMrrTotal" style="font-family:'JetBrains Mono',monospace; font-size:1.35rem; font-weight:800; color:#047857; margin:6px 0 2px 0;">$4.50 MDP</div>
+              <span style="font-size:0.75rem; color:#059669; font-weight:600;">/ mes recurrente</span>
+            </div>
+
+            <!-- Card 4: ARR Anualizado -->
+            <div style="background:#EFF6FF; border:1px solid #BFDBFE; padding:16px; border-radius:12px; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:0.68rem; font-weight:700; color:#2563EB; text-transform:uppercase;">ARR ANUALIZADO</span>
+              <div id="calcKpiArrTotal" style="font-family:'JetBrains Mono',monospace; font-size:1.35rem; font-weight:800; color:#1D4ED8; margin:6px 0 2px 0;">$54.00 MDP</div>
+              <span style="font-size:0.75rem; color:#2563EB; font-weight:600;">/ año de ingresos</span>
+            </div>
+
+          </div>
+
+          <!-- Visual Bar: Revenue Breakdown Waterfall (KISS) -->
+          <div style="background:#FFFFFF; border:1px solid #E2E8F0; padding:20px; border-radius:12px; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+              <h4 style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; color:#0F172A; font-weight:800; text-transform:uppercase;">
+                📊 Distribución del Revenue Generado en el Periodo
+              </h4>
+              <span id="calcKpiSetupTotal" style="font-family:'JetBrains Mono',monospace; font-size:0.8rem; background:#FEF3C7; color:#D97706; padding:4px 8px; border-radius:6px; font-weight:700;">
+                Setup Cash: $6.00 MDP
+              </span>
+            </div>
+
+            <!-- Waterfall Visual Bar -->
+            <div style="height:24px; width:100%; background:#E2E8F0; border-radius:12px; overflow:hidden; display:flex; margin-bottom:12px;">
+              <div id="calcBarMrr" style="width:75%; background:linear-gradient(90deg, #059669, #10B981); height:100%; transition:width 0.3s ease;" title="MRR Recurrente"></div>
+              <div id="calcBarSetup" style="width:25%; background:linear-gradient(90deg, #D97706, #F59E0B); height:100%; transition:width 0.3s ease;" title="Setup Fees Cash"></div>
+            </div>
+
+            <!-- Legend -->
+            <div style="display:flex; gap:20px; font-size:0.8rem; font-weight:600; color:#475569;">
+              <div style="display:flex; align-items:center; gap:6px;">
+                <span style="width:12px; height:12px; border-radius:3px; background:#059669; display:inline-block;"></span>
+                <span>MRR Recurrente Cartera (<span id="calcLegMrrPct">75%</span>)</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:6px;">
+                <span style="width:12px; height:12px; border-radius:3px; background:#D97706; display:inline-block;"></span>
+                <span>Setup Fees Recaudado (<span id="calcLegSetupPct">25%</span>)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Business Mechanics Callout Box (KISS) -->
+          <div style="background:#F8FAFC; border:1px solid #E2E8F0; border-left:4px solid #2563EB; padding:18px; border-radius:10px;">
+            <strong style="color:#0F172A; font-size:0.88rem; font-family:'JetBrains Mono',monospace;">💡 Mecánica RevOps & Diagnóstico de Eficiencia Comercial:</strong>
+            <p id="calcMecanicaText" style="font-size:0.85rem; color:#475569; margin-top:6px; line-height:1.5;">
+              Para alcanzar la meta de <strong>100 clientes</strong> en <strong>36 meses</strong> con <strong>1 Ejecutivo de Cuenta (AE)</strong>, solo se requiere un ritmo de <strong>2.78 cierres al mes por persona</strong> (1 cierre cada 11 días). Esto genera <strong>$4.50 MDP/mes en MRR</strong> ($54.00 MDP ARR) con una recaudación inmediata de <strong>$6.00 MDP en Setup Fees</strong>.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <footer class="exec-footer">
