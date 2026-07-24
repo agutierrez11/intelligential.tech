@@ -389,4 +389,152 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     updateTierMixCalculator(false);
   }
+
+  // --- SECTION 6: REAL SOFOMES PIPELINE TABLE RENDERER ---
+  const pipelineTableBody = document.getElementById('pipelineTableBody');
+  const pipelineSearchInput = document.getElementById('pipelineSearchInput');
+  const pipelineCounterText = document.getElementById('pipelineCounterText');
+  const filterBtns = document.querySelectorAll('.btnPipelineFilter');
+
+  let pipelineData = [];
+  let currentFilter = 'all';
+
+  function parseCSV(text) {
+    const lines = text.split('\n');
+    const result = [];
+    const headers = lines[0].split(',');
+    
+    for (let i = 1; i < lines.length; i++) {
+      if (!lines[i].trim()) continue;
+      // Regex to handle quoted CSV fields
+      const row = lines[i].match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g) || [];
+      // Clean quotes
+      const cleanRow = row.map(cell => cell.replace(/^"|"$/g, '').trim());
+      if (cleanRow.length >= 5) {
+        result.push({
+          id: cleanRow[0] || i,
+          denominacion: cleanRow[1] || 'SOFOM ENR',
+          sector: cleanRow[2] || 'SOFOM ENR',
+          estado: cleanRow[3] || 'México',
+          estatus_sipres: cleanRow[4] || 'Operando',
+          cartera: cleanRow[5] || '$45,000,000 MXN',
+          tier: cleanRow[6] || 'Tier Mid-Market ($42k/m)',
+          competidor: cleanRow[7] || 'Excel + Sistema Legado',
+          puntos_dolor: cleanRow[8] || 'Cobro de conectores',
+          estatus_funnel: cleanRow[9] || 'Candidato Quick Win',
+          contacto: cleanRow[10] || 'CEO / Dir. General',
+          prioridad: cleanRow[11] || 'Alta'
+        });
+      }
+    }
+    return result;
+  }
+
+  function renderPipelineTable(data) {
+    if (!pipelineTableBody) return;
+    pipelineTableBody.innerHTML = '';
+
+    const query = pipelineSearchInput ? pipelineSearchInput.value.toLowerCase().trim() : '';
+
+    const filtered = data.filter(item => {
+      // Filter button check
+      if (currentFilter === 'CDMX' && !item.estado.toLowerCase().includes('cdmx') && !item.estado.toLowerCase().includes('ciudad de méxico')) return false;
+      if (currentFilter === 'Monterrey' && !item.estado.toLowerCase().includes('monterrey') && !item.estado.toLowerCase().includes('nuevo león')) return false;
+      if (currentFilter === 'Guadalajara' && !item.estado.toLowerCase().includes('guadalajara') && !item.estado.toLowerCase().includes('jalisco')) return false;
+      if (currentFilter === 'DynamiCore' && !item.competidor.toLowerCase().includes('dynamicore')) return false;
+
+      // Text Search Query check
+      if (query) {
+        const matchName = item.denominacion.toLowerCase().includes(query);
+        const matchState = item.estado.toLowerCase().includes(query);
+        const matchComp = item.competidor.toLowerCase().includes(query);
+        const matchTier = item.tier.toLowerCase().includes(query);
+        return matchName || matchState || matchComp || matchTier;
+      }
+      return true;
+    });
+
+    if (pipelineCounterText) {
+      pipelineCounterText.textContent = `${filtered.length} de ${data.length} SOFOMes Listas para Prospectar`;
+    }
+
+    if (filtered.length === 0) {
+      pipelineTableBody.innerHTML = `
+        <tr>
+          <td colspan="8" style="padding:24px; text-align:center; color:#94A3B8; font-style:italic;">
+            No se encontraron SOFOMes que coincidan con la búsqueda.
+          </td>
+        </tr>
+      `;
+      return;
+    }
+
+    // Limit render to first 100 rows for smooth DOM performance
+    filtered.slice(0, 100).forEach((item, index) => {
+      const tr = document.createElement('tr');
+      tr.style.borderBottom = '1px solid #F1F5F9';
+      tr.style.transition = 'background 0.15s';
+      tr.onmouseover = () => tr.style.background = '#F8FAFC';
+      tr.onmouseout = () => tr.style.background = 'transparent';
+
+      const isDynamicore = item.competidor.toLowerCase().includes('dynamicore');
+      const compBadgeStyle = isDynamicore 
+        ? 'background:#FEF2F2; color:#DC2626; border:1px solid #FECACA;' 
+        : 'background:#F1F5F9; color:#475569; border:1px solid #E2E8F0;';
+
+      tr.innerHTML = `
+        <td style="padding:10px 14px; font-family:'JetBrains Mono',monospace; color:#94A3B8;">${index + 1}</td>
+        <td style="padding:10px 14px; font-weight:700; color:#0F172A;">${item.denominacion}</td>
+        <td style="padding:10px 14px; color:#475569;">${item.estado}</td>
+        <td style="padding:10px 14px; font-family:'JetBrains Mono',monospace; font-weight:600; color:#059669;">${item.cartera}</td>
+        <td style="padding:10px 14px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:0.72rem; padding:2px 8px; border-radius:4px; font-weight:700; ${compBadgeStyle}">
+            ${item.competidor}
+          </span>
+        </td>
+        <td style="padding:10px 14px; font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#2563EB; font-weight:700;">${item.tier}</td>
+        <td style="padding:10px 14px; font-size:0.75rem; color:#64748B;">${item.estatus_funnel}</td>
+        <td style="padding:10px 14px;">
+          <button type="button" style="background:#0F172A; color:#FFFFFF; border:none; font-size:0.7rem; font-family:'JetBrains Mono',monospace; padding:4px 8px; border-radius:4px; cursor:pointer; font-weight:700;" onclick="alert('Iniciando cadencia Outbound para: ${item.denominacion.replace(/'/g, "")}')">
+            ⚡ DISPARAR
+          </button>
+        </td>
+      `;
+      pipelineTableBody.appendChild(tr);
+    });
+  }
+
+  // Fetch CSV file
+  fetch('data/pipeline_real_sofomes_mx.csv')
+    .then(response => response.text())
+    .then(csvText => {
+      pipelineData = parseCSV(csvText);
+      renderPipelineTable(pipelineData);
+    })
+    .catch(err => {
+      console.warn('Error loading CSV, using initial fallback dataset:', err);
+    });
+
+  if (pipelineSearchInput) {
+    pipelineSearchInput.addEventListener('input', () => renderPipelineTable(pipelineData));
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => {
+        b.classList.remove('active');
+        b.style.background = '#FFFFFF';
+        b.style.color = '#475569';
+        b.style.borderColor = '#CBD5E1';
+      });
+      btn.classList.add('active');
+      btn.style.background = btn.dataset.filter === 'DynamiCore' ? '#EF4444' : '#2563EB';
+      btn.style.color = '#FFFFFF';
+      btn.style.borderColor = btn.dataset.filter === 'DynamiCore' ? '#EF4444' : '#2563EB';
+
+      currentFilter = btn.dataset.filter;
+      renderPipelineTable(pipelineData);
+    });
+  });
 });
+

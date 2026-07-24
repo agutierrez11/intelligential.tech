@@ -737,23 +737,59 @@
             <strong style="color:#0F172A; font-size:0.9rem;">2 a 3 Cuentas Tier 2 / Mes</strong>
             <p style="font-size:0.8rem; color:#475569; margin-top:4px;">
               Genera <strong>+$84k a +$126k MRR/mes</strong> por vendedor con <strong>$110k - $165k en cash de Setup</strong>. Máxima comisión con cero sobrecarga operativa.
-            </p>
+      <!-- Search & Filter Controls -->
+      <div style="background:#FFFFFF; border:1px solid #E2E8F0; padding:18px; border-radius:14px; margin-bottom:20px; box-shadow:0 4px 6px -1px rgba(0,0,0,0.04);">
+        <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:12px;">
+          <div style="flex:1; min-width:280px; position:relative;">
+            <input type="text" id="pipelineSearchInput" placeholder="🔍 Buscar por nombre, estado (ej. CDMX, Monterrey), o competidor (ej. DynamiCore)..." style="width:100%; padding:10px 14px; border:2px solid #CBD5E1; border-radius:8px; font-size:0.88rem; font-family:'Outfit',sans-serif; outline:none; transition:all 0.2s;" onfocus="this.style.borderColor='#2563EB'" onblur="this.style.borderColor='#CBD5E1'">
           </div>
+          <div style="display:flex; gap:6px; flex-wrap:wrap;">
+            <button class="btnPipelineFilter active" data-filter="all" style="padding:8px 12px; font-size:0.75rem; font-weight:700; font-family:'JetBrains Mono',monospace; border:1px solid #2563EB; border-radius:6px; background:#2563EB; color:#FFFFFF; cursor:pointer;">TODOS (600+)</button>
+            <button class="btnPipelineFilter" data-filter="CDMX" style="padding:8px 12px; font-size:0.75rem; font-weight:700; font-family:'JetBrains Mono',monospace; border:1px solid #CBD5E1; border-radius:6px; background:#FFFFFF; color:#475569; cursor:pointer;">CDMX</button>
+            <button class="btnPipelineFilter" data-filter="Monterrey" style="padding:8px 12px; font-size:0.75rem; font-weight:700; font-family:'JetBrains Mono',monospace; border:1px solid #CBD5E1; border-radius:6px; background:#FFFFFF; color:#475569; cursor:pointer;">MONTERREY</button>
+            <button class="btnPipelineFilter" data-filter="Guadalajara" style="padding:8px 12px; font-size:0.75rem; font-weight:700; font-family:'JetBrains Mono',monospace; border:1px solid #CBD5E1; border-radius:6px; background:#FFFFFF; color:#475569; cursor:pointer;">GUADALAJARA</button>
+            <button class="btnPipelineFilter" data-filter="DynamiCore" style="padding:8px 12px; font-size:0.75rem; font-weight:700; font-family:'JetBrains Mono',monospace; border:1px solid #EF4444; border-radius:6px; background:#FEF2F2; color:#DC2626; cursor:pointer;">COMPETIDOR DYNAMICORE</button>
+          </div>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.8rem; color:#64748B; border-top:1px solid #F1F5F9; padding-top:10px;">
+          <span>Contador en tiempo real: <strong id="pipelineCounterText" style="color:#0F172A;">Cargando dataset...</strong></span>
+          <span style="font-family:'JetBrains Mono',monospace; font-weight:600; color:#059669;">✔ Datos Reales SIPRES / CONDUSEF</span>
+        </div>
+      </div>
 
+      <!-- Pipeline Table Scrollable Container -->
+      <div style="background:#FFFFFF; border:1px solid #E2E8F0; border-radius:14px; overflow:hidden; box-shadow:0 10px 15px -3px rgba(0,0,0,0.05);">
+        <div style="max-height:480px; overflow-y:auto;">
+          <table style="width:100%; border-collapse:collapse; text-align:left; font-size:0.82rem;">
+            <thead style="position:sticky; top:0; background:#0F172A; color:#F8FAFC; font-family:'JetBrains Mono',monospace; font-size:0.75rem; text-transform:uppercase;">
+              <tr>
+                <th style="padding:12px 14px;">#</th>
+                <th style="padding:12px 14px;">SOFOM / Denominación Real</th>
+                <th style="padding:12px 14px;">Estado / Sede</th>
+                <th style="padding:12px 14px;">Cartera Est.</th>
+                <th style="padding:12px 14px;">Software / Competidor</th>
+                <th style="padding:12px 14px;">Tier Pricing</th>
+                <th style="padding:12px 14px;">Estatus Funnel</th>
+                <th style="padding:12px 14px;">Acción Outbound</th>
+              </tr>
+            </thead>
+            <tbody id="pipelineTableBody">
+              <!-- Dynamically populated via app.js -->
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
 
   </main>
 
-  </main>
-
-  <footer class="exec-footer">
-    <div class="container">
-      <p>Intelligential © 2026 — Documento de Trabajo Estratégico y Plan RevOps preparado por Antonio Gutiérrez para Luis Fernando Sánchez.</p>
+  <footer class="exec-footer" style="margin-top:40px; border-top:1px solid #E2E8F0; padding:24px 0; background:#FFFFFF;">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; font-size:0.82rem; color:#64748B;">
+      <span>Intelligential © 2026 — Estrategia Comercial & Documentación RevOps</span>
+      <span style="font-family:'JetBrains Mono',monospace;">Preparado por Antonio Gutiérrez para Luis Fernando Sánchez</span>
     </div>
   </footer>
 
-  <script src="app.js?v=3"></script>
+  <script src="app.js"></script>
 </body>
 </html>
