@@ -34,7 +34,7 @@ La oportunidad consiste en capturar la cartera transaccional de restaurantes (es
 * **Tasa Tarjeta Internacional:** 3.20%
 * **Mezcla Transaccional Estimada (50% Nac / 50% Intl en zona turística):** **2.85% Tasa Ponderada**.
 * **Costo Directo de Red / Intercambio (Visa, Mastercard, Bancos):** ~1.75%
-* **Net Margin Adquirente:** **1.10% (110 bps del TPV Total)**.
+* **Net Margin Adquirente:** **1.10% a 1.45% (110 a 145 bps del TPV Total)**.
 
 ---
 
@@ -92,23 +92,27 @@ sequenceDiagram
     API-->>M: Webhook / Callback 200 OK (Comanda marcada como PAGADA)
 ```
 
-### Explicación en 4 Pasos:
-1. **Llamada de Cobro:** Cuando el mesero cierra la comanda en el Software POS, el sistema realiza un `POST /v1/transactions/create` indicando monto, terminal_id y referencia de mesa.
-2. **Push to Device:** La API del Adquirente envía una notificación push instantánea a la terminal física **Smart POS** ubicada en la mesa del cliente.
-3. **Procesamiento de Tarjeta:** La terminal se enciende con el monto exacto. El cliente paga (inserta/desliza/contactless) y selecciona propina. La terminal consulta al Switch bancario.
-4. **Callback & Cierre Automático:** La terminal aprueba la transacción y la API notifica al Software POS mediante un Webhook instantáneo. La comanda se cierra automáticamente sin digitación manual humana.
+---
+
+## 6. 🏆 Matriz Estratégica de Evaluación de los 4 Procesadores en Pipeline
+
+Verificación directa con sitios oficiales de cada opción:
+
+| Aliado Evaluado | Sitio Oficial | Oferta Principal de Mercado | Evaluación de API & Smart POS | Estrategia de Negociación |
+| :--- | :--- | :--- | :--- | :--- |
+| **Efevoo Pay** | [efevoopay.com](https://efevoopay.com/es/adquiriente/) | Adquirencia comercial directa, terminales Smart POS Android y soluciones omnicanal. | ⭐️⭐️⭐️⭐️⭐️ API REST nativa para terminales de cobro en mesa. | **Prioridad 1 para Adquirencia Directa B2B.** Exigir habilitación de DCC + 7.5% Net Margin. |
+| **BZ PAY Solutions** | [bzpay.com.mx](https://bzpay.com.mx/) | Terminales de pago con tarjeta, tasas personalizadas y **depósito de fondos en 24 horas**. | ⭐️⭐️⭐️⭐️⭐️ Terminales físicas ágiles con integración rápida. | **Prioridad 1 para oferta de liquidación rápida 24h** a restaurantes y Success Fees directos. |
+| **Prosepago** | [prosepago.com](https://www.prosepago.com/home) | Procesadora y agregadora de pagos omnicanal para comercios y distribuidores en México. | ⭐️⭐️⭐️⭐️⭐️ Flexibilidad en APIs e integraciones POS personalizadas. | **Prioridad 1 para rapidez contractual de convenio ISO y split de comisiones.** |
+| **AxxiPay** | [axxipay.com](https://www.axxipay.com/) | Pasarela y soluciones de procesamiento con alta capacidad de reconciliación y ruteo. | ⭐️⭐️⭐️⭐️ Pasarela REST moderna y SDKs de cobro. | **Ideal para reconciliación en tiempo real en cadenas y franquicias.** |
 
 ---
 
-## 6. 🛡️ Portabilidad & Estrategia Multi-Adquirente
+## 7. 🛡️ Criterios Mínimos de Calificación para Firmar Convenio ISO
 
-Este Business Case está diseñado de forma **agnóstica y portátil**. En caso de que un Adquirente específico intente restringir los porcentajes o retrasar los acuerdos de integración, el vehículo de originación mantiene el control de la relación comercial para presentar y desplegar la misma solución con:
-
-* **Fiserv / First Data**
-* **Getnet (Grupo Santander)**
-* **EVO Payments / Banorte**
-* **Mercado Pago Enterprise**
-* **Kushki / Nu / Velo**
+1. **Licencia / Capacidad de Adquirencia Directa:** Ofrecer tasas adquirentes competitivas (~2.45% nac / 3.20% intl).
+2. **Capacidad de DCC (Dynamic Currency Conversion) / Multimoneda:** Para maximizar el margen neto en zonas turísticas.
+3. **API REST / SDK de Cobro para POS:** Push to device y Webhook callback para cierre automático de mesa.
+4. **Respeto a la Estructura de Canal ISO:** 7.5% del Net Margin para originadores + Success Fee de activación.
 
 ---
 
