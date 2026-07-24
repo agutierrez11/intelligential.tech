@@ -375,4 +375,29 @@ Reconociendo que hoy no conocemos el guion exacto que usa Luis en sus reuniones 
 > *"Luis, viendo los diferentes perfiles que nos compran (CEO, CFO, CTO)... **¿cuál ha sido el interlocutor que usualmente toma la decisión final en las SOFOMes que han cerrado, y cómo adaptas hoy la plática para cada uno de ellos?**"*
 
 ---
+
+## 17. 📊 Benchmark de Eficiencia Comercial: La Ley de Price Aplicada al Equipo Actual de 3 Vendedores
+
+### 💡 La Realidad Actual vs. El Benchmark Empírico:
+Actualmente en Intelligential el equipo comercial opera de forma Founder-Driven con solo **3 personas vendiendo**. Al comparar este escenario con la auditoría empírica de fuerzas de ventas masivas (donde **13 vendedores representan el 82.7% de la facturación de 165 personas**), la conclusión comercial es contundente:
+
+```
++---------------------------------------------------------------------------------------------------+
+|            LA LEY DE PRICE EN EL EQUIPO ACTUAL DE INTELLIGENTIAL (3 VENDEDORES)                  |
++------------------------------------+--------------------------------------------------------------+
+| 1. NO INFLAR LA NÓMINA DE VENTAS   | La evidencia demuestra que el 80%-90% de los ingresos de     |
+|                                    | cualquier empresa los generan de 1 a 3 High Performers.      |
++------------------------------------+--------------------------------------------------------------+
+| 2. MÁXIMO RENDIMIENTO DE LOS 3 AEs | Con 3 vendedores activos, aplicar la cadencia Schwerpunkt     |
+|                                    | (5 cuentas/día) equivale a la producción de 15 AEs promedio.  |
++------------------------------------+--------------------------------------------------------------+
+| 3. EFICIENCIA DE CAPITAL           | Se alcanzan los 20 clientes a Diciembre y $200k MRR manteniendo|
+|    (BOOTSTRAPPED HYPER-EFFICIENCY) | una estructura ligera sin quemar caja en contratación masiva.|
++---------------------------------------------------------------------------------------------------+
+```
+
+### 💬 Argumento Sugerido para la Sesión con Luis el Lunes:
+> *"Luis, analizando datos empíricos de eficiencia en equipos de ventas (donde el 80% de los ingresos siempre los trae el 10% de la nómina)... **en Intelligential no necesitamos contratar una fuerza de ventas masiva de 10 personas para lograr la meta del Consejo.** Con el equipo actual de 3 vendedores y una cadencia multicanal de 5 cuentas al día por persona, tenemos la capacidad exacta para cerrar los 40 clientes del año protegiendo el margen de la empresa."*
+
+---
 *Documento estratégico preparado para la alineación comercial con Luis Fernando Sánchez.*
