@@ -15,7 +15,7 @@ def search_firecrawl(query, api_key):
     }
     payload = json.dumps({
         "query": query,
-        "limit": 3
+        "limit": 2
     }).encode('utf-8')
     
     req = urllib.request.Request(url, data=payload, headers=headers, method="POST")
@@ -24,26 +24,63 @@ def search_firecrawl(query, api_key):
             res_data = json.loads(response.read().decode('utf-8'))
             return res_data
     except Exception as e:
-        print(f"Error calling Firecrawl for '{query}': {e}")
+        print(f"Error calling Firecrawl Search: {e}")
         return None
 
-def detect_tech_stack(url, snippet):
-    combined = (str(url) + " " + str(snippet)).lower()
+def scrape_firecrawl(site_url, api_key):
+    """Scrapes site content to extract full technographic stack metadata"""
+    url = "https://api.firecrawl.dev/v1/scrape"
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json"
+    }
+    payload = json.dumps({
+        "url": site_url,
+        "formats": ["markdown"],
+        "onlyMainContent": True
+    }).encode('utf-8')
+    
+    req = urllib.request.Request(url, data=payload, headers=headers, method="POST")
+    try:
+        with urllib.request.urlopen(req) as response:
+            res_data = json.loads(response.read().decode('utf-8'))
+            return res_data
+    except Exception as e:
+        print(f"Error calling Firecrawl Scrape for '{site_url}': {e}")
+        return None
+
+def extract_tech_details(site_url, search_snippet, markdown_content):
+    combined = (str(site_url) + " " + str(search_snippet) + " " + str(markdown_content)).lower()
+    
+    technologies = []
     if 'dynamicore' in combined:
-        return 'DynamiCore (Detectado)'
-    elif 'softcredito' in combined or 'softcrédito' in combined:
-        return 'Softcrédito (Detectado)'
-    elif 'ascendes' in combined:
-        return 'Ascendes (Detectado)'
-    elif 'mambu' in combined:
-        return 'Mambu (Detectado)'
-    elif 'aws' in combined or 'amazon' in combined:
-        return 'AWS In-House (Detectado)'
+        technologies.append('DynamiCore')
+    if 'softcredito' in combined or 'softcrédito' in combined:
+        technologies.append('Softcrédito')
+    if 'ascendes' in combined:
+        technologies.append('Ascendes')
+    if 'mambu' in combined:
+        technologies.append('Mambu')
+    if 'aws' in combined or 'amazon' in combined:
+        technologies.append('AWS Cloud')
+    if 'azure' in combined:
+        technologies.append('Microsoft Azure')
+    if 'wordpress' in combined:
+        technologies.append('WordPress')
+    if 'react' in combined:
+        technologies.append('React.js')
+    if 'hubspot' in combined:
+        technologies.append('HubSpot CRM')
+    if 'zendesk' in combined:
+        technologies.append('Zendesk')
+
+    if technologies:
+        return ", ".join(technologies)
     else:
-        return 'Sistema Legado In-House'
+        return "Sistema Legado / In-House"
 
 def main():
-    print("=== FIRECRAWL SOFOM ENRICHMENT ENGINE ===")
+    print("=== FIRECRAWL FULL TECHNOGRAPHIC ENRICHMENT ENGINE (STEP 1: SEARCH + STEP 2: SCRAPE) ===")
     api_key = FIRECRAWL_API_KEY
     if not api_key:
         print("Error: No Firecrawl API key provided.")
@@ -59,33 +96,51 @@ def main():
     
     if 'sitio_web_oficial' not in df.columns:
         df['sitio_web_oficial'] = ''
+    if 'tecnologias_detectadas' not in df.columns:
+        df['tecnologias_detectadas'] = ''
         
     processed = 0
-    max_to_process = 30  # Batch size
+    max_to_process = 50
     
     for idx, row in df.head(max_to_process).iterrows():
         nombre_raw = str(row.get('denominacion_social_real', '')).split(',')[0]
-        query = f"SOFOM {nombre_raw} Mexico portal credito"
-        print(f"[{idx+1}/{max_to_process}] Buscando con Firecrawl: {query}...")
+        site_url = str(row.get('sitio_web_oficial', ''))
         
-        res = search_firecrawl(query, api_key)
-        if res and res.get('success') and res.get('data'):
-            top_result = res['data'][0]
-            site_url = top_result.get('url', '')
-            snippet = top_result.get('description', '')
-            
-            stack = detect_tech_stack(site_url, snippet)
-            df.at[idx, 'sitio_web_oficial'] = site_url
-            df.at[idx, 'competidor_actual'] = stack
-            
-            print(f"   [OK] URL: {site_url}")
-            print(f"   [OK] Tech Stack: {stack}")
-            processed += 1
+        # Step 1: Find URL if missing
+        if not site_url or site_url == 'nan' or 'condusef' in site_url or 'facebook' in site_url:
+            query = f"SOFOM {nombre_raw} Mexico sitio oficial"
+            print(f"[{idx+1}/{max_to_process}] 1. Buscando URL oficial para: {nombre_raw}...")
+            search_res = search_firecrawl(query, api_key)
+            if search_res and search_res.get('success') and search_res.get('data'):
+                site_url = search_res['data'][0].get('url', '')
+                snippet = search_res['data'][0].get('description', '')
+                df.at[idx, 'sitio_web_oficial'] = site_url
+            else:
+                snippet = ''
+        else:
+            snippet = ''
+
+        # Step 2: Scrape URL to extract full technographic stack
+        markdown_text = ""
+        if site_url and 'http' in site_url and 'condusef' not in site_url and 'facebook' not in site_url:
+            print(f"[{idx+1}/{max_to_process}] 2. Escaneando Tecnologías de: {site_url}...")
+            scrape_res = scrape_firecrawl(site_url, api_key)
+            if scrape_res and scrape_res.get('success') and scrape_res.get('data'):
+                markdown_text = scrape_res['data'].get('markdown', '')
+                
+        # Detect Tech Stack
+        stack = extract_tech_details(site_url, snippet, markdown_text)
+        df.at[idx, 'competidor_actual'] = stack
+        df.at[idx, 'tecnologias_detectadas'] = stack
+        
+        print(f"   [OK] Site: {site_url}")
+        print(f"   [OK] Tecnologías Detectadas: {stack}\n")
+        processed += 1
         time.sleep(0.2)
 
     # Save updated CSV
     df.to_csv(csv_path, index=False)
-    print(f"\n[OK] Enriquecimiento completado. {processed} entidades guardadas en {csv_path}.")
+    print(f"\n[OK] Enriquecimiento Tecnográfico Completo finalizado. {processed} entidades guardadas.")
 
 if __name__ == '__main__':
     main()
