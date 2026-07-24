@@ -274,6 +274,13 @@ En la teoría estratégica militar (von Clausewitz) y en el management B2B moder
 +---------------------------------------------------------------------------------------------------+
 ```
 
+### 📊 Evidencia Empírica de Éxito de la Doctrina Schwerpunkt en Core Bancario:
+La literatura de estrategia de negocios y estudios globales (**MDPI 2025, Cambridge Strategy Group, Theseus 2025**) demuestran empíricamente por qué esta doctrina vence a competidores más grandes:
+
+1. **Venta por Reducción de Riesgo y Cumplimiento (MDPI 2025):** Las Juntas Directivas de instituciones financieras **rechazan proyectos de cambio monolítico indefinido**, pero aprueban de forma acelerada plataformas modulares enfocadas en **cumplimiento regulatorio y seguridad de API**.
+2. **Superioridad sobre Rivales Dispersos (Cambridge Strategy Group):** Tratar de ser "todo para todos" destruye el margen comercial. Las firmas que aplican el *Schwerpunkt* de Clausewitz en un dolor crítico **superan con facilidad a rivales 10x más grandes pero dispersos**.
+3. **Aumento del 36% en Tasa de Cierre (HubSpot Benchmark):** Enfocar el 100% de la alineación comercial en el ROI y el dolor de cumplimiento del cliente incrementa un **36% el cierre de negocios** en el primer año.
+
 ### 💡 El Principio Comercial:
 > *"No dispersamos esfuerzo atacando bancos gigantescos ni microfinancieras sin capital. Aplicamos la **Doctrina Schwerpunkt**: concentramos el 100% de la fuerza comercial en las 600 SOFOMes/Arrendadoras del Sweet Spot, rompiendo la resistencia del mercado mediante el argumento del cumplimiento anti-multas CNBV."*
 
