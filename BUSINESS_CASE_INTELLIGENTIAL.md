@@ -126,4 +126,24 @@ Basado en las respuestas del CEO sobre la suficiencia del mercado y los siguient
 10. **Adopción de Samu.ai para Inteligencia Conversacional en Demos ($150 USD/mes).**
 
 ---
+
+## 9. 💳 Estrategia de Orquestación Modular Tailor-Made (Inspirada en Payment Orchestration)
+
+### 💡 La Analogía con los Orquestadores Globales de Pagos (Yuno, Spreedly, Primer):
+En la industria de pagos, un Orquestador Global posee **+100 métodos de pago y pasarelas pre-conectadas**, pero **jamás fuerza a un comercio a contratar o pagar las 100 en el Día 1**. El comercio contrata la **Plataforma de Orquestación** y activa un menú "Tailor-Made" (A la Carta) según sus necesidades de negocio.
+
+### 🎯 La Solución Perfecta al Dilema de la Slide 13 del Consejo:
+En la Slide 13 del Consejo de Administración (Abril 2026) se preguntó:  
+> *"¿Si nuestra propuesta de valor se basa en integrar nativamente core, cumplimiento y onboarding, deberíamos dejar de ofrecerlo por partes?"*
+
+**La Respuesta Estratégica con Orquestación Tailor-Made:**
+1. **No desarmamos la propuesta 3-en-1:** Mantenemos la plataforma de orquestación única sobre AWS como el corazón del sistema.
+2. **Ofrecemos Orquestación Modular Tailor-Made:**
+   - **Core Bancario en AWS (El Motor Base Infaltable):** Administración de cartera, amortización y contabilidad regulada CNBV.
+   - **Conectores "A la Carta" (On/Off Switch):** La SOFOM enciende o apaga las integraciones que requiera (Nubarium para biometría, Syntage para SAT, Mifiel para NOM-151, STP para SPEI).
+3. **Beneficio Comercial:**
+   - Permite ingresar con un **precio de entrada más competitivo en startups (Tier 1)** desactivando módulos no requeridos al inicio.
+   - Abre un canal de **ingresos incrementales por expansión (Add-ons & Up-selling)** conforme la SOFOM madura su operación.
+
+---
 *Documento estratégico preparado para la alineación comercial con Luis Fernando Sánchez.*
