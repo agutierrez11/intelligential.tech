@@ -281,8 +281,31 @@ La literatura de estrategia de negocios y estudios globales (**MDPI 2025, Cambri
 2. **Superioridad sobre Rivales Dispersos (Cambridge Strategy Group):** Tratar de ser "todo para todos" destruye el margen comercial. Las firmas que aplican el *Schwerpunkt* de Clausewitz en un dolor crítico **superan con facilidad a rivales 10x más grandes pero dispersos**.
 3. **Aumento del 36% en Tasa de Cierre (HubSpot Benchmark):** Enfocar el 100% de la alineación comercial en el ROI y el dolor de cumplimiento del cliente incrementa un **36% el cierre de negocios** en el primer año.
 
-### 💡 El Principio Comercial:
-> *"No dispersamos esfuerzo atacando bancos gigantescos ni microfinancieras sin capital. Aplicamos la **Doctrina Schwerpunkt**: concentramos el 100% de la fuerza comercial en las 600 SOFOMes/Arrendadoras del Sweet Spot, rompiendo la resistencia del mercado mediante el argumento del cumplimiento anti-multas CNBV."*
+### 🎯 Matriz de Ejecución Comercial Schwerpunkt (Trade-offs: Lo que SÍ vs. Lo que NO)
+
+Para que una estrategia de Schwerpunkt sea efectiva, el equipo comercial debe definir con claridad **qué NO va a perseguir** para evitar la dispersión de recursos:
+
+```
++---------------------------------------------------------------------------------------------------+
+|               MATRIZ DE EJECUCIÓN SCHWERPUNKT EN INTELLIGENTIAL (TRADE-OFFS)                      |
++-------------------+-----------------------------------+-------------------------------------------+
+| DIMENSIÓN         | 🟢 LO QUE SÍ ES TU SCHWERPUNKT    | 🔴 LO QUE NO VAS A PERSEGUIR              |
+|                   | (ENFOQUE TOTAL)                   | (EVITAR DISPERSIÓN)                       |
++-------------------+-----------------------------------+-------------------------------------------+
+| **Segmento**      | SOFOMes ENR, Arrendadoras y       | Bancos tier-1 globales o microfinancieras |
+|                   | Lenders medianos en México.       | sin presupuesto ni capital operativo.     |
++-------------------+-----------------------------------+-------------------------------------------+
+| **Propuesta**     | Infraestructura All-in-One que    | Vender módulos sueltos de KYC o PLD como  |
+|                   | erradica el "infierno de integraciones".| parches de otros sistemas legados. |
++-------------------+-----------------------------------+-------------------------------------------+
+| **Proceso**       | Venta consultiva basada en ROI    | Vender por volumen mediante pautas        |
+| **Comercial**     | operativo y mitigación de multas. | masivas de marketing genérico.            |
++---------------------------------------------------------------------------------------------------+
+```
+
+### 💡 El Diagnóstico del "Caos de Datos" (Demo Quick Win de 10 Minutos):
+* **Pregunta de Ruptura:** *"¿Cuánto tiempo pierde tu equipo cruzando la data de originación con el Core? ¿Qué pasa si la CNBV te audita hoy tu matriz de riesgo PLD?"*
+* **La Demo Quick Win:** En los primeros 10 minutos de la reunión, demostrar cómo una solicitud digital pasa a crédito activo en el Core y genera la alerta de PLD en tiempo real sobre AWS.
 
 ---
 
