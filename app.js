@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Existing DynamiCore comparison calculator:
+  // --- 1. DYNAMICORE COMPARISON CALCULATOR ---
   const rentaSlider = document.getElementById('rentaSlider');
   const rentaValue = document.getElementById('rentaValue');
   
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCalculator();
   }
 
-  // --- REV OPS CAPACITY & ARR/MRR KISS CALCULATOR ---
+  // --- 2. REVOPS CAPACITY & ARR/MRR KISS CALCULATOR (SECTION 4) ---
   const calcSliderClientes = document.getElementById('calcSliderClientes');
   const calcSliderMeses = document.getElementById('calcSliderMeses');
   const calcSliderAEs = document.getElementById('calcSliderAEs');
@@ -78,6 +78,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const calcLegMrrPct = document.getElementById('calcLegMrrPct');
   const calcLegSetupPct = document.getElementById('calcLegSetupPct');
   const calcMecanicaText = document.getElementById('calcMecanicaText');
+
+  // Toggle Preset Buttons:
+  const btnPresetActual = document.getElementById('btnPresetActual');
+  const btnPresetSweet = document.getElementById('btnPresetSweet');
+  const btnPresetMix = document.getElementById('btnPresetMix');
 
   function updateRevOpsCalculator() {
     if (!calcSliderClientes) return;
@@ -131,16 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  if (calcSliderClientes) {
-    calcSliderClientes.addEventListener('input', updateRevOpsCalculator);
-    calcSliderMeses.addEventListener('input', updateRevOpsCalculator);
-    calcSliderAEs.addEventListener('input', updateRevOpsCalculator);
-    calcSliderTicket.addEventListener('input', updateRevOpsCalculator);
-    calcSliderSetup.addEventListener('input', updateRevOpsCalculator);
-    updateRevOpsCalculator();
-  }
-
-  // --- TIER MIX (PRODUCT MIX) SIMULATOR ---
+  // --- 3. TIER MIX (PRODUCT MIX) SIMULATOR (SECTION 5) & BIDIRECTIONAL SYNC ---
   const tierSliderT1 = document.getElementById('tierSliderT1');
   const tierSliderT2 = document.getElementById('tierSliderT2');
   const tierSliderT3 = document.getElementById('tierSliderT3');
@@ -153,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const tierResultTicket = document.getElementById('tierResultTicket');
   const tierRecommendationText = document.getElementById('tierRecommendationText');
 
-  function updateTierMixCalculator() {
+  function updateTierMixCalculator(syncToSection4 = true) {
     if (!tierSliderT1) return;
 
     let pctT1 = parseInt(tierSliderT1.value, 10);
@@ -172,12 +168,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (tierValT2) tierValT2.textContent = Math.round(normT2 * 100) + '%';
     if (tierValT3) tierValT3.textContent = Math.round(normT3 * 100) + '%';
 
-    // Pricing Constants:
-    // T1: Renta $20,000 | Ciclo: 20 días
-    // T2: Renta $42,000 | Ciclo: 45 días
-    // T3: Renta $83,000 | Ciclo: 90 días
+    // Pricing & Setup Constants:
+    // T1: Renta $20,000 | Setup $40,000 | Ciclo: 20 días
+    // T2: Renta $42,000 | Setup $55,000 | Ciclo: 45 días
+    // T3: Renta $83,000 | Setup $65,000 | Ciclo: 90 días
     const cicloPonderado = Math.round((normT1 * 20) + (normT2 * 45) + (normT3 * 90));
     const ticketPonderado = Math.round((normT1 * 20000) + (normT2 * 42000) + (normT3 * 83000));
+    const setupPonderado = Math.round((normT1 * 40000) + (normT2 * 55000) + (normT3 * 65000));
 
     if (tierResultCiclo) tierResultCiclo.textContent = cicloPonderado + ' Días';
     if (tierResultTicket) tierResultTicket.textContent = '$' + ticketPonderado.toLocaleString('es-MX') + ' MXN';
@@ -193,12 +190,84 @@ document.addEventListener('DOMContentLoaded', () => {
         • <strong>${t3CuotaMes} Clientes Tier 3</strong> (Enterprise / $83k)
       `;
     }
+
+    // SYNC TO SECTION 4:
+    if (syncToSection4 && calcSliderTicket && calcSliderSetup) {
+      calcSliderTicket.value = ticketPonderado;
+      calcSliderSetup.value = setupPonderado;
+      updateRevOpsCalculator();
+    }
+  }
+
+  // --- PRESET TOGGLE BUTTON LOGIC ---
+  function setActivePresetBtn(activeBtn) {
+    [btnPresetActual, btnPresetSweet, btnPresetMix].forEach(btn => {
+      if (!btn) return;
+      if (btn === activeBtn) {
+        btn.style.background = '#FFFFFF';
+        btn.style.color = '#0F172A';
+        btn.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
+      } else {
+        btn.style.background = 'transparent';
+        btn.style.color = '#64748B';
+        btn.style.boxShadow = 'none';
+      }
+    });
+  }
+
+  if (btnPresetActual) {
+    btnPresetActual.addEventListener('click', () => {
+      setActivePresetBtn(btnPresetActual);
+      calcSliderClientes.value = 100;
+      calcSliderMeses.value = 36;
+      calcSliderAEs.value = 1;
+      calcSliderTicket.value = 50000;
+      calcSliderSetup.value = 100000;
+      updateRevOpsCalculator();
+    });
+  }
+
+  if (btnPresetSweet) {
+    btnPresetSweet.addEventListener('click', () => {
+      setActivePresetBtn(btnPresetSweet);
+      calcSliderClientes.value = 100;
+      calcSliderMeses.value = 36;
+      calcSliderAEs.value = 1;
+      calcSliderTicket.value = 42000;
+      calcSliderSetup.value = 55000;
+      updateRevOpsCalculator();
+    });
+  }
+
+  if (btnPresetMix) {
+    btnPresetMix.addEventListener('click', () => {
+      setActivePresetBtn(btnPresetMix);
+      updateTierMixCalculator(true);
+    });
+  }
+
+  if (calcSliderClientes) {
+    calcSliderClientes.addEventListener('input', updateRevOpsCalculator);
+    calcSliderMeses.addEventListener('input', updateRevOpsCalculator);
+    calcSliderAEs.addEventListener('input', updateRevOpsCalculator);
+    calcSliderTicket.addEventListener('input', updateRevOpsCalculator);
+    calcSliderSetup.addEventListener('input', updateRevOpsCalculator);
+    updateRevOpsCalculator();
   }
 
   if (tierSliderT1) {
-    tierSliderT1.addEventListener('input', updateTierMixCalculator);
-    tierSliderT2.addEventListener('input', updateTierMixCalculator);
-    tierSliderT3.addEventListener('input', updateTierMixCalculator);
-    updateTierMixCalculator();
+    tierSliderT1.addEventListener('input', () => {
+      setActivePresetBtn(btnPresetMix);
+      updateTierMixCalculator(true);
+    });
+    tierSliderT2.addEventListener('input', () => {
+      setActivePresetBtn(btnPresetMix);
+      updateTierMixCalculator(true);
+    });
+    tierSliderT3.addEventListener('input', () => {
+      setActivePresetBtn(btnPresetMix);
+      updateTierMixCalculator(true);
+    });
+    updateTierMixCalculator(false);
   }
 });

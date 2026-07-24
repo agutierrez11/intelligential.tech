@@ -334,9 +334,24 @@
         
         <!-- Left Panel: Input Sliders -->
         <div style="background:#FFFFFF; border:1px solid #E2E8F0; padding:24px; border-radius:16px; box-shadow:0 4px 6px -1px rgba(0,0,0,0.05);">
-          <div style="display:flex; align-items:center; gap:8px; margin-bottom:20px;">
-            <span style="font-size:1.2rem;">⚙️</span>
-            <h3 style="font-family:'JetBrains Mono',monospace; font-size:0.95rem; font-weight:800; color:#0F172A; text-transform:uppercase;">Variables de Entrada</h3>
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="font-size:1.2rem;">⚙️</span>
+              <h3 style="font-family:'JetBrains Mono',monospace; font-size:0.95rem; font-weight:800; color:#0F172A; text-transform:uppercase; margin:0;">Variables de Entrada</h3>
+            </div>
+          </div>
+
+          <!-- TOGGLE BUTTONS (ESTADO ACTUAL VS SUGERENCIAS) -->
+          <div style="margin-bottom:20px; background:#F1F5F9; padding:4px; border-radius:10px; display:flex; gap:4px;">
+            <button id="btnPresetActual" type="button" style="flex:1; padding:8px 6px; font-size:0.72rem; font-weight:700; font-family:'JetBrains Mono',monospace; border:none; border-radius:8px; cursor:pointer; background:#FFFFFF; color:#0F172A; box-shadow:0 1px 3px rgba(0,0,0,0.1); transition:all 0.2s;">
+              🔴 ACTUAL ($50k)
+            </button>
+            <button id="btnPresetSweet" type="button" style="flex:1; padding:8px 6px; font-size:0.72rem; font-weight:700; font-family:'JetBrains Mono',monospace; border:none; border-radius:8px; cursor:pointer; background:transparent; color:#64748B; transition:all 0.2s;">
+              🟢 SWEET ($42k)
+            </button>
+            <button id="btnPresetMix" type="button" style="flex:1; padding:8px 6px; font-size:0.72rem; font-weight:700; font-family:'JetBrains Mono',monospace; border:none; border-radius:8px; cursor:pointer; background:transparent; color:#64748B; transition:all 0.2s;">
+              🟣 TIER MIX
+            </button>
           </div>
 
           <!-- Slider 1: Meta Clientes -->
