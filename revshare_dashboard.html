@@ -473,24 +473,36 @@
         .flow-step {
             background: var(--bg-card);
             border: 1px dashed var(--border-color);
-            border-radius: 14px;
+            border-radius: 16px;
             padding: 1.2rem;
             position: relative;
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         .flow-step.active {
             border-style: solid;
             border-color: var(--accent-cyan);
             background: rgba(2, 132, 199, 0.05);
-            box-shadow: 0 0 15px rgba(2, 132, 199, 0.2);
-            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(2, 132, 199, 0.25);
+            transform: translateY(-4px);
         }
 
         .flow-step.completed {
             border-style: solid;
             border-color: var(--accent-green);
             background: rgba(5, 150, 105, 0.05);
+        }
+
+        .step-header-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 0.6rem;
         }
 
         .step-number {
@@ -504,12 +516,40 @@
             color: #ffffff;
             font-size: 0.8rem;
             font-weight: 800;
-            margin-bottom: 0.75rem;
             font-family: var(--font-mono);
         }
 
         .flow-step.completed .step-number {
             background: var(--accent-green);
+        }
+
+        /* SVG Dibujitos / Illustrations */
+        .step-icon-wrapper {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: rgba(79, 70, 229, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0.4rem 0 0.8rem 0;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .flow-step.active .step-icon-wrapper {
+            background: rgba(2, 132, 199, 0.15);
+            transform: scale(1.1);
+        }
+
+        .flow-step.completed .step-icon-wrapper {
+            background: rgba(5, 150, 105, 0.15);
+            transform: scale(1.05);
+        }
+
+        .step-icon-wrapper svg {
+            width: 32px;
+            height: 32px;
+            transition: stroke 0.3s ease;
         }
 
         .step-title {
@@ -531,10 +571,12 @@
             background: rgba(0, 0, 0, 0.05);
             padding: 0.4rem 0.6rem;
             border-radius: 6px;
-            margin-top: 0.6rem;
+            margin-top: 0.8rem;
             color: var(--accent-cyan);
             word-break: break-all;
             min-height: 48px;
+            width: 100%;
+            text-align: left;
         }
 
         [data-theme="dark"] .code-snippet {
@@ -657,7 +699,7 @@
     <header>
         <div class="header-title">
             <div class="badge-tag">
-                <span class="badge-dot"></span> Generic FinTech Partnership Framework v3.4
+                <span class="badge-dot"></span> Generic FinTech Partnership Framework v3.5
             </div>
             <h1 style="margin-top: 0.5rem;">Business Case: Adquirente FinTech x Software POS</h1>
             <p>Simulador Financiero, Arquitectura de Integración API & Modelo de Revenue Sharing Portátil</p>
@@ -667,7 +709,7 @@
                 <span id="theme-icon">🌙</span> <span id="theme-text">Modo Oscuro</span>
             </button>
             <button class="btn-copy" onclick="copyWhatsAppSummary()">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
                 Copiar Resumen WhatsApp
             </button>
         </div>
@@ -730,7 +772,7 @@
                 <input type="range" id="input-netbps" min="50" max="200" value="110" step="5" oninput="calculate()">
             </div>
 
-            <!-- Control 5: Partner Share % (Dynamic 5% to 25%, Default 10%) -->
+            <!-- Control 5: Partner Share % -->
             <div class="control-group">
                 <div class="control-label">
                     <span>Nuestra Tajada (3 Socios)</span>
@@ -786,7 +828,7 @@
                     </div>
                 </div>
 
-                <!-- Card 3 (Highlight - DYNAMICALLY UPDATES TITLE WITH % SLIDER) -->
+                <!-- Card 3 (Highlight) -->
                 <div class="kpi-card highlight">
                     <div>
                         <div class="kpi-label" id="lbl-kpi-partner-title">REVENUE 3 SOCIOS (10.0%)</div>
@@ -845,7 +887,7 @@
                 </div>
             </div>
 
-            <!-- Dynamic Interactive API Integration Simulator -->
+            <!-- Dynamic Interactive API Integration Simulator WITH SVG ILLUSTRATIONS ("DIBUJITOS") -->
             <div class="glass-card">
                 <div class="card-title">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
@@ -873,30 +915,82 @@
                         </button>
                     </div>
 
+                    <!-- Flow Grid with Vector Illustrations ("Dibujitos") -->
                     <div class="api-flow-grid">
+                        <!-- Step 1 Illustration: Software POS / Comanda -->
                         <div class="flow-step" id="step-1">
-                            <div class="step-number">1</div>
+                            <div class="step-header-row">
+                                <div class="step-number">1</div>
+                                <span style="font-size: 0.75rem; color: var(--text-dim); font-family: var(--font-mono);">PASO 1</span>
+                            </div>
+                            <div class="step-icon-wrapper">
+                                <!-- Dibujito 1: Pantalla POS / Tablet Restaurante con Comanda -->
+                                <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                    <path d="M7 8h10M7 12h6"></path>
+                                </svg>
+                            </div>
                             <div class="step-title">Orden en Software POS</div>
                             <div class="step-desc">Mesero liquida Mesa 4 ($1,500.00 MXN)</div>
                             <div class="code-snippet" id="snip-step-1">POST /v1/transactions/create<br>amount: 1500.00</div>
                         </div>
 
+                        <!-- Step 2 Illustration: Push Notification & Smart POS Terminal Device -->
                         <div class="flow-step" id="step-2">
-                            <div class="step-number">2</div>
+                            <div class="step-header-row">
+                                <div class="step-number">2</div>
+                                <span style="font-size: 0.75rem; color: var(--text-dim); font-family: var(--font-mono);">PASO 2</span>
+                            </div>
+                            <div class="step-icon-wrapper">
+                                <!-- Dibujito 2: Terminal Smart POS Móvil con Ondas Wi-Fi / Push -->
+                                <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="5" y="2" width="14" height="20" rx="3" ry="3"></rect>
+                                    <line x1="12" y1="18" x2="12.01" y2="18" stroke-width="3"></line>
+                                    <path d="M8 6h8M8 9h5"></path>
+                                    <path d="M19 4a4 4 0 0 1 0 6" stroke-dasharray="2 2"></path>
+                                </svg>
+                            </div>
                             <div class="step-title">Push to Smart POS</div>
                             <div class="step-desc">API despierta la terminal en mesa</div>
                             <div class="code-snippet" id="snip-step-2">device: POS-8842<br>status: PUSH_SENT</div>
                         </div>
 
+                        <!-- Step 3 Illustration: Tarjeta de Crédito / Chip / Contactless -->
                         <div class="flow-step" id="step-3">
-                            <div class="step-number">3</div>
+                            <div class="step-header-row">
+                                <div class="step-number">3</div>
+                                <span style="font-size: 0.75rem; color: var(--text-dim); font-family: var(--font-mono);">PASO 3</span>
+                            </div>
+                            <div class="step-icon-wrapper">
+                                <!-- Dibujito 3: Tarjeta de Crédito / Chip + Lectura Contactless -->
+                                <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-amber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                    <line x1="1" y1="10" x2="23" y2="10"></line>
+                                    <rect x="5" y="14" width="4" height="3" rx="1"></rect>
+                                    <path d="M16 14a2 2 0 0 1 2 2"></path>
+                                </svg>
+                            </div>
                             <div class="step-title">Procesamiento Tarjeta</div>
                             <div class="step-desc">Cliente aprueba cobro + propina</div>
                             <div class="code-snippet" id="snip-step-3">Auth: 948201<br>Card: Visa Intl</div>
                         </div>
 
+                        <!-- Step 4 Illustration: Webhook Callback / Recibo Baucher Aprobado -->
                         <div class="flow-step" id="step-4">
-                            <div class="step-number">4</div>
+                            <div class="step-header-row">
+                                <div class="step-number">4</div>
+                                <span style="font-size: 0.75rem; color: var(--text-dim); font-family: var(--font-mono);">PASO 4</span>
+                            </div>
+                            <div class="step-icon-wrapper">
+                                <!-- Dibujito 4: Recibo Baucher Digital con Checkmark Verde Aprobado -->
+                                <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <path d="M9 15l2 2 4-4" stroke-width="2.5"></path>
+                                </svg>
+                            </div>
                             <div class="step-title">Callback & Cierre Auto</div>
                             <div class="step-desc">Webhook liquida comanda en 0.5s</div>
                             <div class="code-snippet" id="snip-step-4">Webhook: 200 OK<br>status: PAID</div>
