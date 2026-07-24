@@ -331,4 +331,48 @@ El sesgo de supervivencia ocurre cuando analizamos únicamente a los "sobrevivie
 > *"Luis, para evitar caer en el **Sesgo de Supervivencia** analizando solo a los clientes actuales... **¿cuáles han sido los motivos principales de rechazo o estancamiento de los prospectos que NO cerraron en los últimos 18 meses?** Ahí está la verdadera información para ajustar el pricing y la cadencia de prospección."*
 
 ---
+
+## 16. 🎭 Sugerencias de Adaptación del Pitch por Rol (Buyer Persona Options)
+
+### 💡 Principio de Humildad Comercial:
+Reconociendo que hoy no conocemos el guion exacto que usa Luis en sus reuniones Founder-Driven, los siguientes ángulos no son verdades absolutas ni dogmas, sino un **Menú de Sugerencias de Adaptación** para pelotearlo con el CEO el lunes.
+
+```
++---------------------------------------------------------------------------------------------------+
+|               LAS 5 RAZONES DE COMPRA Y ADAPTACIÓN DE PITCH POR INTERLOCUTOR                      |
++------------------------------------+--------------------------------------------------------------+
+| 1. RESUELVES UN DOLOR              | Riesgo de multas CNBV/SITI y paros de operación.              |
+| 2. AHORRAS TIEMPO                  | Activación en semanas sobre AWS vs 12 meses de dev in-house. |
+| 3. HACES GANAR DINERO              | Originación digital rápida = mayor colocación de cartera.    |
+| 4. HACES LA VIDA MÁS FÁCIL         | 1 sola plataforma 3-en-1 vs lidiar con 4 contratos sueltos.  |
+| 5. HACES SENTIR BIEN               | Paz mental de cumplir ante la CNBV y respaldo de 5X Capital. |
++---------------------------------------------------------------------------------------------------+
+```
+
+### 🗣️ Sugerencias de Estilo y Enfoque según el Interlocutor:
+
+```
++---------------------------------------------------------------------------------------------------+
+|               ESTILO DE CONVERSACIÓN SUGERIDO POR ROL DE DECISOR EN LA SOFOM                      |
++-------------------+-----------------------------------+-------------------------------------------+
+| INTERLOCUTOR      | ESTILO DE CONVERSACIÓN            | SUGERENCIA DE ÁNGULO EN LA DEMO           |
++-------------------+-----------------------------------+-------------------------------------------+
+| **CEO / Director**| Directo, Visión de conjunto,      | Velocidad de colocación de cartera,       |
+| **General**       | crecimiento del negocio.          | visión de escalabilidad y paz mental CNBV.|
++-------------------+-----------------------------------+-------------------------------------------+
+| **CFO / Director**| Números, Hechos, Análisis de      | Análisis de ROI, ahorro del 42% en TCO vs |
+| **de Finanzas**   | costos y márgenes.                | legacy y eliminación de $600k en dev sueldos.|
++-------------------+-----------------------------------+-------------------------------------------+
+| **CRO / Director**| Números / ROI, Visión de conjunto,| Reducción del ciclo de originación de     |
+| **Comercial**     | velocidad de ventas.              | 14 días a 10 min para colocar más crédito.|
++-------------------+-----------------------------------+-------------------------------------------+
+| **CTO / Director**| Cauteloso, Detallista, Monótono,  | Arquitectura serverless en AWS, 99.9% SLA|
+| **de TI**         | enfocado en seguridad.            | Uptime, cifrado AES-256 y API REST limpia.|
++---------------------------------------------------------------------------------------------------+
+```
+
+### 💬 Pregunta Consultiva para Luis el Lunes:
+> *"Luis, viendo los diferentes perfiles que nos compran (CEO, CFO, CTO)... **¿cuál ha sido el interlocutor que usualmente toma la decisión final en las SOFOMes que han cerrado, y cómo adaptas hoy la plática para cada uno de ellos?**"*
+
+---
 *Documento estratégico preparado para la alineación comercial con Luis Fernando Sánchez.*
