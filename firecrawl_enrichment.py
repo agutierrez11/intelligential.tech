@@ -28,7 +28,6 @@ def search_firecrawl(query, api_key):
         return None
 
 def scrape_firecrawl(site_url, api_key):
-    """Scrapes site content to extract full technographic stack metadata"""
     url = "https://api.firecrawl.dev/v1/scrape"
     headers = {
         "Authorization": f"Bearer {api_key}",
@@ -80,7 +79,7 @@ def extract_tech_details(site_url, search_snippet, markdown_content):
         return "Sistema Legado / In-House"
 
 def main():
-    print("=== FIRECRAWL FULL TECHNOGRAPHIC ENRICHMENT ENGINE (STEP 1: SEARCH + STEP 2: SCRAPE) ===")
+    print("=== FIRECRAWL MASS ENRICHMENT BATCH: 600 CORE SOFOMES ===")
     api_key = FIRECRAWL_API_KEY
     if not api_key:
         print("Error: No Firecrawl API key provided.")
@@ -100,7 +99,7 @@ def main():
         df['tecnologias_detectadas'] = ''
         
     processed = 0
-    max_to_process = 50
+    max_to_process = 600
     
     for idx, row in df.head(max_to_process).iterrows():
         nombre_raw = str(row.get('denominacion_social_real', '')).split(',')[0]
@@ -109,7 +108,7 @@ def main():
         # Step 1: Find URL if missing
         if not site_url or site_url == 'nan' or 'condusef' in site_url or 'facebook' in site_url:
             query = f"SOFOM {nombre_raw} Mexico sitio oficial"
-            print(f"[{idx+1}/{max_to_process}] 1. Buscando URL oficial para: {nombre_raw}...")
+            print(f"[{idx+1}/{max_to_process}] 1. Buscando URL: {nombre_raw}...")
             search_res = search_firecrawl(query, api_key)
             if search_res and search_res.get('success') and search_res.get('data'):
                 site_url = search_res['data'][0].get('url', '')
@@ -134,13 +133,19 @@ def main():
         df.at[idx, 'tecnologias_detectadas'] = stack
         
         print(f"   [OK] Site: {site_url}")
-        print(f"   [OK] Tecnologías Detectadas: {stack}\n")
+        print(f"   [OK] Tech: {stack}\n")
         processed += 1
-        time.sleep(0.2)
+        
+        # Save progress checkpoint every 50 records
+        if processed % 50 == 0:
+            df.to_csv(csv_path, index=False)
+            print(f"--- CHECKPOINT INTERMEDIO: {processed} SOFOMes guardadas en CSV ---\n")
+            
+        time.sleep(0.15)
 
-    # Save updated CSV
+    # Save final CSV
     df.to_csv(csv_path, index=False)
-    print(f"\n[OK] Enriquecimiento Tecnográfico Completo finalizado. {processed} entidades guardadas.")
+    print(f"\n[OK] Enriquecimiento Masivo de 600 SOFOMes finalizado exitosamente. {processed} entidades guardadas.")
 
 if __name__ == '__main__':
     main()
