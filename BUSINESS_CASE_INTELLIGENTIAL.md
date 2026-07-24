@@ -173,4 +173,31 @@ Un **Orquestador de Core Bancario (Banking Integration & Middleware Layer)** es 
 > *"Intelligential no es solo un libro mayor contable; es la **Capa de Orquestación Middleware sobre AWS** que desacopla la complejidad. Enrutamos transacciones, gestionamos APIs de cumplimiento y traducimos los eventos crediticios en contabilidad regulada CNBV lista para operar."*
 
 ---
+
+## 11. 🚀 La Estrategia Maestra de Coopetencia: Intelligential como la Capa CNBV/SAT para Cores Globales (Mambu)
+
+### 💡 El Gran Dolor de Mambu y Cores Internacionales en México:
+Cores globales como **Mambu, Thought Machine o Temenos** ganan contratos con neobancos y fintechs en México, pero sufren una debilidad crítica documentada por la industria: **NO tienen pre-construida la capa de reporte regulatorio de la CNBV, Banxico, PLD ni la extracción fiscal del SAT**.
+
+### 🎯 La Alianza B2B de Licenciamiento Regulatorio ("Powered by Intelligential"):
+En lugar de competir frontalmente con un gigante global en cuentas enterprise gigantescas:
+
+```
++---------------------------------------------------------------------------------------------------+
+|            MODELO DE COOPETENCIA B2B: CAPA CNBV/SAT EMBEBIDA PARA CORES GLOBALES                  |
++---------------------------------------------------------------------------------------------------+
+| CORE BANCARIO GLOBAL | MAMBU / THOUGHT MACHINE / TEMENOS                                         |
+| (Libro Mayor Cloud)  | Maneja el saldo de la cuenta y los microservicios globales.                |
++----------------------+----------------------------------------------------------------------------+
+| CAPA REGULATORIA MX  | INTELLIGENTIAL (CNBV / BANXICO / SAT / INE LAYER)                           |
+| (Powered by Intellig)| Entrega la contabilidad regulada CNBV, matriz de PLD y conectores locales. |
++---------------------------------------------------------------------------------------------------+
+```
+
+### 💰 El Impacto Financiero de la Estrategia:
+1. **Canal de Distribución Indirecto:** Mambu y los Cores internacionales se convierten en **vendedores de Intelligential** al incluir nuestro módulo de regulación mexicana en sus propuestas.
+2. **Modelo de Licenciamiento Recurrente (RegTech SaaS):** Intelligential cobra una licencia mensual recurrente (**$10,000 a $25,000 USD/mes**) por cada institución financiera que opere Mambu en México con nuestro motor CNBV/SAT.
+3. **Escalabilidad Sin CAC:** Acceso a clientes de alto volumen sin costo de adquisición de clientes (CAC zero).
+
+---
 *Documento estratégico preparado para la alineación comercial con Luis Fernando Sánchez.*
