@@ -200,8 +200,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- PRESET TOGGLE BUTTON LOGIC FOR SECTION 4 (ESCENARIOS DE EJECUCIÓN ESTRATÉGICA) ---
+  const btnPresetMin36 = document.getElementById('btnPresetMin36');
+
   function setActivePresetBtn(activeBtn) {
-    [btnPresetActual, btnPresetSweet, btnPresetMix].forEach(btn => {
+    [btnPresetActual, btnPresetSweet, btnPresetMix, btnPresetMin36].forEach(btn => {
       if (!btn) return;
       if (btn === activeBtn) {
         btn.style.background = '#FFFFFF';
@@ -269,6 +271,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
       updateTierMixCalculator(false);
       updateRevOpsCalculator();
+    });
+  }
+
+  // Escenario 4: Comportamiento Mínimo 36 Meses (Métricas Reales Esperadas por la Compañía)
+  if (btnPresetMin36) {
+    btnPresetMin36.addEventListener('click', () => {
+      setActivePresetBtn(btnPresetMin36);
+      calcSliderClientes.value = 100;
+      calcSliderMeses.value = 36;
+      calcSliderAEs.value = 1;
+      calcSliderTicket.value = 42000;
+      calcSliderSetup.value = 55000;
+
+      tierSliderT1.value = 30;
+      tierSliderT2.value = 60;
+      tierSliderT3.value = 10;
+
+      updateTierMixCalculator(false);
+      updateRevOpsCalculator();
+
+      if (calcMecanicaText) {
+        calcMecanicaText.innerHTML = `
+          • <strong>COMPORTAMIENTO MÍNIMO EXIGIBLE (36 MESES):</strong> Para alcanzar la meta de <strong>100 clientes acumulados</strong> (40 Año 1 + 30 Año 2 + 30 Año 3) con <strong>1 Ejecutivo (AE)</strong>, se requiere un ritmo mínimo sostenido de <strong>2.78 cierres al mes</strong> (1 cierre cada 11 días).<br>
+          • <strong>IMPACTO FINANCIERO REAL:</strong> Genera <strong>$4.20 MDP/mes en MRR</strong> ($50.40 MDP ARR) con una recaudación acumulada inmediata de <strong>$5.50 MDP en Setup Fees Cash</strong>.<br>
+          • <strong>ACTIVIDAD OUTBOUND MÍNIMA EXIGIBLE:</strong> 5 cuentas objetivo al día (100 cuentas/mes ➔ 2.78% tasa de conversión requerida).
+        `;
+      }
     });
   }
 
