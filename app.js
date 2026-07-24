@@ -400,30 +400,44 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentFilter = 'all';
 
   function parseCSV(text) {
-    const lines = text.split('\n');
+    const lines = text.split(/\r?\n/);
     const result = [];
-    const headers = lines[0].split(',');
     
     for (let i = 1; i < lines.length; i++) {
-      if (!lines[i].trim()) continue;
-      // Regex to handle quoted CSV fields
-      const row = lines[i].match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g) || [];
-      // Clean quotes
-      const cleanRow = row.map(cell => cell.replace(/^"|"$/g, '').trim());
-      if (cleanRow.length >= 5) {
+      const line = lines[i].trim();
+      if (!line) continue;
+      
+      const cols = [];
+      let inQuotes = false;
+      let curCol = '';
+      
+      for (let c = 0; c < line.length; c++) {
+        const char = line[c];
+        if (char === '"') {
+          inQuotes = !inQuotes;
+        } else if (char === ',' && !inQuotes) {
+          cols.push(curCol.trim());
+          curCol = '';
+        } else {
+          curCol += char;
+        }
+      }
+      cols.push(curCol.trim());
+
+      if (cols.length >= 4) {
         result.push({
-          id: cleanRow[0] || i,
-          denominacion: cleanRow[1] || 'SOFOM ENR',
-          sector: cleanRow[2] || 'SOFOM ENR',
-          estado: cleanRow[3] || 'México',
-          estatus_sipres: cleanRow[4] || 'Operando',
-          cartera: cleanRow[5] || '$45,000,000 MXN',
-          tier: cleanRow[6] || 'Tier Mid-Market ($42k/m)',
-          competidor: cleanRow[7] || 'Excel + Sistema Legado',
-          puntos_dolor: cleanRow[8] || 'Cobro de conectores',
-          estatus_funnel: cleanRow[9] || 'Candidato Quick Win',
-          contacto: cleanRow[10] || 'CEO / Dir. General',
-          prioridad: cleanRow[11] || 'Alta'
+          id: cols[0] || i,
+          denominacion: (cols[1] || 'SOFOM ENR').replace(/^"|"$/g, ''),
+          sector: (cols[2] || 'SOFOM ENR').replace(/^"|"$/g, ''),
+          estado: (cols[3] || 'México').replace(/^"|"$/g, ''),
+          estatus_sipres: (cols[4] || 'Operando').replace(/^"|"$/g, ''),
+          cartera: (cols[5] || '$45,000,000 MXN').replace(/^"|"$/g, ''),
+          tier: (cols[6] || 'Tier Mid-Market ($42k/m)').replace(/^"|"$/g, ''),
+          competidor: (cols[7] || 'Excel + Sistema Legado').replace(/^"|"$/g, ''),
+          puntos_dolor: (cols[8] || 'Cobro de conectores').replace(/^"|"$/g, ''),
+          estatus_funnel: (cols[9] || 'Candidato Quick Win').replace(/^"|"$/g, ''),
+          contacto: (cols[10] || 'CEO / Dir. General').replace(/^"|"$/g, ''),
+          prioridad: (cols[11] || 'Alta').replace(/^"|"$/g, '')
         });
       }
     }
@@ -440,6 +454,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const stateLower = item.estado.toLowerCase();
 
       // Filter button check
+      if (currentFilter === 'CDMX' && !stateLower.includes('cdmx') && !stateLower.includes('ciudad de méxico')) return false;
+      if (currentFilter === 'Monterrey' && !stateLower.includes('monterrey') && !stateLower.includes('nuevo león')) return false;
+      if (currentFilter === 'Guadalajara' && !stateLower.includes('guadalajara') && !stateLower.includes('jalisco')) return false;
       if (currentFilter === 'OceanoAzul') {
         const isRedOcean = stateLower.includes('cdmx') || stateLower.includes('ciudad de méxico') || stateLower.includes('monterrey') || stateLower.includes('nuevo león') || stateLower.includes('guadalajara') || stateLower.includes('jalisco');
         if (isRedOcean) return false;
