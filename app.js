@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCalculator();
   }
 
-  // --- NEW: RevOps Capacity & ARR/MRR KISS Calculator ---
+  // --- REV OPS CAPACITY & ARR/MRR KISS CALCULATOR ---
   const calcSliderClientes = document.getElementById('calcSliderClientes');
   const calcSliderMeses = document.getElementById('calcSliderMeses');
   const calcSliderAEs = document.getElementById('calcSliderAEs');
@@ -88,21 +88,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const ticket = parseInt(calcSliderTicket.value, 10);
     const setup = parseInt(calcSliderSetup.value, 10);
 
-    // Update Slider Labels:
     if (calcValClientes) calcValClientes.textContent = clientes.toLocaleString('es-MX');
     if (calcValMeses) calcValMeses.textContent = meses + ' Meses';
     if (calcValAEs) calcValAEs.textContent = aes + (aes === 1 ? ' AE' : ' AEs');
     if (calcValTicket) calcValTicket.textContent = '$' + ticket.toLocaleString('es-MX') + ' MXN';
     if (calcValSetup) calcValSetup.textContent = '$' + setup.toLocaleString('es-MX') + ' MXN';
 
-    // Math Calculations:
     const ritmoEmpresa = (clientes / meses).toFixed(2);
     const cuotaAE = (clientes / meses / aes).toFixed(2);
     const mrrTotal = clientes * ticket;
     const arrTotal = mrrTotal * 12;
     const setupTotal = clientes * setup;
 
-    // Helper format MDP or MXN:
     function formatMdp(val) {
       if (val >= 1000000) {
         return '$' + (val / 1000000).toFixed(2) + ' MDP';
@@ -110,14 +107,12 @@ document.addEventListener('DOMContentLoaded', () => {
       return '$' + (val / 1000).toFixed(0) + 'k MXN';
     }
 
-    // Update Output Cards:
     if (calcKpiRitmoEmpresa) calcKpiRitmoEmpresa.textContent = ritmoEmpresa;
     if (calcKpiCuotaAE) calcKpiCuotaAE.textContent = cuotaAE;
     if (calcKpiMrrTotal) calcKpiMrrTotal.textContent = formatMdp(mrrTotal);
     if (calcKpiArrTotal) calcKpiArrTotal.textContent = formatMdp(arrTotal);
     if (calcKpiSetupTotal) calcKpiSetupTotal.textContent = 'Setup Cash: ' + formatMdp(setupTotal);
 
-    // Waterfall percentages:
     const totalRev = mrrTotal + setupTotal;
     const mrrPct = Math.round((mrrTotal / totalRev) * 100);
     const setupPct = 100 - mrrPct;
@@ -143,5 +138,67 @@ document.addEventListener('DOMContentLoaded', () => {
     calcSliderTicket.addEventListener('input', updateRevOpsCalculator);
     calcSliderSetup.addEventListener('input', updateRevOpsCalculator);
     updateRevOpsCalculator();
+  }
+
+  // --- TIER MIX (PRODUCT MIX) SIMULATOR ---
+  const tierSliderT1 = document.getElementById('tierSliderT1');
+  const tierSliderT2 = document.getElementById('tierSliderT2');
+  const tierSliderT3 = document.getElementById('tierSliderT3');
+
+  const tierValT1 = document.getElementById('tierValT1');
+  const tierValT2 = document.getElementById('tierValT2');
+  const tierValT3 = document.getElementById('tierValT3');
+
+  const tierResultCiclo = document.getElementById('tierResultCiclo');
+  const tierResultTicket = document.getElementById('tierResultTicket');
+  const tierRecommendationText = document.getElementById('tierRecommendationText');
+
+  function updateTierMixCalculator() {
+    if (!tierSliderT1) return;
+
+    let pctT1 = parseInt(tierSliderT1.value, 10);
+    let pctT2 = parseInt(tierSliderT2.value, 10);
+    let pctT3 = parseInt(tierSliderT3.value, 10);
+
+    const totalPct = pctT1 + pctT2 + pctT3;
+    if (totalPct === 0) pctT2 = 100;
+
+    // Normalize to 100%:
+    const normT1 = pctT1 / (totalPct || 1);
+    const normT2 = pctT2 / (totalPct || 1);
+    const normT3 = pctT3 / (totalPct || 1);
+
+    if (tierValT1) tierValT1.textContent = Math.round(normT1 * 100) + '%';
+    if (tierValT2) tierValT2.textContent = Math.round(normT2 * 100) + '%';
+    if (tierValT3) tierValT3.textContent = Math.round(normT3 * 100) + '%';
+
+    // Pricing Constants:
+    // T1: Renta $20,000 | Ciclo: 20 días
+    // T2: Renta $42,000 | Ciclo: 45 días
+    // T3: Renta $83,000 | Ciclo: 90 días
+    const cicloPonderado = Math.round((normT1 * 20) + (normT2 * 45) + (normT3 * 90));
+    const ticketPonderado = Math.round((normT1 * 20000) + (normT2 * 42000) + (normT3 * 83000));
+
+    if (tierResultCiclo) tierResultCiclo.textContent = cicloPonderado + ' Días';
+    if (tierResultTicket) tierResultTicket.textContent = '$' + ticketPonderado.toLocaleString('es-MX') + ' MXN';
+
+    const t1CuotaMes = (normT1 * 3).toFixed(1);
+    const t2CuotaMes = (normT2 * 3).toFixed(1);
+    const t3CuotaMes = (normT3 * 3).toFixed(1);
+
+    if (tierRecommendationText) {
+      tierRecommendationText.innerHTML = `
+        • <strong>${t1CuotaMes} Clientes Tier 1</strong> (Startup / $20k)<br>
+        • <strong>${t2CuotaMes} Clientes Tier 2</strong> (Growth / $42k)<br>
+        • <strong>${t3CuotaMes} Clientes Tier 3</strong> (Enterprise / $83k)
+      `;
+    }
+  }
+
+  if (tierSliderT1) {
+    tierSliderT1.addEventListener('input', updateTierMixCalculator);
+    tierSliderT2.addEventListener('input', updateTierMixCalculator);
+    tierSliderT3.addEventListener('input', updateTierMixCalculator);
+    updateTierMixCalculator();
   }
 });

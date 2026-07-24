@@ -394,6 +394,174 @@
       </div>
     </section>
 
+    <!-- Section 5: Simulador de Tier Mix & Ciclos de Venta por Ejecutivo -->
+    <section class="dash-section" id="tier-mix-simulator">
+      <div class="section-title-row">
+        <h2>5. 🎯 Simulador de Tier Mix (Product Mix) & Ciclos de Venta por Ejecutivo</h2>
+        <span class="section-badge badge-green">OPTIMIZACIÓN DE CUOTA AE</span>
+      </div>
+      <p class="section-intro">
+        Ajusta la mezcla de tipos de cuenta (Tiers) que debe buscar cada vendedor para balancear cierres rápidos (Quick Wins) con cuentas Enterprise de alto valor.
+      </p>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:24px; margin-top:20px;">
+        
+        <!-- Left: Product Tier Comparison Cards -->
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          
+          <!-- Tier 1 Card -->
+          <div style="background:#FFFFFF; border:1px solid #E2E8F0; padding:18px; border-radius:12px; border-left:5px solid #059669; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; font-weight:800; color:#059669; background:#ECFDF5; padding:3px 8px; border-radius:4px;">🟢 TIER 1 (STARTUP / SEED)</span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:0.8rem; font-weight:700; color:#475569;">Ciclo: 15-30 Días (Quick Win)</span>
+            </div>
+            <div style="display:flex; gap:20px; margin-top:10px;">
+              <div><span style="font-size:0.75rem; color:#64748B;">Renta Target:</span> <strong style="color:#0F172A; font-family:'JetBrains Mono',monospace;">$20,000 MXN/m</strong></div>
+              <div><span style="font-size:0.75rem; color:#64748B;">Setup Fee:</span> <strong style="color:#0F172A; font-family:'JetBrains Mono',monospace;">$40,000 MXN</strong></div>
+            </div>
+            <p style="font-size:0.8rem; color:#64748B; margin-top:8px;">SOFOMes nuevas o Fintechs Semilla. Cierre rápido sin comités de compras complejos.</p>
+          </div>
+
+          <!-- Tier 2 Card -->
+          <div style="background:#FFFFFF; border:1px solid #E2E8F0; padding:18px; border-radius:12px; border-left:5px solid #2563EB; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; font-weight:800; color:#2563EB; background:#EFF6FF; padding:3px 8px; border-radius:4px;">🟡 TIER 2 (GROWTH - SWEET SPOT)</span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:0.8rem; font-weight:700; color:#475569;">Ciclo: 45-60 Días (Sustentable)</span>
+            </div>
+            <div style="display:flex; gap:20px; margin-top:10px;">
+              <div><span style="font-size:0.75rem; color:#64748B;">Renta Target:</span> <strong style="color:#0F172A; font-family:'JetBrains Mono',monospace;">$42,000 MXN/m</strong></div>
+              <div><span style="font-size:0.75rem; color:#64748B;">Setup Fee:</span> <strong style="color:#0F172A; font-family:'JetBrains Mono',monospace;">$55,000 MXN</strong></div>
+            </div>
+            <p style="font-size:0.8rem; color:#64748B; margin-top:8px;">SOFOMes activas y Arrendadoras PYME con cartera $20M-$100M MXN. Representan el 60% del volumen ideal.</p>
+          </div>
+
+          <!-- Tier 3 Card -->
+          <div style="background:#FFFFFF; border:1px solid #E2E8F0; padding:18px; border-radius:12px; border-left:5px solid #7C3AED; box-shadow:0 2px 4px rgba(0,0,0,0.03);">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; font-weight:800; color:#7C3AED; background:#F5F3FF; padding:3px 8px; border-radius:4px;">🔴 TIER 3 (ENTERPRISE / WHALE)</span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:0.8rem; font-weight:700; color:#475569;">Ciclo: 90-120 Días (Comité)</span>
+            </div>
+            <div style="display:flex; gap:20px; margin-top:10px;">
+              <div><span style="font-size:0.75rem; color:#64748B;">Renta Target:</span> <strong style="color:#0F172A; font-family:'JetBrains Mono',monospace;">$83,000 MXN/m</strong></div>
+              <div><span style="font-size:0.75rem; color:#64748B;">Setup Fee:</span> <strong style="color:#0F172A; font-family:'JetBrains Mono',monospace;">$100,000 MXN</strong></div>
+            </div>
+            <p style="font-size:0.8rem; color:#64748B; margin-top:8px;">Grandes Arrendadoras e Instituciones Reguladas. Evaluación técnica rigurosa y comités formales.</p>
+          </div>
+
+        </div>
+
+        <!-- Right: Interactive Product Mix Sliders & Results -->
+        <div style="background:#FFFFFF; border:1px solid #E2E8F0; padding:24px; border-radius:16px; box-shadow:0 4px 6px -1px rgba(0,0,0,0.05); display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <h3 style="font-family:'JetBrains Mono',monospace; font-size:0.95rem; font-weight:800; color:#0F172A; text-transform:uppercase; margin-bottom:16px;">
+              🎛️ Mezcla de Cuota del Ejecutivo (Product Mix %)
+            </h3>
+
+            <!-- Slider Tier 1 % -->
+            <div style="margin-bottom:16px;">
+              <div style="display:flex; justify-content:space-between; font-size:0.85rem; font-weight:600; margin-bottom:4px;">
+                <span style="color:#059669;">% Tier 1 (Quick Wins - 20 días)</span>
+                <span id="tierValT1" style="font-family:'JetBrains Mono',monospace; font-weight:800; color:#059669;">30%</span>
+              </div>
+              <input type="range" id="tierSliderT1" min="0" max="100" step="5" value="30" style="width:100%; accent-color:#059669; cursor:pointer;">
+            </div>
+
+            <!-- Slider Tier 2 % -->
+            <div style="margin-bottom:16px;">
+              <div style="display:flex; justify-content:space-between; font-size:0.85rem; font-weight:600; margin-bottom:4px;">
+                <span style="color:#2563EB;">% Tier 2 (Growth - 45 días)</span>
+                <span id="tierValT2" style="font-family:'JetBrains Mono',monospace; font-weight:800; color:#2563EB;">60%</span>
+              </div>
+              <input type="range" id="tierSliderT2" min="0" max="100" step="5" value="60" style="width:100%; accent-color:#2563EB; cursor:pointer;">
+            </div>
+
+            <!-- Slider Tier 3 % -->
+            <div style="margin-bottom:20px;">
+              <div style="display:flex; justify-content:space-between; font-size:0.85rem; font-weight:600; margin-bottom:4px;">
+                <span style="color:#7C3AED;">% Tier 3 (Enterprise - 90 días)</span>
+                <span id="tierValT3" style="font-family:'JetBrains Mono',monospace; font-weight:800; color:#7C3AED;">10%</span>
+              </div>
+              <input type="range" id="tierSliderT3" min="0" max="100" step="5" value="10" style="width:100%; accent-color:#7C3AED; cursor:pointer;">
+            </div>
+          </div>
+
+          <!-- Calculated Tier Mix Results Box -->
+          <div style="background:#F8FAFC; border:1px solid #CBD5E1; padding:18px; border-radius:12px;">
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-bottom:12px;">
+              <div>
+                <span style="font-size:0.75rem; color:#64748B; font-weight:600;">Ciclo Venta Ponderado:</span>
+                <div id="tierResultCiclo" style="font-family:'JetBrains Mono',monospace; font-size:1.2rem; font-weight:800; color:#0F172A;">42 Días</div>
+              </div>
+              <div>
+                <span style="font-size:0.75rem; color:#64748B; font-weight:600;">Ticket Promedio Resultante:</span>
+                <div id="tierResultTicket" style="font-family:'JetBrains Mono',monospace; font-size:1.2rem; font-weight:800; color:#059669;">$39,500 MXN</div>
+              </div>
+            </div>
+
+            <div style="border-top:1px solid #E2E8F0; padding-top:10px; font-size:0.82rem; color:#334155; line-height:1.5;">
+              <strong>🎯 Cuota Recomendada por Mes para 1 AE (Mezcla Equilibrada):</strong>
+              <div id="tierRecommendationText" style="margin-top:4px; font-family:'JetBrains Mono',monospace; font-weight:600; color:#1E293B;">
+                • 1 Cliente Tier 1 (Quick Win / $20k)<br>
+                • 2 Clientes Tier 2 (Growth / $42k)<br>
+                • 1 Cliente Tier 3 cada 3 meses (Enterprise / $83k)
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- SWEET SPOT DE NEGOCIO BOX (3 DIMENSIONES) -->
+      <div style="margin-top:24px; background:#FFFFFF; border:2px solid #2563EB; padding:24px; border-radius:16px; box-shadow:0 10px 15px -3px rgba(37,99,235,0.08);">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+          <span style="background:#2563EB; color:#FFFFFF; font-family:'JetBrains Mono',monospace; font-size:0.75rem; font-weight:800; padding:4px 10px; border-radius:6px; text-transform:uppercase;">
+            🎯 SWEET SPOT DEL NEGOCIO (EL PUNTO DULCE REVOPS)
+          </span>
+          <span style="font-size:0.85rem; color:#475569; font-weight:600;">Definición de Máximo Rendimiento por Tiempo, Cliente y Esfuerzo</span>
+        </div>
+
+        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
+          
+          <!-- Dimension 1: Tipo de Cliente -->
+          <div style="background:#EFF6FF; border:1px solid #BFDBFE; padding:16px; border-radius:10px;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:0.78rem; font-weight:800; color:#1D4ED8; margin-bottom:6px;">
+              🏢 1. POR TIPO DE CLIENTE (ICP)
+            </div>
+            <strong style="color:#0F172A; font-size:0.9rem;">SOFOM ENR / Arrendadora Growth</strong>
+            <p style="font-size:0.8rem; color:#475569; margin-top:4px;">
+              Cartera $20M - $100M MXN. Renta <strong>$42,000 MXN/mes</strong> + Setup <strong>$55,000 MXN</strong>. Presupuesto disponible y decisión ágil del Director General.
+            </p>
+          </div>
+
+          <!-- Dimension 2: Por Tiempo -->
+          <div style="background:#ECFDF5; border:1px solid #A7F3D0; padding:16px; border-radius:10px;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:0.78rem; font-weight:800; color:#047857; margin-bottom:6px;">
+              ⏱️ 2. POR TIEMPO (CICLO VENTA)
+            </div>
+            <strong style="color:#0F172A; font-size:0.9rem;">45 a 60 Días de Ciclo de Venta</strong>
+            <p style="font-size:0.8rem; color:#475569; margin-top:4px;">
+              Cadencia exacta de 2 reuniones: <strong>Demo de Producto ➔ Presentación de Propuesta con Setup Decompresivo ➔ Firma de Contrato</strong>.
+            </p>
+          </div>
+
+          <!-- Dimension 3: Esfuerzo del Vendedor -->
+          <div style="background:#F5F3FF; border:1px solid #DDD6FE; padding:16px; border-radius:10px;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:0.78rem; font-weight:800; color:#6D28D9; margin-bottom:6px;">
+              💪 3. ESFUERZO DEL VENDEDOR (AE)
+            </div>
+            <strong style="color:#0F172A; font-size:0.9rem;">2 a 3 Cuentas Tier 2 / Mes</strong>
+            <p style="font-size:0.8rem; color:#475569; margin-top:4px;">
+              Genera <strong>+$84k a +$126k MRR/mes</strong> por vendedor con <strong>$110k - $165k en cash de Setup</strong>. Máxima comisión con cero sobrecarga operativa.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
   </main>
 
   <footer class="exec-footer">
