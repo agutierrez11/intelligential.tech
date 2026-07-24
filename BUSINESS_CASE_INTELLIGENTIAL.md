@@ -146,4 +146,31 @@ En la Slide 13 del Consejo de Administración (Abril 2026) se preguntó:
    - Abre un canal de **ingresos incrementales por expansión (Add-ons & Up-selling)** conforme la SOFOM madura su operación.
 
 ---
+
+## 10. 🏛️ Definición Técnica de Arquitectura: ¿Qué es realmente un Orquestador de Core Bancario?
+
+### 🔍 La Brecha en la Industria (Mambu, Topaz vs. Orquestación Middleware):
+Los Cores tradicionales como **Mambu, COBIS Topaz o Temenos** no se posicionan bajo la palabra "Orquestador"; se comercializan como sistemas centrales o libro mayor (ledger). 
+
+Un **Orquestador de Core Bancario (Banking Integration & Middleware Layer)** es una **capa tecnológica intermedia (API Gateway + ESB + Workflow Engine + Protocol Translator)** que conecta el sistema central crediticio con canales externos, fuentes oficiales y pasarelas de pago.
+
+```
++---------------------------------------------------------------------------------------------------+
+|               ARQUITECTURA DE LA CAPA DE ORQUESTACIÓN DE INTELLIGENTIAL SOBRE AWS                 |
++---------------------------------------------------------------------------------------------------+
+| 1. API GATEWAY & ENRUTAMIENTO | Distribuye solicitudes paralelas a fuentes oficiales               |
+|    DE TRANSACCIONES            | (INE/Nubarium, SAT/Syntage, Buró/Moffin, SPEI/STP).               |
++-------------------------------+-------------------------------------------------------------------+
+| 2. WORKFLOW ENGINE            | Ejecuta la matriz de riesgo PLD, motor de decisiones y            |
+|    (MOTOR DE FLUIDEZ & REGLAS)| aprobación crediticia en milisegundos.                            |
++-------------------------------+-------------------------------------------------------------------+
+| 3. TRADUCTOR DE PROTOCOLOS    | Convierte eventos de cartera en pólizas contables reguladas       |
+|    Y REGISTROS CNBV           | compatibles con ERPs tradicionales (Contpaqi, SAP, Aspel).        |
++---------------------------------------------------------------------------------------------------+
+```
+
+### 💡 El Posicionamiento de Alto Nivel ante Instituciones Financieras:
+> *"Intelligential no es solo un libro mayor contable; es la **Capa de Orquestación Middleware sobre AWS** que desacopla la complejidad. Enrutamos transacciones, gestionamos APIs de cumplimiento y traducimos los eventos crediticios en contabilidad regulada CNBV lista para operar."*
+
+---
 *Documento estratégico preparado para la alineación comercial con Luis Fernando Sánchez.*
