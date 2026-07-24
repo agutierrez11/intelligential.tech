@@ -400,4 +400,25 @@ Actualmente en Intelligential el equipo comercial opera de forma Founder-Driven 
 > *"Luis, analizando datos empíricos de eficiencia en equipos de ventas (donde el 80% de los ingresos siempre los trae el 10% de la nómina)... **en Intelligential no necesitamos contratar una fuerza de ventas masiva de 10 personas para lograr la meta del Consejo.** Con el equipo actual de 3 vendedores y una cadencia multicanal de 5 cuentas al día por persona, tenemos la capacidad exacta para cerrar los 40 clientes del año protegiendo el margen de la empresa."*
 
 ---
+
+## 18. 🔬 Roadmap GTM: Enriquecimiento Tecnográfico con Wappalyzer API
+
+### 💡 Technographic Lead Generation & Competitor Displacement:
+Para llevar la prospección del dataset de **2,263 SOFOMes/Arrendadoras** de CONDUSEF al siguiente nivel de precisión militar, utilizaremos la **API de Wappalyzer (Tecnografía GTM)**:
+
+```
++---------------------------------------------------------------------------------------------------+
+|               ARQUITECTURA DE ENRIQUECIMIENTO TECNOGRÁFICO GTM                                    |
++------------------------------------+--------------------------------------------------------------+
+| 1. EXTRAER SITES WEB DE CONDUSEF   | Tomamos los 2,263 dominios oficiales del padrón SIPRES.       |
++------------------------------------+--------------------------------------------------------------+
+| 2. ESCANEO CON WAPPALYZER API      | La API detecta firmas digitales de software, widgets,        |
+|                                    | subdominios de cores (DynamiCore, Mambu, Softcrédito) y AWS.  |
++------------------------------------+--------------------------------------------------------------+
+| 3. PRIORIZACIÓN QUIRÚRGICA EN CRM  | El CRM clasifica automáticamente a las SOFOMes por software  |
+|                                    | actual para disparar secuencias de flanqueo contextualizadas.|
++---------------------------------------------------------------------------------------------------+
+```
+
+---
 *Documento estratégico preparado para la alineación comercial con Luis Fernando Sánchez.*
