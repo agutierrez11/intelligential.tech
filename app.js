@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // --- PRESET TOGGLE BUTTON LOGIC ---
+  // --- PRESET TOGGLE BUTTON LOGIC FOR SECTION 4 ---
   function setActivePresetBtn(activeBtn) {
     [btnPresetActual, btnPresetSweet, btnPresetMix].forEach(btn => {
       if (!btn) return;
@@ -246,6 +246,59 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- PRESET TOGGLE BUTTON LOGIC FOR SECTION 5 ---
+  const btnTierPreset1 = document.getElementById('btnTierPreset1');
+  const btnTierPreset2 = document.getElementById('btnTierPreset2');
+  const btnTierPreset3 = document.getElementById('btnTierPreset3');
+
+  function setActiveTierPresetBtn(activeBtn) {
+    [btnTierPreset1, btnTierPreset2, btnTierPreset3].forEach(btn => {
+      if (!btn) return;
+      if (btn === activeBtn) {
+        btn.style.background = '#FFFFFF';
+        btn.style.color = '#0F172A';
+        btn.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
+      } else {
+        btn.style.background = 'transparent';
+        btn.style.color = '#64748B';
+        btn.style.boxShadow = 'none';
+      }
+    });
+  }
+
+  if (btnTierPreset1) {
+    btnTierPreset1.addEventListener('click', () => {
+      setActiveTierPresetBtn(btnTierPreset1);
+      tierSliderT1.value = 30;
+      tierSliderT2.value = 60;
+      tierSliderT3.value = 10;
+      setActivePresetBtn(btnPresetMix);
+      updateTierMixCalculator(true);
+    });
+  }
+
+  if (btnTierPreset2) {
+    btnTierPreset2.addEventListener('click', () => {
+      setActiveTierPresetBtn(btnTierPreset2);
+      tierSliderT1.value = 70;
+      tierSliderT2.value = 30;
+      tierSliderT3.value = 0;
+      setActivePresetBtn(btnPresetMix);
+      updateTierMixCalculator(true);
+    });
+  }
+
+  if (btnTierPreset3) {
+    btnTierPreset3.addEventListener('click', () => {
+      setActiveTierPresetBtn(btnTierPreset3);
+      tierSliderT1.value = 10;
+      tierSliderT2.value = 40;
+      tierSliderT3.value = 50;
+      setActivePresetBtn(btnPresetMix);
+      updateTierMixCalculator(true);
+    });
+  }
+
   if (calcSliderClientes) {
     calcSliderClientes.addEventListener('input', updateRevOpsCalculator);
     calcSliderMeses.addEventListener('input', updateRevOpsCalculator);
@@ -257,14 +310,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (tierSliderT1) {
     tierSliderT1.addEventListener('input', () => {
+      setActiveTierPresetBtn(null);
       setActivePresetBtn(btnPresetMix);
       updateTierMixCalculator(true);
     });
     tierSliderT2.addEventListener('input', () => {
+      setActiveTierPresetBtn(null);
       setActivePresetBtn(btnPresetMix);
       updateTierMixCalculator(true);
     });
     tierSliderT3.addEventListener('input', () => {
+      setActiveTierPresetBtn(null);
       setActivePresetBtn(btnPresetMix);
       updateTierMixCalculator(true);
     });
