@@ -452,19 +452,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const filtered = data.filter(item => {
       const stateLower = item.estado.toLowerCase();
+      const sectorLower = (item.sector || '').toLowerCase();
+      const nameLower = item.denominacion.toLowerCase();
 
       // Filter button check
-      if (currentFilter === 'CDMX' && !stateLower.includes('cdmx') && !stateLower.includes('ciudad de méxico')) return false;
-      if (currentFilter === 'Monterrey' && !stateLower.includes('monterrey') && !stateLower.includes('nuevo león')) return false;
-      if (currentFilter === 'Guadalajara' && !stateLower.includes('guadalajara') && !stateLower.includes('jalisco')) return false;
-      if (currentFilter === 'OceanoAzul') {
-        const isRedOcean = stateLower.includes('cdmx') || stateLower.includes('ciudad de méxico') || stateLower.includes('monterrey') || stateLower.includes('nuevo león') || stateLower.includes('guadalajara') || stateLower.includes('jalisco');
-        if (isRedOcean) return false;
-      }
-      if (currentFilter === 'OceanoRojo') {
-        const isRedOcean = stateLower.includes('cdmx') || stateLower.includes('ciudad de méxico') || stateLower.includes('monterrey') || stateLower.includes('nuevo león') || stateLower.includes('guadalajara') || stateLower.includes('jalisco');
-        if (!isRedOcean) return false;
-      }
+      if (currentFilter === 'Sofomes' && !sectorLower.includes('sofom') && !nameLower.includes('sofom')) return false;
+      if (currentFilter === 'Leasing' && !nameLower.includes('arrenda') && !nameLower.includes('leasing') && !nameLower.includes('maquinaria') && !nameLower.includes('equipo') && !nameLower.includes('capital')) return false;
+      if (currentFilter === 'Lenders' && !nameLower.includes('digital') && !nameLower.includes('tech') && !nameLower.includes('fintech') && !nameLower.includes('capital') && !nameLower.includes('soluciones')) return false;
       if (currentFilter === 'DynamiCore' && !item.competidor.toLowerCase().includes('dynamicore')) return false;
 
       // Text Search Query check

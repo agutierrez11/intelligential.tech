@@ -421,4 +421,31 @@ Para llevar la prospección del dataset de **2,263 SOFOMes/Arrendadoras** de CON
 ```
 
 ---
+
+## 19. 🎯 Cadencia Diaria Equilibrada por Nichos de Mercado (Balanced ICP Mix)
+
+### 💡 Distribución Quirúrgica de Prospección por AE (17 Cuentas / Día):
+Para mantener un pipeline equilibrado entre volumen de tracción constante, alto ticket de leasing y cierres ágiles en fintechs, el equipo de ventas ejecutará la **Cadencia Diaria Equilibrada de 17 Cuentas por Vendedor**:
+
+```
++---------------------------------------------------------------------------------------------------+
+|               CADENCIA DIARIA EQUILIBRADA POR NICHO DE MERCADO (POR VENDEDOR)                     |
++------------------------------------+--------------------------------------------------------------+
+| 🏢 10 SOFOMES / ARRENDADORAS       | • **40% del Mix** | Base de volumen constante en el mercado. |
+|    (BASE DE VOLUMEN)               | • Ticket Recurrente: **$42,000 MXN/mes**.                    |
++------------------------------------+--------------------------------------------------------------+
+| 🚜 5 LEASING & MAQUINARIA PESADA   | • **30% del Mix** | Alto Ticket (Maquinaria, Equipo, Autos). |
+|    (HIGH TICKET / HEAVY EQUIPMENT) | • Ticket Recurrente: **$80,000 - $150,000 MXN/mes**.        |
++------------------------------------+--------------------------------------------------------------+
+| ⚡ 2 LENDERS DIGITALES / FINTECHS   | • **20% del Mix** | Cierres ágiles sin fricción de legado.   |
+|    (QUICK WINS DIGITALES)          | • Ticket Recurrente: **$20,000 - $42,000 MXN/mes**.          |
++---------------------------------------------------------------------------------------------------+
+```
+
+### 📈 Cobertura Total del Mercado Nacional en 60 Días:
+* **Producción Diaria por AE:** 17 Cuentas al día = **340 Cuentas/Mes por Vendedor**.
+* **Producción del Equipo Actual (3 AEs):** $340 \times 3 = \mathbf{1,020 \text{ Cuentas Tocadas al Mes}}$.
+* **Cobertura Nacional:** En solo **60 días (2 Meses)**, el equipo actual de 3 vendedores barre **el 100% de las 2,263 entidades del padrón financiero en México** sin gastar en contratación de personal adicional.
+
+---
 *Documento estratégico preparado para la alineación comercial con Luis Fernando Sánchez.*
