@@ -50,4 +50,39 @@ En lugar de asumir un flujo continuo de ventas, este bloque investiga la natural
 | **04** | *"¿El fondo 5X Capital exige prioridad en margen EBITDA o velocidad de crecimiento de MRR?"* | Calibrar agresividad comercial vs. control de costos. |
 
 ---
+
+## 4. 🔬 Bloque 4: Cuestionario de Auditoría Técnica y Operativa (Las 5 Preguntas para Luis)
+
+Para entender exactamente la madurez operativa de la plataforma y cómo responden en las demos ante los clientes, estas son las **5 preguntas de investigación quirúrgica para entrevistarlo**:
+
+```
++---------------------------------------------------------------------------------------------------+
+|               5 PREGUNTAS DE AUDITORÍA TÉCNICA Y OPERATIVA PARA LUIS F. SÁNCHEZ                    |
++-------------------+-------------------------------------------------------------------------------+
+| ÁREA DE CONTROL   | PREGUNTA EXACTA DE DESCUBRIMIENTO PARA LUIS                                   |
++-------------------+-------------------------------------------------------------------------------+
+| 1. Integración ERP| *"Luis, en las SOFOMes que han cerrado en los últimos 12 meses, ¿cuál es la   |
+|    y Core Legado  | objeción más común de sus contadores respecto a su ERP actual (ej. Contpaqi   |
+|                   | o SAP), y cómo les entregamos hoy las pólizas CNBV para no tener fricción?"   |
++-------------------+-------------------------------------------------------------------------------+
+| 2. SLA & Uptime   | *"En la infraestructura actual sobre AWS, ¿tenemos garantizado por contrato un|
+|    en Cierre CNBV | SLA de 99.9% para respaldar el cierre mensual de cartera de la CNBV sin que   |
+|                   | los clientes sufran ralentización?"                                           |
++-------------------+-------------------------------------------------------------------------------+
+| 3. Esquema API    | *"En los conectores con Nubarium, Syntage y Buró de Crédito, ¿manejamos un   |
+|    Pass-Through   | esquema de Pass-Through transparente (el cliente conecta sus llaves API) o    |
+|                   | empaquetamos una bolsa mayorista de consultas en la mensualidad?"            |
++-------------------+-------------------------------------------------------------------------------+
+| 4. Data Ownership| *"Cuando negociamos con clientes Enterprise, ¿cómo les garantizamos la        |
+|    y Portabilidad | propiedad de su base de datos PostgreSQL si en el futuro necesitan exportar   |
+|                   | su expediente de PLD o cartera?"                                              |
++-------------------+-------------------------------------------------------------------------------+
+| 5. Retención NRR  | *"Pensando en la visión de 5X Capital, ¿cuál es nuestra tasa de retención (NRR)|
+|    y Churn Rate   | y churn actual, y qué pilares (Core, Compliance, Onboarding) son los que más  |
+|                   | reducen el riesgo de cancelación?"                                           |
++---------------------------------------------------------------------------------------------------+
+```
+
+---
 *Documento de soporte preparado para la sesión de alineación estratégica con Luis Fernando Sánchez.*
+
