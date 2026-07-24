@@ -437,10 +437,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const query = pipelineSearchInput ? pipelineSearchInput.value.toLowerCase().trim() : '';
 
     const filtered = data.filter(item => {
+      const stateLower = item.estado.toLowerCase();
+
       // Filter button check
-      if (currentFilter === 'CDMX' && !item.estado.toLowerCase().includes('cdmx') && !item.estado.toLowerCase().includes('ciudad de méxico')) return false;
-      if (currentFilter === 'Monterrey' && !item.estado.toLowerCase().includes('monterrey') && !item.estado.toLowerCase().includes('nuevo león')) return false;
-      if (currentFilter === 'Guadalajara' && !item.estado.toLowerCase().includes('guadalajara') && !item.estado.toLowerCase().includes('jalisco')) return false;
+      if (currentFilter === 'OceanoAzul') {
+        const isRedOcean = stateLower.includes('cdmx') || stateLower.includes('ciudad de méxico') || stateLower.includes('monterrey') || stateLower.includes('nuevo león') || stateLower.includes('guadalajara') || stateLower.includes('jalisco');
+        if (isRedOcean) return false;
+      }
+      if (currentFilter === 'OceanoRojo') {
+        const isRedOcean = stateLower.includes('cdmx') || stateLower.includes('ciudad de méxico') || stateLower.includes('monterrey') || stateLower.includes('nuevo león') || stateLower.includes('guadalajara') || stateLower.includes('jalisco');
+        if (!isRedOcean) return false;
+      }
       if (currentFilter === 'DynamiCore' && !item.competidor.toLowerCase().includes('dynamicore')) return false;
 
       // Text Search Query check
