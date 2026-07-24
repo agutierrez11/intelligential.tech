@@ -253,4 +253,52 @@ En lugar de atacar el Core, la **Estrategia de Flanqueo (Flanking Strategy / Cab
 ```
 
 ---
+
+## 14. ⚔️ La Doctrina SCHWERPUNKT: Concentración de Fuerza en el Centro de Gravedad
+
+### 🎖️ ¿Qué es la Doctrina SCHWERPUNKT?
+En la teoría estratégica militar (von Clausewitz) y en el management B2B moderno (OODA Loop de John Boyd), el **Schwerpunkt** es el **"Punto Focal de Máxima Concentración de Fuerza"**. En lugar de dispersar recursos atacando todo el frente, identificas el punto exacto donde la concentración abrumadora de tu propuesta rompe la línea del mercado.
+
+```
++---------------------------------------------------------------------------------------------------+
+|                  LOS 3 NIVELES DEL SCHWERPUNKT EN INTELLIGENTIAL                                  |
++------------------------------------+--------------------------------------------------------------+
+| 1. SCHWERPUNKT DE MERCADO (ICP)    | Concentración total en SOFOMes ENR y Arrendadoras de cartera  |
+|                                    | $20M-$100M MXN (El Sweet Spot de $42k Renta / $55k Setup).   |
++------------------------------------+--------------------------------------------------------------+
+| 2. SCHWERPUNKT DE PRODUCTO (VALOR) | La **Orquestación 3-en-1 sobre AWS** (Core + CNBV + Onboarding)|
+|                                    | donde Mambu colapsa por falta de reporte local.              |
++------------------------------------+--------------------------------------------------------------+
+| 3. SCHWERPUNKT DE PROSPECCIÓN      | La grieta regulatoria de la norma **CNBV-2026-001** y la ola |
+|    (DISPARADOR DE VENTA)           | de $216 MDP en multas de la CNBV.                            |
++---------------------------------------------------------------------------------------------------+
+```
+
+### 💡 El Principio Comercial:
+> *"No dispersamos esfuerzo atacando bancos gigantescos ni microfinancieras sin capital. Aplicamos la **Doctrina Schwerpunkt**: concentramos el 100% de la fuerza comercial en las 600 SOFOMes/Arrendadoras del Sweet Spot, rompiendo la resistencia del mercado mediante el argumento del cumplimiento anti-multas CNBV."*
+
+---
+
+## 15. 🧠 Auditoría del Sesgo de Supervivencia (Survivorship Bias en Pipeline)
+
+### ✈️ El Principio del Sesgo de Supervivencia (Abraham Wald):
+El sesgo de supervivencia ocurre cuando analizamos únicamente a los "sobrevivientes" (los clientes que sí firmaron) e ignoramos a los cientos de prospectos que se descolgaron o "murieron" en el pipeline. Si solo escuchamos a los clientes actuales, reforzamos las partes equivocadas del proceso comercial.
+
+```
++---------------------------------------------------------------------------------------------------+
+|               EVITANDO EL SESGO DE SUPERVIVENCIA EN EL PIPELINE DE INTELLIGENTIAL                 |
++------------------------------------+--------------------------------------------------------------+
+| 🔴 LA FALACIA DEL SOBREVIVIENTE     | "Nuestros 10 clientes actuales aman el Setup Fee de $100k y  |
+|                                    | el producto 3-en-1, así que no hay nada que cambiar."        |
++------------------------------------+--------------------------------------------------------------+
+| 🟢 LA AUDITORÍA DE LOS "CAÍDOS"    | Investigar a los 50 prospectos que NO cerraron en 18 meses:  |
+|    (TRATOS PERDIDOS Y ESTANCADOS)  | ¿Se cayeron por el Setup Fee? ¿Por resistencia del contador? |
+|                                    | ¿Por falta de seguimiento a tiempo?                          |
++------------------------------------+--------------------------------------------------------------+
+```
+
+### 💡 Pregunta Quirúrgica para la Sesión con Luis:
+> *"Luis, para evitar caer en el **Sesgo de Supervivencia** analizando solo a los clientes actuales... **¿cuáles han sido los motivos principales de rechazo o estancamiento de los prospectos que NO cerraron en los últimos 18 meses?** Ahí está la verdadera información para ajustar el pricing y la cadencia de prospección."*
+
+---
 *Documento estratégico preparado para la alineación comercial con Luis Fernando Sánchez.*
