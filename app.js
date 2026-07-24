@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // --- PRESET TOGGLE BUTTON LOGIC FOR SECTION 4 ---
+  // --- PRESET TOGGLE BUTTON LOGIC FOR SECTION 4 (ESCENARIOS DE EJECUCIÓN ESTRATÉGICA) ---
   function setActivePresetBtn(activeBtn) {
     [btnPresetActual, btnPresetSweet, btnPresetMix].forEach(btn => {
       if (!btn) return;
@@ -215,34 +215,60 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Escenario 1: Q3-Q4 2026 (20 Clientes a Diciembre / +$200k MRR)
   if (btnPresetActual) {
     btnPresetActual.addEventListener('click', () => {
       setActivePresetBtn(btnPresetActual);
-      calcSliderClientes.value = 100;
-      calcSliderMeses.value = 36;
+      calcSliderClientes.value = 20;
+      calcSliderMeses.value = 5;
       calcSliderAEs.value = 1;
-      calcSliderTicket.value = 50000;
-      calcSliderSetup.value = 100000;
+      calcSliderTicket.value = 42000;
+      calcSliderSetup.value = 55000;
+      
+      tierSliderT1.value = 40;
+      tierSliderT2.value = 50;
+      tierSliderT3.value = 10;
+      
+      updateTierMixCalculator(false);
       updateRevOpsCalculator();
     });
   }
 
+  // Escenario 2: Meta Anual del Consejo (40 Clientes SOM en 12 Meses)
   if (btnPresetSweet) {
     btnPresetSweet.addEventListener('click', () => {
       setActivePresetBtn(btnPresetSweet);
+      calcSliderClientes.value = 40;
+      calcSliderMeses.value = 12;
+      calcSliderAEs.value = 1;
+      calcSliderTicket.value = 39500;
+      calcSliderSetup.value = 55000;
+
+      tierSliderT1.value = 30;
+      tierSliderT2.value = 60;
+      tierSliderT3.value = 10;
+
+      updateTierMixCalculator(false);
+      updateRevOpsCalculator();
+    });
+  }
+
+  // Escenario 3: Visión a 3 Años (100 Clientes en 36 Meses / Escala SaaS)
+  if (btnPresetMix) {
+    btnPresetMix.addEventListener('click', () => {
+      setActivePresetBtn(btnPresetMix);
       calcSliderClientes.value = 100;
       calcSliderMeses.value = 36;
       calcSliderAEs.value = 1;
       calcSliderTicket.value = 42000;
-      calcSliderSetup.value = 55000;
-      updateRevOpsCalculator();
-    });
-  }
+      calcSliderSetup.value = 58000;
 
-  if (btnPresetMix) {
-    btnPresetMix.addEventListener('click', () => {
-      setActivePresetBtn(btnPresetMix);
-      updateTierMixCalculator(true);
+      tierSliderT1.value = 20;
+      tierSliderT2.value = 60;
+      tierSliderT3.value = 20;
+
+      updateTierMixCalculator(false);
+      updateRevOpsCalculator();
     });
   }
 
